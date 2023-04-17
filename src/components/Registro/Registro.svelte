@@ -32,7 +32,7 @@ const elements = {
   </label><br />
   <label >description
     <input type="text" bind:value={description} />
-  </label><br />
+  </label><br/> 
   <label>longuitude
     <input type="number" bind:value={longuitude} />
   </label><br />

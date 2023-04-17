@@ -26,7 +26,7 @@ $: elements = {
 <button on:click={manexadorTrae}>traer</button>
 
 <ul>
-  {#each elementos as {  name, description,latitude, longuitude }}
+  {#each elementos as {  name, description, latitude, longuitude }}
     <li> {name} {description} {latitude} {longuitude}</li>
   {/each}
 </ul>
