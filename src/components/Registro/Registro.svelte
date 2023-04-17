@@ -33,13 +33,13 @@ const elements = {
   <label >description
     <input type="text" bind:value={description} />
   </label><br/> 
-  <label>longuitude
-    <input type="number" bind:value={longuitude} />
+  <label>latitude
+    <input type="number" bind:value={latitude} />
   </label><br />
   <label
-    >latitude
+    >longuitude
 
-    <input type="number" bind:value={latitude} />
+    <input type="number" bind:value={longuitude} />
   </label>
   <button on:click={manexadorPost}>subir</button>
 </div>
