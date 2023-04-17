@@ -4,7 +4,7 @@
   let longuitude=0
   let latitude=0
 
-const elements = {
+$: elements = {
 
     name: name,
     description: description,
