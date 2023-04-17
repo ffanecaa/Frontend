@@ -8,8 +8,9 @@ const elements = {
 
     name: name,
     description: description,
-    longuitude: longuitude,
     latitude: latitude,
+    longuitude: longuitude,
+   
   };
 
   function manexadorPost(){
@@ -31,25 +32,14 @@ const elements = {
     >nome
     <input type="text" bind:value={name} />
   </label><br />
-  <label
-    >description
+  <label >description
     <input type="text" bind:value={description} />
   </label><br />
-  <label
-    >longuitude
+  <label>longuitude
     <input type="number" bind:value={longuitude} />
   </label><br />
   <label
     >latitude
-
-
-
-
-
-
-
-
-
 
     <input type="number" bind:value={latitude} />
   </label>
