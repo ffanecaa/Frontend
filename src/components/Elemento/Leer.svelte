@@ -32,7 +32,9 @@ $: elements = {
 </ul> -->
 
 <script>
+  import Delete from "./Delete.svelte"
    let elementos = [];
+
    function manexadorTrae(){
     fetch("http://localhost:8000/elements/")
       .then(res => res.json())
@@ -48,5 +50,6 @@ $: elements = {
 <ul>
   {#each elementos as {  name, description, latitude, longuitude }}
     <li> {name} {description} {latitude} {longuitude}</li>
+    <Delete elemento = { [name, description, latitude, longuitude]}/>
   {/each}
 </ul>

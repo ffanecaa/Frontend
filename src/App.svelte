@@ -1,6 +1,6 @@
 <script>
-  import Registro from "./components/Registro/Registro.svelte";
-  import Leer from "./components/Message/Leer.svelte";
+  import Registro from "./components/Elemento/Registro.svelte";
+  import Leer from "./components/Elemento/Leer.svelte";
 
 import Iconos from "./components/Iconos/Iconos.svelte";
 import Iconostraer from "./components/Iconos/Iconostraer.svelte";
