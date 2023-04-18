@@ -5,6 +5,8 @@
 import Iconos from "./components/Iconos/Iconos.svelte";
 import Iconostraer from "./components/Iconos/Iconostraer.svelte";
 import Cathegory from "./components/Cathegory/Cathegory.svelte"
+  import Mapas from "./components/mapa/Mapas.svelte";
+
 </script>
 <Registro/>
 <Leer/>
@@ -12,7 +14,7 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 <br>
 <Iconostraer/>
 <Cathegory/>
-
+<Mapas/>
 
 
 
