@@ -35,8 +35,19 @@ $: elements = {
   import Delete from "./Delete.svelte"
   import Mapas from "../mapa/Mapas.svelte";
   import L from 'leaflet';
+  import { element } from "svelte/internal";
    let elementos = [];
+//    let name=''
+//   let description=''
+//   let longuitude=0
+//   let latitude=0
+//    $: elements = {
+//  name,
+//  description,
+//  latitude,
+//  longuitude,
 
+// };
 
    function manexadorTrae(){
     fetch("http://localhost:8000/elements/")
@@ -51,10 +62,14 @@ $: elements = {
 <button on:click={manexadorTrae}>traer</button>
 <br>
 <div>
-  {#each elementos as {  name, description, latitude, longuitude }}
+  {#each elementos as { 
+     name, description, latitude, longuitude }}
     <h2> {name} </h2><p>{description}</p><p> {latitude} {longuitude}</p>
-  <Delete elemento = { {name, description, latitude, longuitude}}/>
-    <Mapas latitude={latitude} longuitude={longuitude} name={name} L={L} /><br><br>
+  
+    <Delete elemento={{ name, description, latitude, longuitude}}/>
+    
+  
+  <Mapas latitude={latitude} longuitude={longuitude} name={name} L={L} /><br><br>
   {/each}
 </div>
 

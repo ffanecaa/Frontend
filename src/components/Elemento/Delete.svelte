@@ -1,5 +1,9 @@
 <script>
-export let elemento
+      let name=''
+  let description=''
+  let longuitude=0
+  let latitude=0
+export let elemento={ }
 function handleDelete(){
     fetch("http://localhost:8000/elements/",{
 method:"DELETE",

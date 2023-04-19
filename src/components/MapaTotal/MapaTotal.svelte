@@ -17,6 +17,8 @@
         .then(res => res.json())
         .then(response => {
           elementos = response;
+
+          // for dentro pq es lo q queremos q realice el manexador coja y disponga
           for (let i = 0; i < elementos.length; i++) {
   let elemento = elementos[i];
   let latitude = elemento.latitude;
@@ -46,6 +48,7 @@
     });
   
   </script>
+  <h1>mapa puntos</h1>
   
   <div id="mymap" style="height: 600px;"></div>
   
