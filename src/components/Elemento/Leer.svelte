@@ -34,7 +34,9 @@ $: elements = {
 <script>
   import Delete from "./Delete.svelte"
   import Mapas from "../mapa/Mapas.svelte";
+  import L from 'leaflet';
    let elementos = [];
+
 
    function manexadorTrae(){
     fetch("http://localhost:8000/elements/")
@@ -52,7 +54,7 @@ $: elements = {
   {#each elementos as {  name, description, latitude, longuitude }}
     <li> {name} {description} {latitude} {longuitude}</li>
     <!-- <Delete elemento = { {name, description, latitude, longuitude}}/> -->
-    <Mapas name={name} latitude={latitude} longuitude={longuitude} />
+    <Mapas latitude={latitude} longuitude={longuitude} name={name} L={L} />
   {/each}
 </ul>
 
