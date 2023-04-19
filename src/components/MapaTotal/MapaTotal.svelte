@@ -5,9 +5,11 @@
     let map;
     let longuitude
     let latitude
+    let name
     let elementos = [
         {longuitude:longuitude,
-        latitude:latitude}
+        latitude:latitude,
+    name:name}
     ];
   
     function manexadorTrae(){
@@ -19,7 +21,8 @@
   let elemento = elementos[i];
   let latitude = elemento.latitude;
   let longuitude = elemento.longuitude;
-  L.marker([latitude, longuitude]).addTo(map);
+  let name = elemento.name
+  L.marker([latitude, longuitude]).addTo(map).bindPopup(name);
 }
     })
         }
