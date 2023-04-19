@@ -33,6 +33,7 @@ $: elements = {
 
 <script>
   import Delete from "./Delete.svelte"
+  import Mapas from "../mapa/Mapas.svelte";
    let elementos = [];
 
    function manexadorTrae(){
@@ -50,6 +51,9 @@ $: elements = {
 <ul>
   {#each elementos as {  name, description, latitude, longuitude }}
     <li> {name} {description} {latitude} {longuitude}</li>
-    <Delete elemento = { {name, description, latitude, longuitude}}/>
+    <!-- <Delete elemento = { {name, description, latitude, longuitude}}/> -->
+    <Mapas name={name} latitude={latitude} longuitude={longuitude} />
   {/each}
 </ul>
+
+
