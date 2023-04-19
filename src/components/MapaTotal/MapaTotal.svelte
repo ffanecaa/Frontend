@@ -40,7 +40,7 @@
   
       // Agregar cada marcador al mapa
    
-
+// no pq es dentro de la funcion manexador pq trae los datos y los dispara en el mapa
     //   for(let i =0; i >elementos.length; i++){
 
     //     L.marker([latitude,longuitude]).addTo(map)
