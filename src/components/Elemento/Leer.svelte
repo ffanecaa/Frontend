@@ -53,7 +53,7 @@ $: elements = {
 <ul>
   {#each elementos as {  name, description, latitude, longuitude }}
     <li> {name} {description} {latitude} {longuitude}</li>
-    <!-- <Delete elemento = { {name, description, latitude, longuitude}}/> -->
+  <Delete elemento = { {name, description, latitude, longuitude}}/>
     <Mapas latitude={latitude} longuitude={longuitude} name={name} L={L} />
   {/each}
 </ul>

@@ -23,7 +23,7 @@ $: markers = [
 
 
   onMount(() => {
-    map = L.map(mapId).setView([ 42.8805200,-8.5456900], 8);
+    map = L.map(mapId).setView([ 42.812000, -7.90005], 8);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     }).addTo(map);

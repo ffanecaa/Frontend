@@ -7,7 +7,7 @@
 const accessToken = "lFES81l8YKINAgfZoKQDCgrjNAQPA1t36ObWQZFNsS8eFqzKfdtQSePWY5Z7a1Sk"
 
 onMount(()=>{
-	let latlng =  [-8.5456900, 42.8805200]
+	let latlng =  [-7.3984000, 40.7605200]
 	// 3 IS ZOOM
 let map = L.map("mymaps").setView([-8.5456900, 42.8805200],8)
 
