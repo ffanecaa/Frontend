@@ -51,6 +51,6 @@
   <h1>mapa puntos</h1>
   
   <div id="mymap" style="height: 600px;"></div>
-  
+  <!-- convendria fuera funcion load dispare cargue pagina mirar evento -->
   <button on:click={manexadorTrae}>Cargar localizaciones</button>
   
