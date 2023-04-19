@@ -8,7 +8,7 @@
 export let longuitude=0
 export let name='catedral'
 export let L
-const mapId = `map-${name}`;
+const mapId = `map-${name}`; // neceito que cada mapa tenga un nombre sino no se genera
 
 //array
 
