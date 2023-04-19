@@ -47,7 +47,7 @@
   
   </script>
   
-  <div id="mymap" style="height: 500px;"></div>
+  <div id="mymap" style="height: 600px;"></div>
   
   <button on:click={manexadorTrae}>Cargar localizaciones</button>
   
