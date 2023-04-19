@@ -30,7 +30,7 @@ $: markers = [
   
 
 
-
+/* bucle */
   markers.forEach(marker => {
       L.marker(marker.position).addTo(map).bindPopup(marker.name);
     });
