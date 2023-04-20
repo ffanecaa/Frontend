@@ -41,3 +41,5 @@ function handleClick(){
   </label>
   <button on:click={handleClick}>📝</button>
   {/if}
+
+ <p>esto {element.element}</p>
