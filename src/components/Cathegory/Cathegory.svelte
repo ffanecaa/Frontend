@@ -3,7 +3,7 @@
 <label >categoria
     <input type="text" bind:value={name}>
 </label>
-<button on:click={handleClick}>click</button>
+<button on:click={manexadorPost}>click</button>
 <button on:click={handleClick2}>get</button>
 
 <ol>
@@ -16,11 +16,11 @@
     let cathegories=[]
      let name=''
    $: cathegory ={
-        name: name
+        name: name,
     }
    
     
- function handleClick(){
+ function manexadorPost(){
    fetch("http://localhost:8000/cathegory/",{
         method: "POST",
         headers: {"Content-Type":"application/json"},
@@ -29,7 +29,7 @@
 }
 
 function handleClick2(){
-    fetch("http://localhost:8000/cathegory/")
+    fetch("http://localhost:8000/cathegory")
  .then(res =>res.json())
 .then(response =>{
     cathegories=response
