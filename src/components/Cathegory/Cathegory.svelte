@@ -4,16 +4,16 @@
     <input type="text" bind:value={name}>
 </label>
 <button on:click={manexadorPostC}>click</button>
-<button on:click={handleClick2}>get</button>
-
+<button on:click={manexadorGetC}>get</button>
+<h2>categorias</h2>
 <ol>
-    {#each cathegories as {name}}
+    {#each cathe as {name}}
     <li>{name}</li>
     {/each}
 </ol>
 
 <script>
-    let cathegories=[]
+    let cathe=[]
      let name=''
    $: cathegory ={
         name: name,
@@ -28,11 +28,11 @@
     })
 }
 
-function handleClick2(){
-    fetch("http://localhost:8000/cathegory")
- .then(res =>res.json())
-.then(response =>{
-    cathegories=response
+function manexadorGetC(){
+    fetch("http://localhost:8000/cathegory/")
+ .then(res => res.json())
+.then(response => {
+    cathe = response;
 
  })
     
