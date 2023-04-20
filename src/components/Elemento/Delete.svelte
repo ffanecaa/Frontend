@@ -1,8 +1,5 @@
 <script>
-      let name=''
-  let description=''
-  let longuitude=0
-  let latitude=0
+ 
 export let elemento
 
 

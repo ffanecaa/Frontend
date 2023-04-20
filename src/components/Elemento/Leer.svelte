@@ -35,7 +35,8 @@ $: elements = {
   import Delete from "./Delete.svelte"
   import Mapas from "../mapa/Mapas.svelte";
   import L from 'leaflet';
-  import { element } from "svelte/internal";
+ 
+  import Put from "./Put.svelte";
    let elementos = [];
    let name=''
   let description=''
@@ -79,7 +80,7 @@ $: elements = {
     <p>{elemento.description}</p>
     <p class="coordinates">{elemento.latitude} {elemento.longuitude}</p>
     <Delete elemento={elemento} />
-
+    <Put bind:element={elemento}/>
     <Mapas latitude={elemento.latitude} longuitude={elemento.longuitude} name={elemento.name} L={L} />
     <br><br><br><br>
   {/each}
