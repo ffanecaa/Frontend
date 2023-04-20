@@ -68,8 +68,8 @@ $: elements = {
   
     <Delete elemento={{ name, description, latitude, longuitude}}/>
     
-  
-  <Mapas latitude={latitude} longuitude={longuitude} name={name} L={L} /><br><br>
+     <Mapas latitude={latitude} longuitude={longuitude} name={name} L={L} />
+     <br><br>
   {/each}
 </div>
 

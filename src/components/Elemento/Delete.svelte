@@ -3,7 +3,13 @@
   let description=''
   let longuitude=0
   let latitude=0
-export let elemento={ }
+export let elemento={      
+   name:name,
+   description:description,
+   longuitude:longuitude,
+   latitude:latitude}
+
+
 function handleDelete(){
     fetch("http://localhost:8000/elements/",{
 method:"DELETE",
