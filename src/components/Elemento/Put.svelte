@@ -1,8 +1,5 @@
 <script>
-     let name=''
-  let description=''
-  let longuitude=0
-  let latitude=0
+
 let edit=false
 export let element
 function handleEdit(){
@@ -13,7 +10,7 @@ function handleClick(){
     fetch("http://localhost:8000/elements/",{
         method:"PUT",
         headers:{"content-Type":"application/json"},
-        body:JSON.stringify(element)
+        body:JSON.stringify(element.element)
     })
     edit=false
 }
