@@ -13,7 +13,7 @@ $: elements = {
    
   };
 
-  function manexadorPost(){
+  function handlePost(){
   fetch("http://localhost:8000/elements/",{
       method: "POST",
       headers:{"Content-Type": "application/json"},
@@ -41,5 +41,5 @@ $: elements = {
 
     <input type="number" bind:value={longuitude} />
   </label>
-  <button on:click={manexadorPost}>subir</button>
+  <button on:click={handlePost}>subir</button>
 </div>

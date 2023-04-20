@@ -9,6 +9,8 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
    import MapaTotal from "./components/MapaTotal/MapaTotal.svelte"
 
 </script>
+
+
 <Registro/>
 <Leer/>
 <Iconos/>
@@ -17,5 +19,10 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 <Cathegory/>
 <!-- <Mapas/> -->
 <MapaTotal/>
+
+
+
+
+
 
 
