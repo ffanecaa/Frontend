@@ -37,10 +37,10 @@ $: elements = {
   import L from 'leaflet';
   import { element } from "svelte/internal";
    let elementos = [];
-//    let name=''
-//   let description=''
-//   let longuitude=0
-//   let latitude=0
+   let name=''
+  let description=''
+  let longuitude=0
+  let latitude=0
 //    $: elements = {
 //  name,
 //  description,
@@ -61,16 +61,43 @@ $: elements = {
 <h2>elementos</h2>
 <button on:click={manexadorTrae}>traer</button>
 <br>
-<div>
-  {#each elementos as { 
+
+  <!-- {#each elementos as { 
      name, description, latitude, longuitude }}
     <h2> {name} </h2><p>{description}</p><p> {latitude} {longuitude}</p>
   
-    <Delete elemento={{ name, description, latitude, longuitude}}/>
+     <Delete elemento={{ name, description, latitude, longuitude}}/> -->
     
-     <Mapas latitude={latitude} longuitude={longuitude} name={name} L={L} />
+     <!-- <Mapas latitude={latitude} longuitude={longuitude} name={name} L={L} />
      <br><br>
+  {/each} --> 
+
+<div>
+
+  {#each elementos as elemento}
+  <h2>{elemento.name}:</h2>
+    <p>{elemento.description}</p>
+    <p class="coordinates">{elemento.latitude} {elemento.longuitude}</p>
+    <Delete elemento={elemento} />
+
+    <Mapas latitude={elemento.latitude} longuitude={elemento.longuitude} name={elemento.name} L={L} />
+    <br><br><br><br>
   {/each}
+
 </div>
 
-
+<style>
+  h2{
+    text-shadow: 1px 1px 2px black;
+    text-transform: capitalize;
+  }
+  p{
+    text-align: left;
+    margin: 0;
+  padding: 0;
+  text-indent: 20px;
+  }
+  .coordinates{
+    text-align:right;
+  }
+</style>

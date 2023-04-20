@@ -3,11 +3,7 @@
   let description=''
   let longuitude=0
   let latitude=0
-export let elemento={      
-   name:name,
-   description:description,
-   longuitude:longuitude,
-   latitude:latitude}
+export let elemento
 
 
 function handleDelete(){

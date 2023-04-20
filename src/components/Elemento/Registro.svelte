@@ -21,6 +21,9 @@ $: elements = {
   
     })
   }
+
+
+
 </script>
 
 <div>
@@ -42,4 +45,5 @@ $: elements = {
     <input type="number" bind:value={longuitude} />
   </label>
   <button on:click={handlePost}>subir</button>
+
 </div>
