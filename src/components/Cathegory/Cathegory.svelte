@@ -3,7 +3,7 @@
 <label >categoria
     <input type="text" bind:value={name}>
 </label>
-<button on:click={manexadorPost}>click</button>
+<button on:click={manexadorPostC}>click</button>
 <button on:click={handleClick2}>get</button>
 
 <ol>
@@ -20,7 +20,7 @@
     }
    
     
- function manexadorPost(){
+ function manexadorPostC(){
    fetch("http://localhost:8000/cathegory/",{
         method: "POST",
         headers: {"Content-Type":"application/json"},
