@@ -1,4 +1,4 @@
-<div id={mapId} style="height: 550px;"></div>
+<div id={mapId} style="height: 50px ;"></div>
 
 <script>
     //  import L from 'leaflet';
@@ -37,3 +37,9 @@ para cada marca que lo envie al marker */
     });
 });
 </script>
+
+
+<style>
+ 
+  
+</style>
