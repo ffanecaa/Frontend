@@ -3,31 +3,21 @@
     import { onMount } from 'svelte'
   
     let map;
-    let longuitude
-    let latitude
-    let name
-    let elementos = [
-        {longuitude:longuitude,
-        latitude:latitude,
-    name:name}
-    ];
+    let elementos = [];
   
     function manexadorTrae(){
       fetch("http://localhost:8000/elements/")
         .then(res => res.json())
         .then(response => {
           elementos = response;
-
           // for dentro pq es lo q queremos q realice el manexador coja y disponga
-          for (let i = 0; i < elementos.length; i++) {
-  let elemento = elementos[i];
-  let latitude = elemento.latitude;
-  let longuitude = elemento.longuitude;
-  let name = elemento.name
-  L.marker([latitude, longuitude]).addTo(map).bindPopup(name);
-}
-    })
-        }
+          for (let elemento of elementos) {
+            L.marker(
+              [elemento.latitude, elemento.longuitude]
+            ).bindPopup(elemento.name).addTo(map);
+          }
+        })
+    }
     
   
     

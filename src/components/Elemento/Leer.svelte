@@ -63,15 +63,7 @@ $: elements = {
 <button on:click={manexadorTrae}>traer</button>
 <br>
 
-  <!-- {#each elementos as { 
-     name, description, latitude, longuitude }}
-    <h2> {name} </h2><p>{description}</p><p> {latitude} {longuitude}</p>
-  
-     <Delete elemento={{ name, description, latitude, longuitude}}/> -->
-    
-     <!-- <Mapas latitude={latitude} longuitude={longuitude} name={name} L={L} />
-     <br><br>
-  {/each} --> 
+
 
 <div>
 
