@@ -10,14 +10,16 @@
 <ol>
     {#each cathe as {name}}
     <li>{name}</li>
-    <button on:click={manexadorDeleteC}>delete</button>
+    
     {/each}
 </ol>
 
 <script>
-    let cathegoriaa
+
     let cathe=[]
+
      let name=''
+     
    $: cathegory ={
         name: name,
     }
