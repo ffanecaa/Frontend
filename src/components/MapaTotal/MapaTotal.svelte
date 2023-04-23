@@ -1,12 +1,34 @@
 <script>
     import L from 'leaflet';
     import { MarkerClusterGroup } from 'leaflet.markercluster';
-
-    import { onMount } from 'svelte'
   
+    import { onMount } from 'svelte'
+    import "leaflet/dist/leaflet.css";
     let map;
     let elementos = [];
-    let markers= new MarkerClusterGroup()
+
+    let markers = new MarkerClusterGroup({
+  iconCreateFunction: function(cluster) {
+    const count = cluster.getChildCount();
+    let bgcolor = 'green';
+    if (count > 10) {
+      bgcolor = 'red';
+    } else if (count > 5) {
+      bgcolor = 'orange';
+    }
+    return L.divIcon({
+      html: count, // lo que se visualiza dentro del icono
+      className: 'icon',
+      iconSize: L.point(40, 40),
+      iconAnchor: L.point(20, 20),// tiene q ser la mitad para q ubiq correctamente
+      style: `background-color: ${bgcolor};`
+    });
+  }
+});
+
+  
+
+
     function manexadorTrae(){
       fetch("http://localhost:8000/elements/")
         .then(res => res.json())
@@ -48,5 +70,11 @@
   <button on:click={manexadorTrae}>Cargar localizaciones</button>
   
   <style>
-    
+     .icon {
+    color: rgb(109, 9, 9);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 100%;
+  }
   </style>
