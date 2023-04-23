@@ -11,9 +11,9 @@
   iconCreateFunction: function(cluster) {
     const count = cluster.getChildCount();
     let bgcolor = 'green';
-    if (count > 10) {
+    if (count > 20) {
       bgcolor = 'red';
-    } else if (count > 5) {
+    } else if (count > 10) {
       bgcolor = 'orange';
     }
     return L.divIcon({
@@ -71,10 +71,11 @@
   
   <style>
      .icon {
-    color: rgb(109, 9, 9);
+    color: rgb(215, 211, 211);
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 100%;
+    border-radius: 50%;
+
   }
   </style>
