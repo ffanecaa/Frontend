@@ -1,10 +1,12 @@
 <script>
     import L from 'leaflet';
+    import { MarkerClusterGroup } from 'leaflet.markercluster';
+
     import { onMount } from 'svelte'
   
     let map;
     let elementos = [];
-  
+    let markers= new MarkerClusterGroup()
     function manexadorTrae(){
       fetch("http://localhost:8000/elements/")
         .then(res => res.json())
@@ -12,15 +14,16 @@
           elementos = response;
           // for dentro pq es lo q queremos q realice el manexador coja y disponga
           for (let elemento of elementos) {
-            L.marker(
+          let marker =  L.marker(
               [elemento.latitude, elemento.longuitude]
-            ).bindPopup(elemento.name).addTo(map);
-          }
-        })
-    }
+            ).bindPopup(elemento.name)
+            markers.addLayer(marker)
+          } map.addLayer(markers)
+    })
+        }
     
   
-    
+
   
     onMount(() => {
       map = L.map("mymap").setView([42.812000, -7.90005], 8);
@@ -44,3 +47,6 @@
   <!-- convendria fuera funcion load dispare cargue pagina mirar evento -->
   <button on:click={manexadorTrae}>Cargar localizaciones</button>
   
+  <style>
+    
+  </style>

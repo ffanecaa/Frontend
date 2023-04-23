@@ -14,6 +14,7 @@
     "vite": "^4.1.0"
   },
   "dependencies": {
+    "leaflet.markercluster": "^1.5.3",
     "svelte-map-leaflet": "^0.5.0"
   }
 }
