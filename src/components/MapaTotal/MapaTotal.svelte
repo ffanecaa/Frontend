@@ -1,10 +1,18 @@
 <script>
     import L from 'leaflet';
     import { onMount } from 'svelte'
-  
+    import { MarkerClusterGroup } from 'leaflet.markercluster';
     let map;
     let elementos = [];
-  
+
+    let markers = new MarkerClusterGroup(
+     
+        )
+
+//     {iconCreateFunction: function(cluster) {
+// let childCount = cluster.getChildCount();
+//     return L.divIcon({className: 'mydivicon', html: '<div><span>' + childCount + '</span></div>'});
+// }
     function manexadorTrae(){
       fetch("http://localhost:8000/elements/")
         .then(res => res.json())
@@ -12,10 +20,11 @@
           elementos = response;
           // for dentro pq es lo q queremos q realice el manexador coja y disponga
           for (let elemento of elementos) {
-            L.marker(
+            let marker =  L.marker(
               [elemento.latitude, elemento.longuitude]
-            ).bindPopup(elemento.name).addTo(map);
-          }
+            ).bindPopup(elemento.name)
+            markers.addLayer(marker)
+          } map.addLayer(markers)
         })
     }
     
@@ -42,5 +51,13 @@
   
   <div id="mymap" style="height: 600px;"></div>
   <!-- convendria fuera funcion load dispare cargue pagina mirar evento -->
-  <button on:click={manexadorTrae}>Cargar localizaciones</button>
+  <button on:click|once={manexadorTrae}>Cargar localizaciones</button>
   
+
+<style>
+    .mydivicon{
+     color:whitesmoke;
+
+    }
+
+ </style>
