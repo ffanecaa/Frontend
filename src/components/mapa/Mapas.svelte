@@ -1,4 +1,4 @@
-<div id={mapId} style="height: 50px ;"></div>
+<div id={mapId} style="height: 500px ;"></div>
 
 <script>
     //  import L from 'leaflet';

@@ -7,10 +7,11 @@ import Iconostraer from "./components/Iconos/Iconostraer.svelte";
 import Cathegory from "./components/Cathegory/Cathegory.svelte"
    
    import MapaTotal from "./components/MapaTotal/MapaTotal.svelte"
+  import IconCathe from "./components/Iconos/icon-Cathe.svelte";
 
 </script>
 
-
+<IconCathe/>
 <Registro/>
 <Leer/>
 <Iconos/>
