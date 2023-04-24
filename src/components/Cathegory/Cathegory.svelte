@@ -6,22 +6,24 @@
 <button on:click={manexadorPostC}>click</button>
 <button on:click={manexadorGetC}>get</button>
 
+
 <h2>categorias</h2>
 <ol>
-    {#each cathe as {name}}
-    <li>{name}</li>
-    
+    {#each cathe as cathegory}
+    <li>{cathegory.name}</li>
+  <DeleteCathegory cathegory={cathegory}/>
     {/each}
 </ol>
 
 <script>
-
+import DeleteCathegory from "./DeleteCathegory.svelte";
     let cathe=[]
 
      let name=''
-     
+     let id
    $: cathegory ={
         name: name,
+        id:id
     }
    
     
@@ -43,14 +45,7 @@ function manexadorGetC(){
     
 }
 
-function manexadorDeleteC(){
-    fetch("http://localhost:8000/cathegory/",{
-     method: "DELETE",
-     headers: { "Content-Type":"application/json"},
-    body: JSON.stringify({id: cathegoriaa.id})
 
-    })
-}
 
 
 </script>
