@@ -1,7 +1,7 @@
 <script>
 
     let icoCat = []
-    
+   
     
     
     function manexadorget(){
@@ -9,6 +9,7 @@
         .then(res => res.json())
           .then(response => {
             icoCat = response;})
+            console.log(icoCat)
     }
     
     

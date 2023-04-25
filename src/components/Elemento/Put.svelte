@@ -30,9 +30,9 @@
     <input type="number" bind:value={element.latitude} />
   </label><br />
   <label
-    >longuitude
+    >longitude
 
-    <input type="number" bind:value={element.longuitude} />
+    <input type="number" bind:value={element.longitude} />
   </label>
   <button on:click={handleClick}>📝</button>
 {/if}

@@ -2,14 +2,14 @@
  
   let name=''
   let description=''
-  let longuitude=0
+  let longitude=0
   let latitude=0
   let elementos = [];
 $: elements = {
     name: name,
     description: description,
     latitude: latitude,
-    longuitude: longuitude,
+    longitude: longitude,
   };
 
   function manexadorTrae(){
@@ -26,8 +26,8 @@ $: elements = {
 <button on:click={manexadorTrae}>traer</button>
 
 <ul>
-  {#each elementos as {  name, description, latitude, longuitude }}
-    <li> {name} {description} {latitude} {longuitude}</li>
+  {#each elementos as {  name, description, latitude, longitude }}
+    <li> {name} {description} {latitude} {longitude}</li>
   {/each}
 </ul> -->
 
@@ -40,13 +40,13 @@ $: elements = {
    let elementos = [];
    let name=''
   let description=''
-  let longuitude=0
+  let longitude=0
   let latitude=0
 //    $: elements = {
 //  name,
 //  description,
 //  latitude,
-//  longuitude,
+//  longitude,
 
 // };
 
@@ -70,10 +70,10 @@ $: elements = {
   {#each elementos as elemento}
   <h2>{elemento.name}:</h2>
     <p>{elemento.description}</p>
-    <p class="coordinates">{elemento.latitude} {elemento.longuitude}</p>
+    <p class="coordinates">{elemento.latitude} {elemento.longitude}</p>
     <Delete elemento={elemento} />
     <Put bind:element={elemento}/>
-    <Mapas latitude={elemento.latitude} longuitude={elemento.longuitude} name={elemento.name} L={L} />
+    <Mapas latitude={elemento.latitude} longitude={elemento.longitude} name={elemento.name} L={L} />
     <br><br><br><br>
   {/each}
 

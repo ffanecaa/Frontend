@@ -1,13 +1,13 @@
 <script>
     import L from 'leaflet';
     import { onMount } from 'svelte'
+    import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.css"
+    import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css"
     import { MarkerClusterGroup } from 'leaflet.markercluster';
     let map;
     let elementos = [];
 
-    let markers = new MarkerClusterGroup(
-     
-        )
+    let markers = new MarkerClusterGroup()
 
 //     {iconCreateFunction: function(cluster) {
 // let childCount = cluster.getChildCount();
@@ -21,7 +21,7 @@
           // for dentro pq es lo q queremos q realice el manexador coja y disponga
           for (let elemento of elementos) {
             let marker =  L.marker(
-              [elemento.latitude, elemento.longuitude]
+              [elemento.latitude, elemento.longitude]
             ).bindPopup(elemento.name)
             markers.addLayer(marker)
           } map.addLayer(markers)

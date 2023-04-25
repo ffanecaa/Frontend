@@ -1,7 +1,7 @@
 <script>
   let name=''
   let description=''
-  let longuitude=0
+  let longitude=0
   let latitude=0
 
 $: elements = {
@@ -9,7 +9,7 @@ $: elements = {
     name: name,
     description: description,
     latitude: latitude,
-    longuitude: longuitude,
+    longitude: longitude,
    
   };
 
@@ -40,9 +40,9 @@ $: elements = {
     <input type="number" bind:value={latitude} />
   </label><br />
   <label
-    >longuitude
+    >longitude
 
-    <input type="number" bind:value={longuitude} />
+    <input type="number" bind:value={longitude} />
   </label>
   <button on:click={handlePost}>subir</button>
 

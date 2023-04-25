@@ -5,7 +5,7 @@
      import {onMount} from 'svelte'
   let map;
  export let latitude= 0
-export let longuitude=0
+export let longitude=0
 export let name='catedral'
 export let L
 const mapId = `${name}`; // neceito que cada mapa tenga un nombre sino no se genera
@@ -14,7 +14,7 @@ const mapId = `${name}`; // neceito que cada mapa tenga un nombre sino no se gen
 
 $: markers = [
    {
-    position: [ latitude,longuitude],
+    position: [ latitude,longitude],
     name: name
    },
   
@@ -23,7 +23,7 @@ $: markers = [
 
 
   onMount(() => {
-    map = L.map(mapId).setView([ latitude, longuitude], 18);
+    map = L.map(mapId).setView([ latitude, longitude], 18);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     }).addTo(map);
