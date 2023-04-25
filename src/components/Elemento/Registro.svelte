@@ -3,14 +3,14 @@
   let description=''
   let longitude=0
   let latitude=0
-
+  let icon=""
 $: elements = {
 
     name: name,
     description: description,
     latitude: latitude,
     longitude: longitude,
-   
+    icon:icon,
   };
 
   function handlePost(){
@@ -43,6 +43,11 @@ $: elements = {
     >longitude
 
     <input type="number" bind:value={longitude} />
+  </label>
+  <label
+    >icon
+
+    <input type="number" bind:value={icon} />
   </label>
   <button on:click={handlePost}>subir</button>
 
