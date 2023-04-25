@@ -44,6 +44,7 @@ $: elements = {
 
     <input type="number" bind:value={longitude} />
   </label>
+  <br>
   <label
     >icon
 

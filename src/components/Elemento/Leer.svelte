@@ -68,7 +68,7 @@ $: elements = {
 <div>
 
   {#each elementos as elemento}
-  <h2>{elemento.name}:</h2>
+    <h2>{elemento.name}:</h2>
     <p>{elemento.description}</p>
     <p class="coordinates">{elemento.latitude} {elemento.longitude}</p>
     <Delete elemento={elemento} />
