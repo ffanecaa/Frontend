@@ -20,11 +20,15 @@
         .then(res => res.json())
         .then(response => {
           elementos = response;
-        })
+        })  .catch(error => {
+      console.log('Error en la solicitud:', error);
+    });
     }
   </script>
   
   <h2>elementos</h2>
+  <label >nombre
+  <input type="text" bind:value={name}></label>
   <button on:click={manexadorTrae}>traer</button>
   <br>
   
