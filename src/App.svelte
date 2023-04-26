@@ -8,11 +8,11 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
    
    import MapaTotal from "./components/MapaTotal/MapaTotal.svelte"
   import IconCathe from "./components/Iconos/icon-Cathe.svelte";
-  import Especial from "./components/Elemento/Especial.svelte";
+
 
 </script>
 
-<!-- <IconCathe/>
+<IconCathe/>
 <Registro/>
 <Leer/>
 <Iconos/>
@@ -20,9 +20,9 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 <Iconostraer/>
 <Cathegory/>
 
-<MapaTotal/> -->
+<MapaTotal/>
 
-<Especial/>
+
 
 
 
