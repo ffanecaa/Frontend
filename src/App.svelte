@@ -8,10 +8,12 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
    
    import MapaTotal from "./components/MapaTotal/MapaTotal.svelte"
   import IconCathe from "./components/Iconos/icon-Cathe.svelte";
+  import Pruebass from "./components/Elemento/Pruebass.svelte";
+  import Paginacion from "./components/Paginacion/Paginacion.svelte";
 
 </script>
 
-<IconCathe/>
+<!-- <IconCathe/>
 <Registro/>
 <Leer/>
 <Iconos/>
@@ -19,10 +21,10 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 <Iconostraer/>
 <Cathegory/>
 
-<MapaTotal/>
+<MapaTotal/> -->
 
 
-
+<Paginacion/>
 
 
 
