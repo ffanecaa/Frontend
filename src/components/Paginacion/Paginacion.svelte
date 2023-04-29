@@ -41,7 +41,7 @@ async function traerPaxAnterior(){
   
 }
 
-//{"page":2,"limit":1,"nextPAge":"/pax/?page=3limit=1","previousPage":"/pax/?page=1limit=1"}}
+
 
 </script>
 pagina
