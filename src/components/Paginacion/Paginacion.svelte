@@ -1,38 +1,63 @@
 <script>
 
-    let elementos =[]
-    let pagination
-  let elements
-    let page  =3
-    let limit=5
-    let nextPage
-    let previousPage
-
-   $: pagination={
-        page:page,
-        limit:limit,
-        nextPage:nextPage,
-        previousPage:previousPage,
+    import Mapas from "../mapa/Mapas.svelte";  import L from 'leaflet';
+$: info = { elements: [], pagination: {} }
+    let page  =2
+    let limit=1
+    // let nextPage = info.pagination.nextPAge
+    // let previousPage=info.pagination.previuosPage
+//-------------------------traer  datos --------------------------------
+ async function traerDatos(){
+   const resposta = fetch(`http://localhost:8000/pax/?page=${page}&limit=${limit}`)
+        const datos = (await resposta).json()
+        return datos
     }
-
-function manexador(){
-    fetch(`http://localhost:8000/pax/?page=${page}&limit=${limit}`)
-        .then(res => res.json())
-        .then(data => {elementos = data}) 
+      function traerDatosm(){
+    traerDatos()
+    .then (datosrecibidos=> info = datosrecibidos)
+  
+}
+// traer datos -------------------------------NEXT PAGE----------------------------------
+async function traerpaxPosteriro(){
+   const resposta = fetch(`http://localhost:8000${info.pagination.nextPAge}`)
+        const datos = (await resposta).json()
+        return datos
     }
+    function mas(){
+traerpaxPosteriro()
+    .then (datosrecibidos=> info = datosrecibidos)
+  
+}
+//------------------PREVIOUS PAGE --------ENVIO RUTA-------------------------------------------
+async function traerPaxAnterior(){
+   const resposta = fetch(`http://localhost:8000${info.pagination.previousPage}`)
+        const datos = (await resposta).json()
+        return datos
+    }
+    // ---------------MANEXADOR USE FUNCION DE BUSQUEDA Y TRAIGO INFO --------------------
+    function menos(){
+       traerPaxAnterior()
+    .then (datosrecibidos=> info = datosrecibidos)
+  
+}
 
-// for  (let ele of elementos){
-//   ele.push(pu)
-// }
+//{"page":2,"limit":1,"nextPAge":"/pax/?page=3limit=1","previousPage":"/pax/?page=1limit=1"}}
 
 </script>
 pagina
 <input type="text"bind:value={page}>
 elementos
 <input type="text"bind:value={limit}>
-<button on:click={manexador}>boton</button>
-<button >mas</button>
-<button >menos</button>
+<button on:click={traerDatosm}>boton</button>
+<button on:click={mas} >mas</button>
+<button on:click={menos} >menos</button>
 
-<p>{pu}</p>
 
+
+
+{#each info.elements as elemento }
+<p>{elemento.name} {elemento.description}</p>
+<Mapas latitude={elemento.latitude} longitude={elemento.longitude} name={elemento.name} L={L} />
+{/each}
+
+<p>{info.pagination.nextPAge}</p>
