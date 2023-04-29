@@ -3,7 +3,7 @@
     import Mapas from "../mapa/Mapas.svelte";  import L from 'leaflet';
 $: info = { elements: [], pagination: {} }
     let page  =2
-    let limit=1
+    let limit=5
     // let nextPage = info.pagination.nextPAge
     // let previousPage=info.pagination.previuosPage
 //-------------------------traer  datos --------------------------------
