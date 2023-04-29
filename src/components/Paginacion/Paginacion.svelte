@@ -46,8 +46,8 @@ async function traerPaxAnterior(){
 </script>
 pagina
 <input type="text"bind:value={page}>
-elementos
-<input type="text"bind:value={limit}>
+<!-- elementos -->
+<!-- <input type="text"bind:value={limit}> -->
 <button on:click={traerDatosm}>boton</button>
 <button on:click={mas} >mas</button>
 <button on:click={menos} >menos</button>
@@ -61,3 +61,4 @@ elementos
 {/each}
 
 <p>{info.pagination.nextPAge}</p>
+<p>{info.pagination.previousPage}</p>
