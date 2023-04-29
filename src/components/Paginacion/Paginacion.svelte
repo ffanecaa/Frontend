@@ -1,7 +1,19 @@
 <script>
+  import { set_custom_element_data_map } from "svelte/internal";
 
+  let name
+  let description
+  let longitude
+  let latitude
+  $: elemento ={
+    name:name,
+    description :description,
+    latitude:latitude,
+    longitude:longitude
+  }
     import Mapas from "../mapa/Mapas.svelte";  import L from 'leaflet';
-$: info = { elements: [], pagination: {} }
+    $: info = { elements: [], pagination: {} }
+   
     let page  =2
     let limit=5
     // let nextPage = info.pagination.nextPAge
@@ -53,12 +65,14 @@ pagina
 <button on:click={menos} >menos</button>
 
 
-
+<div>
 
 {#each info.elements as elemento }
-<p>{elemento.name} {elemento.description}</p>
-<Mapas latitude={elemento.latitude} longitude={elemento.longitude} name={elemento.name} L={L} />
-{/each}
 
+<p>{elemento.name} {elemento.description} {elemento.latitude} {elemento.longitude}</p>
+<Mapas  name={elemento.name} latitude={elemento.latitude} longitude={elemento.longitude} L={L} />
+{elemento.latitude}
+{/each}
+</div>
 <p>{info.pagination.nextPAge}</p>
 <p>{info.pagination.previousPage}</p>
