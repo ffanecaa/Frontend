@@ -1,5 +1,5 @@
 <script>
-  import { set_custom_element_data_map } from "svelte/internal";
+
 
   let name
   let description
@@ -27,7 +27,7 @@
       function traerDatosm(){
     traerDatos()
     .then (datosrecibidos=> info = datosrecibidos)
-  
+  console.log(info)
 }
 // traer datos -------------------------------NEXT PAGE----------------------------------
 async function traerpaxPosterior(){
