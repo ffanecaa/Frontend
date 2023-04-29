@@ -18,13 +18,13 @@ $: info = { elements: [], pagination: {} }
   
 }
 // traer datos -------------------------------NEXT PAGE----------------------------------
-async function traerpaxPosteriro(){
+async function traerpaxPosterior(){
    const resposta = fetch(`http://localhost:8000${info.pagination.nextPAge}`)
         const datos = (await resposta).json()
         return datos
     }
     function mas(){
-traerpaxPosteriro()
+traerpaxPosterior()
     .then (datosrecibidos=> info = datosrecibidos)
   
 }
