@@ -70,9 +70,7 @@ pagina
 {#each info.elements as elemento }
 
 <p>{elemento.name} {elemento.description} {elemento.latitude} {elemento.longitude}</p>
-<Mapas  name={elemento.name} latitude={elemento.latitude} longitude={elemento.longitude} L={L} />
-{elemento.latitude}
+<Mapas  bind:name={elemento.name} bind:latitude={elemento.latitude} bind:longitude={elemento.longitude} L={L} />
+
 {/each}
 </div>
-<p>{info.pagination.nextPAge}</p>
-<p>{info.pagination.previousPage}</p>
