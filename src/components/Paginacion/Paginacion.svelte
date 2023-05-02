@@ -32,7 +32,7 @@
 }
 // traer datos -------------------------------NEXT PAGE----------------------------------
 async function traerpaxPosterior(){
-   const resposta = fetch(`http://localhost:8000${info.pagination.nextPage}`)
+   const resposta = fetch(`http://localhost:8000${info.pagination.nextPAge}`)
         const datos = (await resposta).json()
         return datos
     }
