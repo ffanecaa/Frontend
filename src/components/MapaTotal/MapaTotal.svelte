@@ -4,6 +4,7 @@
     import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.css"
     import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css"
     import { MarkerClusterGroup } from 'leaflet.markercluster';
+    import Mapas from '../mapa/Mapas.svelte';
     let map;
     let elementos = [];
 
@@ -20,9 +21,14 @@
           elementos = response;
           // for dentro pq es lo q queremos q realice el manexador coja y disponga
           for (let elemento of elementos) {
+            const contenido=`
+          <h3>${elemento.name}</h3>
+          <p>${elemento.description}</p>
+          <a href="http://www.google.com"> link</a>
+        `;
             let marker =  L.marker(
               [elemento.latitude, elemento.longitude]
-            ).bindPopup(elemento.name)
+            ).bindPopup(contenido)
             markers.addLayer(marker)
           } map.addLayer(markers)
         })
