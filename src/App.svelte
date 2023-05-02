@@ -19,10 +19,10 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 <Iconos/>
 <br>
 <Iconostraer/>
-<Cathegory/>
+
 
 <MapaTotal/> -->
-
+<!-- <Cathegory/> -->
 
 <Paginacion/>
 

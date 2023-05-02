@@ -11,7 +11,8 @@
     latitude:latitude,
     longitude:longitude
   }
-    import Mapas from "../mapa/Mapas.svelte";  import L from 'leaflet';
+    import Mapas from '../Mapa/Mapas.svelte';  
+    import L from 'leaflet';
     $: info = { elements: [], pagination: {} }
    
     let page  =2
@@ -31,7 +32,7 @@
 }
 // traer datos -------------------------------NEXT PAGE----------------------------------
 async function traerpaxPosterior(){
-   const resposta = fetch(`http://localhost:8000${info.pagination.nextPAge}`)
+   const resposta = fetch(`http://localhost:8000${info.pagination.nextPage}`)
         const datos = (await resposta).json()
         return datos
     }
@@ -53,9 +54,8 @@ async function traerPaxAnterior(){
   
 }
 
-
-
 </script>
+
 pagina
 <input type="text"bind:value={page}>
 <!-- elementos -->
@@ -70,7 +70,6 @@ pagina
 {#each info.elements as elemento }
 
 <p>{elemento.name} {elemento.description} {elemento.latitude} {elemento.longitude}</p>
-<Mapas  bind:name={elemento.name} bind:latitude={elemento.latitude} bind:longitude={elemento.longitude} L={L} />
-
+<Mapas bind:name={elemento.name} bind:latitude={elemento.latitude} bind:longitude= {elemento.longitude} L={L}/>
 {/each}
 </div>
