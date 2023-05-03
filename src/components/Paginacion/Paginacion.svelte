@@ -11,47 +11,51 @@
     latitude:latitude,
     longitude:longitude
   }
-    import Mapas from '../Mapa/Mapas.svelte';  
+    import Mapas from '../mapa/Mapas.svelte';  
     import L from 'leaflet';
-    $: info = { elements: [], pagination: {} }
+    let info = { elements: [], pagination: {} }
    
-    let page  =2
+    let page  =1
     let limit=5
     // let nextPage = info.pagination.nextPAge
     // let previousPage=info.pagination.previuosPage
-//-------------------------traer  datos --------------------------------
+
+
+//-------------------------TRAER DATOS --------------------------------
  async function traerDatos(){
-   const resposta = fetch(`http://localhost:8000/pax/?page=${page}&limit=${limit}`)
-        const datos = (await resposta).json()
+   const resposta = await fetch(`http://localhost:8000/pax/?page=${page}&limit=${limit}`)
+        const datos = await resposta.json()
         return datos
     }
       function traerDatosm(){
     traerDatos()
-    .then (datosrecibidos=> info = datosrecibidos)
-  console.log(info)
-}
-// traer datos -------------------------------NEXT PAGE----------------------------------
-async function traerpaxPosterior(){
-   const resposta = fetch(`http://localhost:8000${info.pagination.nextPAge}`)
-        const datos = (await resposta).json()
-        return datos
-    }
-    function mas(){
-traerpaxPosterior()
-    .then (datosrecibidos=> info = datosrecibidos)
+    .then (datosrecibidos=> { info = datosrecibidos;  console.log(info)})
   
 }
-//------------------PREVIOUS PAGE --------ENVIO RUTA-------------------------------------------
-async function traerPaxAnterior(){
-   const resposta = fetch(`http://localhost:8000${info.pagination.previousPage}`)
+// traer datos -------------------------------NEXT PAGE----------------------------------
+  async function traerpaxPosterior(){
+    const resposta = fetch(`http://localhost:8000${info.pagination.nextPAge}`)
+        const datos = (await resposta).json()
+        return datos
+       ;
+  }
+
+    function mas(){
+       traerpaxPosterior()
+       .then (datosrecibidos => info = datosrecibidos)
+      console.log(info) 
+    }
+//------------------PREVIOUS PAGE --------ENVIO RUTA--------ºº-----------------------------------
+   async function traerPaxAnterior(){
+      const resposta = fetch(`http://localhost:8000${info.pagination.previousPage}`)
         const datos = (await resposta).json()
         return datos
     }
     // ---------------MANEXADOR USE FUNCION DE BUSQUEDA Y TRAIGO INFO --------------------
     function menos(){
        traerPaxAnterior()
-    .then (datosrecibidos=> info = datosrecibidos)
-  
+         .then (datosrecibidos=> info = datosrecibidos)
+        console.log(info) 
 }
 
 </script>
@@ -67,9 +71,9 @@ pagina
 
 <div>
 
-{#each info.elements as elemento }
+{#each info.elements as elemento (elemento.id)}
 
 <p>{elemento.name} {elemento.description} {elemento.latitude} {elemento.longitude}</p>
-<Mapas bind:name={elemento.name} bind:latitude={elemento.latitude} bind:longitude= {elemento.longitude} L={L}/>
+<Mapas name={elemento.name} latitude={elemento.latitude} longitude= {elemento.longitude} L={L}/>
 {/each}
 </div>

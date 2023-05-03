@@ -18,12 +18,13 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 <Leer/>
 <Iconos/>
 <br>
-<Iconostraer/>
+<Iconostraer/>-->
 
 
 
- <Cathegory/> -->
+ <Cathegory/> 
 <MapaTotal/> 
+<br>
 <Paginacion/>
 
 
