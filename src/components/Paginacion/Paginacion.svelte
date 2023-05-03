@@ -66,15 +66,13 @@
   <!-- elementos -->
   <!-- <input type="text"bind:value={limit}> -->
   <button on:click={traerDatosm}>boton</button>
-  <button on:click={mas} >mas</button>
-  <button on:click={menos} >menos</button>
+ 
   
   
   <div>
   
   {#each info.elements as elemento (elemento.id)}
-  
-  <p>{elemento.name} {elemento.description} {elemento.latitude} {elemento.longitude}</p>
+   <p>{elemento.name} {elemento.description} {elemento.latitude} {elemento.longitude}</p>
   <Mapas name={elemento.name} latitude={elemento.latitude} longitude= {elemento.longitude} L={L}/>
   {/each}
   </div>
@@ -84,3 +82,15 @@
     <button on:click={mas} >▶</button>
   </div>
 </div>
+
+
+<style>
+  .paginacion{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: skyblue;
+  }
+
+
+</style>
