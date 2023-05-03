@@ -11,10 +11,11 @@
     latitude:latitude,
     longitude:longitude
   }
+  import MapaElemento from '../mapa/Mapaelemento.svelte';
     import Mapas from '../mapa/Mapas.svelte';  
     import L from 'leaflet';
     let info = { elements: [], pagination: {} }
-   
+
     let page  =1
     let limit=5
     // let nextPage = info.pagination.nextPAge
@@ -62,34 +63,47 @@
 
 <div class="container_pagination">
  
-  <input type="text"bind:value={page}>
-  <!-- elementos -->
-  <!-- <input type="text"bind:value={limit}> -->
-  <button on:click={traerDatosm}>boton</button>
+  
  
   
   
-  <div>
-  
+  <div class="container_title">
+
   {#each info.elements as elemento (elemento.id)}
-   <p>{elemento.name} {elemento.description} {elemento.latitude} {elemento.longitude}</p>
+<div class="ficha">
+  <h2>{elemento.name}</h2>
+   
+   <p> {elemento.description} </p>
+   <p class ="coordenadas">{elemento.latitude} {elemento.longitude}</p>
+
   <Mapas name={elemento.name} latitude={elemento.latitude} longitude= {elemento.longitude} L={L}/>
+</div>
   {/each}
-  </div>
+</div>
   <div class="paginacion">
     <button on:click={menos} >◀</button>
     <p>{info.pagination.page}</p>
     <button on:click={mas} >▶</button>
+    <input type="text"bind:value={page}>
+  <!-- elementos -->
+  <!-- <input type="text"bind:value={limit}> -->
+  <button on:click={traerDatosm}>boton</button>
   </div>
 </div>
 
 
 <style>
-  .paginacion{
+  .container_pagination{
     display: flex;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
-    background-color: skyblue;
+    background-color: #a6cae5;
+  }
+  .coordenadas{
+ writing-mode: vertical-lr;
+    left:10;
+    top:40%
   }
 
 

@@ -10,6 +10,7 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
   import IconCathe from "./components/Iconos/icon-Cathe.svelte";
   import Pruebass from "./components/Elemento/Pruebass.svelte";
   import Paginacion from "./components/Paginacion/Paginacion.svelte";
+  import Mapaelemento from "./components/mapa/Mapaelemento.svelte";
 
 </script>
 
@@ -22,11 +23,11 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 
 
 
- <Cathegory/> 
+ <!-- <Cathegory/> -->
 <MapaTotal/> 
 <br>
 <Paginacion/>
 
-
+<!-- <Mapaelemento /> -->
 
 

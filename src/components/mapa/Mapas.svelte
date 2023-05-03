@@ -1,4 +1,4 @@
-<div id={mapId} style="height: 500px ;"></div>
+<div class="map" id={mapId} style="height: 500px ;"></div>
 
 <script>
     //  import L from 'leaflet';
@@ -33,13 +33,19 @@ $: markers = [
 /* bucle metodo con funcion dentro 
 para cada marca que lo envie al marker */
   markers.forEach(marker => {
-      L.marker(marker.position).addTo(map).bindPopup(marker.name);
+      L.marker(marker.position).addTo(map).bindPopup(marker.name,);
     });
 });
 </script>
 
 
 <style>
- 
+ .map{
+  width: 600px;
+  height: 300px;
+  align-items: center;
+  margin: 3rem;
+  box-shadow: 3px 3px 3px #8A7EA7;
+ }
   
 </style>
