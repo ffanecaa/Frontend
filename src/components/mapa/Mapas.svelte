@@ -22,8 +22,8 @@ $: markers = [
 
 
 
- // onMount(() => {
-$:    map = L.map(mapId).setView([ latitude, longitude], 18);
+  onMount(() => {
+    map = L.map(mapId).setView([ latitude, longitude], 18);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     }).addTo(map);
@@ -35,7 +35,7 @@ para cada marca que lo envie al marker */
   markers.forEach(marker => {
       L.marker(marker.position).addTo(map).bindPopup(marker.name);
     });
-//});
+});
 </script>
 
 
