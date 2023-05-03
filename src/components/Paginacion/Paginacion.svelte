@@ -60,20 +60,27 @@
 
 </script>
 
-pagina
-<input type="text"bind:value={page}>
-<!-- elementos -->
-<!-- <input type="text"bind:value={limit}> -->
-<button on:click={traerDatosm}>boton</button>
-<button on:click={mas} >mas</button>
-<button on:click={menos} >menos</button>
-
-
-<div>
-
-{#each info.elements as elemento (elemento.id)}
-
-<p>{elemento.name} {elemento.description} {elemento.latitude} {elemento.longitude}</p>
-<Mapas name={elemento.name} latitude={elemento.latitude} longitude= {elemento.longitude} L={L}/>
-{/each}
+<div class="container_pagination">
+ 
+  <input type="text"bind:value={page}>
+  <!-- elementos -->
+  <!-- <input type="text"bind:value={limit}> -->
+  <button on:click={traerDatosm}>boton</button>
+  <button on:click={mas} >mas</button>
+  <button on:click={menos} >menos</button>
+  
+  
+  <div>
+  
+  {#each info.elements as elemento (elemento.id)}
+  
+  <p>{elemento.name} {elemento.description} {elemento.latitude} {elemento.longitude}</p>
+  <Mapas name={elemento.name} latitude={elemento.latitude} longitude= {elemento.longitude} L={L}/>
+  {/each}
+  </div>
+  <div class="paginacion">
+    <button on:click={menos} >◀</button>
+    <p>{info.pagination.page}</p>
+    <button on:click={mas} >▶</button>
+  </div>
 </div>
