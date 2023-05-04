@@ -29,7 +29,7 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 <br>
 <Paginacion/> -->
 
- <!-- <Mapaelemento />  -->
- <MapaElementoNombre/>
+ <Mapaelemento /> 
+ <!-- <MapaElementoNombre/> -->
 
 
