@@ -36,10 +36,19 @@
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     }).addTo(map);
-    L.marker([elemento.latitude, elemento.longitude]).addTo(map);
+    
   })
   afterUpdate(() => {
-    map.setView([elemento.latitude, elemento.longitude], 8);
+    // Eliminar el marcador anterior si existe
+    //recorre el each si exites marcadores
+    map.eachLayer((layer) => {
+      //si existen los borra
+      if (layer instanceof L.Marker) {
+        map.removeLayer(layer);
+      }
+    });
+
+    // Agregar un nuevo marcador en la nueva ubicación
     L.marker([elemento.latitude, elemento.longitude]).addTo(map);
   });
  
