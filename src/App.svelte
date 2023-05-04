@@ -11,6 +11,7 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
   import Pruebass from "./components/Elemento/Pruebass.svelte";
   import Paginacion from "./components/Paginacion/Paginacion.svelte";
   import Mapaelemento from "./components/mapa/Mapaelemento.svelte";
+  import MapaElementoNombre from "./components/mapa/MapaElementoNombre.svelte";
 
 </script>
 
@@ -28,6 +29,7 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 <br>
 <Paginacion/> -->
 
- <Mapaelemento /> 
+ <!-- <Mapaelemento />  -->
+ <MapaElementoNombre/>
 
 
