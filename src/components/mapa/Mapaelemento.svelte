@@ -3,7 +3,7 @@
   import { onMount ,afterUpdate} from "svelte";
   let map;
   let id = 1;
-  let name = "lugares";
+  let name = "centro geografico";
 
   let latitude = 42.812
   let longitude = -7.90005;
@@ -49,7 +49,7 @@
     });
 
     // Agregar un nuevo marcador en la nueva ubicación
-    L.marker([elemento.latitude, elemento.longitude]).addTo(map);
+    L.marker([elemento.latitude, elemento.longitude]).addTo(map).bindPopup(elemento.name,);
   });
  
 </script>
