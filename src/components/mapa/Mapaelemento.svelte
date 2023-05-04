@@ -17,7 +17,7 @@ $: elemento={
   
 }
     async function traerlink(){
-    const resposta = await fetch(`http://localhost:8000/link/`)
+    const resposta = await fetch(`http://localhost:8000/link/:${id}`)
      const datos = await resposta.json()
         return datos
     }

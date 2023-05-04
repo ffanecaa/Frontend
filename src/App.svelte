@@ -24,10 +24,10 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 
 
  <!-- <Cathegory/> -->
-<MapaTotal/> 
+<!-- <MapaTotal/> 
 <br>
-<Paginacion/>
+<Paginacion/> -->
 
-<!-- <Mapaelemento /> -->
+ <Mapaelemento /> 
 
 
