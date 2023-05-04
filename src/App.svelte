@@ -12,6 +12,7 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
   import Paginacion from "./components/Paginacion/Paginacion.svelte";
   import Mapaelemento from "./components/mapa/Mapaelemento.svelte";
   import MapaElementoNombre from "./components/mapa/MapaElementoNombre.svelte";
+  import Nosaldra from "./components/mapa/Nosaldra.svelte";
 
 </script>
 
@@ -24,6 +25,7 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 
 
 
+
  <!-- <Cathegory/> -->
 <!-- <MapaTotal/> 
 <br>
@@ -33,3 +35,4 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
  <!-- <MapaElementoNombre/> -->
 
 
+<Nosaldra/>
