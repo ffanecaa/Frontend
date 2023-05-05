@@ -19,7 +19,7 @@
   // $:marca =[elemento.latitude,elemento.longitude]
 
   async function traerlink() {
-    const resposta = await fetch(`http://localhost:8000/link/${id}`);
+    const resposta = await fetch(`http://localhost:8000/link/:${id}`);
     const datos = await resposta.json();
     return datos;
   }

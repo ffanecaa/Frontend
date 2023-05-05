@@ -35,4 +35,4 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
  <!-- <MapaElementoNombre/> -->
 
 
-<Nosaldra/>
+<!-- <Nosaldra/> -->
