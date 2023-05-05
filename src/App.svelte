@@ -32,7 +32,7 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 <Paginacion/> -->
 
  <Mapaelemento /> 
- <!-- <MapaElementoNombre/> -->
+ <MapaElementoNombre/>
 
 
 <!-- <Nosaldra/> -->

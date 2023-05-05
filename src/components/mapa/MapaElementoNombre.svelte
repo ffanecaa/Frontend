@@ -3,7 +3,7 @@
     import { onMount ,afterUpdate} from "svelte";
     let map;
     let id = 1;
-    let name = "lugares";
+    let name = "";
   
     let latitude = 42.812
     let longitude = -7.90005;
@@ -19,7 +19,7 @@
     // $:marca =[elemento.latitude,elemento.longitude]
   
     async function traerlink() {
-      const resposta = await fetch(`http://localhost:8000/links/${name.toString()}`);
+      const resposta = await fetch(`http://localhost:8000/links/:${name}`);
       const datos = await resposta.json();
       return datos;
     }
@@ -49,7 +49,7 @@
       });
   
       // Agregar un nuevo marcador en la nueva ubicación
-      L.marker([elemento.latitude, elemento.longitude]).addTo(map);
+      L.marker([elemento.latitude, elemento.longitude]).bindPopup(elemento.name).addTo(map);
     });
    
   </script>
