@@ -3,8 +3,8 @@
         <div class='container'>
             <div class='middle'>
                 <div class='bg-image lake-district'></div>
-                <a href='https://www.patrimoniocultural.com'  target="_blank" class='overlay'>
-                    <p>mapas de galicia</p>
+                <a href="/mapa"  target="_blank" class='overlay'>
+                    <p>Catálogo Elementos Galicia</p>
                   
                    
                 </a>

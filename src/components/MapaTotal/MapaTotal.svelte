@@ -21,7 +21,7 @@
             const contenido=`
           <h3>${elemento.name}</h3>
           <p>${elemento.description}</p>
-          <a href=""> link</a>
+          <a href="/mapa/${elemento.id}"> link</a>
         `;
             let marker =  L.marker(
               [elemento.latitude, elemento.longitude]

@@ -30,11 +30,12 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 <Router >
   <nav>
     <Link to="/">Home</Link>
-    <Link to="/Mapa">Mapa</Link>
+    <Link to="/mapa">Mapa</Link>
   </nav>
   <main>
     <Route path="/" component={Nosaldra} />
-    <Route path="/Mapa" component={MapaTotal} />
+    <Route path="/mapa" component={MapaTotal} />
+    <Route path="/mapa/:id" component={Mapaelemento} />
   </main>
 </Router>
 
