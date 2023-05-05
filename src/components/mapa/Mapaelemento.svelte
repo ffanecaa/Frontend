@@ -2,7 +2,7 @@
   import L from "leaflet";
   import { onMount ,afterUpdate} from "svelte";
   let map;
-  let id = 1;
+  export let id = 1;
   let name = "centro geografico";
 
   let latitude = 42.812

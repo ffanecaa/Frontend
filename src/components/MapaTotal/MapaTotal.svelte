@@ -4,16 +4,13 @@
     import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.css"
     import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css"
     import { MarkerClusterGroup } from 'leaflet.markercluster';
-    import Mapas from '../mapa/Mapas.svelte';
+
     let map;
     let elementos = [];
 
     let markers = new MarkerClusterGroup()
 
-//     {iconCreateFunction: function(cluster) {
-// let childCount = cluster.getChildCount();
-//     return L.divIcon({className: 'mydivicon', html: '<div><span>' + childCount + '</span></div>'});
-// }
+
     function manexadorTrae(){
       fetch("http://localhost:8000/elements/")
         .then(res => res.json())

@@ -53,10 +53,29 @@
     });
    
   </script>
-  
+  <h2>{elemento.name}</h2>
   <button on:click={traerlinkm}>nombre</button>
   <input type="text" bind:value={name} />
   <p>{elemento.name}{elemento.description}</p>
   
   <div id={mapId} style="height: 600px;width:800px" />
-  
+  <style>
+    button {  
+      border-radius: 0.4em;
+      padding: 0.4em 1em;
+      border: none;
+     cursor: grab;
+     background-color: transparent;
+      border-radius: 0.4em;
+      color: royalblue;
+      padding: 0.4em 1em;
+      border: 1px solid royalblue;   
+    }
+      div{
+      border: 19px inset #ADD19E;
+      
+      }
+      h2{
+       text-transform: uppercase; 
+      }
+    </style>
