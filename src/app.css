@@ -31,9 +31,9 @@ body {
   min-height: 100vh;
 
 
-  background-image:linear-gradient(#d03d449b,grey);
+  background-image:linear-gradient(#AAD3DF,#C1DCB6,#AAD3DF,#C1DCB6);
 }
-
+/*#E3C741,#DE8E4D,#E3C741,#DE8E4D*/
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

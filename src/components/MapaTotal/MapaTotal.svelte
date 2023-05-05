@@ -24,7 +24,7 @@
             const contenido=`
           <h3>${elemento.name}</h3>
           <p>${elemento.description}</p>
-          <a href=""> link</a>
+          <a href="www.google.com"> link</a>
         `;
             let marker =  L.marker(
               [elemento.latitude, elemento.longitude]
@@ -47,14 +47,21 @@
     });
   
   </script>
-  <h1>mapa puntos</h1>
-  
-  <div id="mymap" style="height: 600px;"></div>
-  <!-- convendria fuera funcion load dispare cargue pagina mirar evento -->
-  <button on:click|once={manexadorTrae}>Cargar localizaciones</button>
-  
+  <div class="mapaTotal">
+    <h1>mapa puntos</h1>
+    
+    <div id="mymap" style="height: 600px;width:800px"></div>
+    <!-- convendria fuera funcion load dispare cargue pagina mirar evento -->
+    <button on:click|once={manexadorTrae}>Cargar localizaciones</button>
+    
+  </div>
 
 <style>
-   
+   .mapaTotal{
+    margin-top: 40px;
+  }
+   button{
+    margin-top: 20px;
+   }
 
  </style>

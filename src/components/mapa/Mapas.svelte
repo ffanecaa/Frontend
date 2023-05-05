@@ -41,11 +41,12 @@ para cada marca que lo envie al marker */
 
 <style>
  .map{
-  width: 600px;
-  height: 300px;
+  width: 800px;
+
   align-items: center;
   margin: 3rem;
   box-shadow: 3px 3px 3px #8A7EA7;
  }
+ 
   
 </style>

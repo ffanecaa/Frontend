@@ -2,7 +2,7 @@
   import L from "leaflet"
   import { onMount } from "svelte"
   let map
-    let id
+    export let id
 let name
 
 let latitude
