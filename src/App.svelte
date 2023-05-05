@@ -10,9 +10,9 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
   import IconCathe from "./components/Iconos/icon-Cathe.svelte";
   import Pruebass from "./components/Elemento/Pruebass.svelte";
   import Paginacion from "./components/Paginacion/Paginacion.svelte";
-  import Mapaelemento from "./components/mapa/Mapaelemento.svelte";
-  import MapaElementoNombre from "./components/mapa/MapaElementoNombre.svelte";
-  import Nosaldra from "./components/mapa/Nosaldra.svelte";
+  import Mapaelemento from "./components/Mapa/Mapaelemento.svelte";
+  import MapaElementoNombre from "./components/Mapa/MapaElementoNombre.svelte";
+  // import Nosaldra from "./components/mapa/Nosaldra.svelte";
 
 </script>
 

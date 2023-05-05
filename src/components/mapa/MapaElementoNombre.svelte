@@ -3,7 +3,7 @@
     import { onMount ,afterUpdate} from "svelte";
     let map;
     let id = 1;
-    let name = "";
+    let name = "lugares";
   
     let latitude = 42.812
     let longitude = -7.90005;
@@ -19,7 +19,7 @@
     // $:marca =[elemento.latitude,elemento.longitude]
   
     async function traerlink() {
-      const resposta = await fetch(`http://localhost:8000/links/:${name}`);
+      const resposta = await fetch(`http://localhost:8000/links/${name}`);
       const datos = await resposta.json();
       return datos;
     }
@@ -35,7 +35,7 @@
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-      }).addTo(map);
+      }).addTo(map).bindPopup(elemento.name);
       
     })
     afterUpdate(() => {
@@ -49,7 +49,7 @@
       });
   
       // Agregar un nuevo marcador en la nueva ubicación
-      L.marker([elemento.latitude, elemento.longitude]).bindPopup(elemento.name).addTo(map);
+      L.marker([elemento.latitude, elemento.longitude]).addTo(map).bindPopup(elemento.name)
     });
    
   </script>
