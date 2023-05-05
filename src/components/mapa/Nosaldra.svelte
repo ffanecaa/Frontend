@@ -3,9 +3,9 @@
         <div class='container'>
             <div class='middle'>
                 <div class='bg-image lake-district'></div>
-                <a href="/mapa"  target="_blank" class='overlay'>
+                <a href="/mapa" class='overlay'>
                     <p>Catálogo Elementos Galicia</p>
-                  
+                 
                    
                 </a>
             </div>
@@ -34,7 +34,8 @@
           height: 100vh;
           width: 100%;
           display: flex;
-          background-image: linear-gradient(rgba(128, 128, 128, 0.773),hsla(60, 10%, 23%, 0.559));
+          background-image: transparent;
+          
         }
         .image-hover-container .container {
           position: relative;
@@ -82,7 +83,8 @@
         }
         /* FIN EFECTO HOVER*/
         .image-hover-container .container .lake-district {
-          background-image: url(../../../public/petro.jpg);
+          background-image: url(../../../duna.jpg);
+          background-position: center;
           background-repeat:no-repeat  ;
           background-size: cover;
         }
@@ -116,7 +118,7 @@
           height: 100%;
           width: 100%;
           z-index: 9;
-          background: rgba(67, 27, 12, 0.75);
+          background: rgba(73, 149, 185, 0.577);
           display: flex;
           flex-direction: column;
           transition: 300ms all;
