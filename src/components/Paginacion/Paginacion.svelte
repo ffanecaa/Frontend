@@ -1,6 +1,6 @@
 <script>
-
-
+ import {onMount} from "svelte"
+ 
   let name
   let description
   let longitude
@@ -16,8 +16,8 @@
     import L from 'leaflet';
     let info = { elements: [], pagination: {} }
 
- let page  =1
- let limit=5
+ export let page  =1
+ export let limit= 5
     // let nextPage = info.pagination.nextPAge
     // let previousPage=info.pagination.previuosPage
 
@@ -59,6 +59,10 @@
         console.log(info) 
 }
 
+onMount(()=>{
+  traerDatosm()
+  })
+
 </script>
 
 <div class="container_pagination">
@@ -93,17 +97,33 @@
 
 
 <style>
-  .container_pagination{
+  .container_pagination {
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background-color: #a6cae5;
   }
-  .coordenadas{
- writing-mode: vertical-lr;
-    left:10;
-    top:40%
+  .paginacion {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .siguientes {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .ficha {
+    margin-bottom: 80px;
+  }
+  .coordenadas {
+    /*writing-mode: vertical-lr;*/
+    left: 10;
+    top: 40%;
+  }
+ input {
+    width: 40px;
+    text-align: center;
   }
 
 
