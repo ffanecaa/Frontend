@@ -49,6 +49,12 @@
     L.marker([elemento.latitude, elemento.longitude]).addTo(map).bindPopup(elemento.name,);
   });
  
+
+  onMount(()=>{
+    traerlinkm()
+  })
+
+
 </script>
    <h2>{elemento.name}</h2>
 <button on:click={traerlinkm}>id</button>
