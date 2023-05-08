@@ -38,7 +38,7 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
     <Route path="/" component={Nosaldra} />
     <Route path="/mapa" component={MapaTotal} />
     <Route path="/mapa/:id" component={Mapaelemento} />
-    <Route path="/Elementos/?page&limit" component={Paginacion} />
+    <Route path="/Elementos/" component={Paginacion} />
  
   </main>
 </Router>

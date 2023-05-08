@@ -11,13 +11,13 @@
     latitude:latitude,
     longitude:longitude
   }
-  import MapaElemento from '../mapa/Mapaelemento.svelte';
+ 
     import Mapas from '../mapa/Mapas.svelte';  
     import L from 'leaflet';
     let info = { elements: [], pagination: {} }
 
-    let page  =1
-    let limit=5
+ let page  =1
+ let limit=5
     // let nextPage = info.pagination.nextPAge
     // let previousPage=info.pagination.previuosPage
 
