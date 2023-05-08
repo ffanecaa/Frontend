@@ -25,6 +25,7 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
   import { Router, Link, Route } from "svelte-routing";
   import MapaTotal from "./components/MapaTotal/MapaTotal.svelte";
   import Mapas from "./components/mapa/Mapas.svelte";
+  import PaginacionCategoria from "./components/Paginacion/PaginacionCategoria.svelte";
   // Agrega esta línea para importar la variable `url`
 </script>
 
@@ -34,6 +35,8 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
     <Link to="/mapa">Mapa</Link>
     <Link to="/paginacion">paginacion</Link>
     <Link to="/nombre">busqueda</Link>
+    <Link to="/cate">cathege</Link>
+    <Link to="/cates">cosa</Link>
   </nav>
   <main>
     <Route path="/" component={Nosaldra} />
@@ -41,6 +44,8 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
     <Route path="/mapa/:id" component={Mapaelemento} />
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
+    <Route path="/cate" component={Paginacion} />
+    <Route path="/cates" component={PaginacionCategoria} />
  
   </main>
 </Router>
