@@ -33,6 +33,6 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
 
  <Mapaelemento /> 
  <MapaElementoNombre/>
-
+<MapaTotal/>
 
 <!-- <Nosaldra/> -->
