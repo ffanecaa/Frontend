@@ -57,7 +57,7 @@
 
 </script>
    <h2>{elemento.name}</h2>
-<button on:click={traerlinkm}>id</button>
+<!-- <button on:click={traerlinkm}>id</button> -->
 <input type="text" on:change={traerlinkm} bind:value={id} />
 <p>{elemento.description}</p>
 
