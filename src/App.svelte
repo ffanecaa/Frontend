@@ -34,9 +34,9 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
     <Link to="/">Home</Link>
     <Link to="/mapa">Mapa</Link>
     <Link to="/paginacion">paginacion</Link>
-    <Link to="/nombre">busqueda</Link>
-    <Link to="/cate">cathege</Link>
-    <Link to="/cates">cosa</Link>
+    <Link to="/nombre">busqueda por nombre </Link>
+    
+    <Link to="/cates">busqueda Categoria</Link>
   </nav>
   <main>
     <Route path="/" component={Nosaldra} />
@@ -44,14 +44,19 @@ import Cathegory from "./components/Cathegory/Cathegory.svelte"
     <Route path="/mapa/:id" component={Mapaelemento} />
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
-    <Route path="/cate" component={Paginacion} />
+   
     <Route path="/cates" component={PaginacionCategoria} />
  
   </main>
 </Router>
 
 
-
+<style>
+  nav{
+ display: flex;
+ justify-content: space-between;
+  }
+</style>
 
 
 

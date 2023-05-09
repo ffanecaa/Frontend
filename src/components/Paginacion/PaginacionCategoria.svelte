@@ -1,27 +1,27 @@
 <script>
     import {onMount} from "svelte"
     
-     let name
-     let description
-     let longitude
-     let latitude
+    //  let name
+    //  let description
+    //  let longitude
+    //  let latitude
      let icon 
-     let cathegories
-     $: elements ={
-       name:name,
-       description :description,
-       latitude:latitude,
-       longitude:longitude,
-       icon:icon,
-       cathegories:cathegories
-     }
+    //  let cathegories
+    //  $: elements ={
+    //    name:name,
+    //    description :description,
+    //    latitude:latitude,
+    //    longitude:longitude,
+    //    icon:icon,
+    //    cathegories:cathegories
+    //  }
     
        import Mapas from '../mapa/Mapas.svelte';  
        import L from 'leaflet';
        let info = { elements: [], pagination: {} }
    
     export let page  =1
-    export let limit= 5
+    export let limit= 32
        // let nextPage = info.pagination.nextPAge
        // let previousPage=info.pagination.previuosPage
    
@@ -39,7 +39,7 @@
    }
    // traer datos -------------------------------NEXT PAGE----------------------------------
      async function traerpaxPosterior(){
-       const resposta = fetch(`http://localhost:8000${info.pagination.nextPAge}&name=${icon}`)
+       const resposta = fetch(`http://localhost:8000${info.pagination.nextPage}&name=${icon}`)
            const datos = (await resposta).json()
            return datos
           ;

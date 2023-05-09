@@ -59,6 +59,9 @@
   <p>{elemento.name}{elemento.description}</p>
   
   <div id={mapId} style="height: 600px;width:800px" />
+
+  <Mapa id={mapId} elemento={elemento}/>
+
   <style>
     button {  
       border-radius: 0.4em;
