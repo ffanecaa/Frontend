@@ -1,4 +1,4 @@
-<script>
+<script> /// la pagina genro link mapa totla /// 
   import L from "leaflet";
   import { onMount ,afterUpdate} from "svelte";
   let map;

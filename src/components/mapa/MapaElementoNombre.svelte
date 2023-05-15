@@ -1,6 +1,10 @@
-<script>
+<script>  // busqueda de elemnto por nombre ... ARREGLAR EL TIPO DE BUSQUEDA QUE ES DEMASIADO ARBITRARIA  
     import L from "leaflet";
     import { onMount ,afterUpdate} from "svelte";
+  import App from "../../App.svelte";
+  import Cathegory from "../Cathegory/Cathegory.svelte";
+  import Counter from "../../lib/Counter.svelte";
+  import Delete from "../Elemento/Delete.svelte";
     let map;
     let id = 1;
     let name = "lugares";
@@ -60,7 +64,7 @@
   
   <div id={mapId} style="height: 600px;width:800px" />
 
-  <Mapa id={mapId} elemento={elemento}/>
+  <!-- <Mapa id={mapId} elemento={elemento}/> -->
 
   <style>
     button {  

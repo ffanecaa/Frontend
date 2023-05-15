@@ -1,4 +1,4 @@
-<script>
+<script>  /// todos los elementos agrupados  
     import L from 'leaflet';
     import { onMount } from 'svelte'
     import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.css"
