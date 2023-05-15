@@ -3,7 +3,7 @@
     import L from "leaflet";
   
     let map;
-  
+    let latlng
     onMount(() => {
       // Crea el mapa y establece la vista en una ubicación inicial
       map = L.map("map").setView([51.505, -0.09], 13);
@@ -22,9 +22,9 @@
           const lng = location.coords.longitude;
   
           // Crea un objeto L.LatLng con las coordenadas obtenidas
-          const latlng = L.latLng(lat, lng);
+           latlng = L.latLng(lat, lng);
           L.circle(latlng,{radius:300}).addTo(map)
-          L.marker(latlng).addTo(map)
+          L.marker(latlng).addTo(map).bindPopup("Localizado")
           // Mueve el mapa a la ubicación obtenida
           map.flyTo(latlng, 15, {
             animate: true,
@@ -38,7 +38,7 @@
     });
   </script>
   
-  <h1>Geolocalización con Leaflet y Svelte</h1>
+  <h1>Geolocalización </h1>
   
   <div id="map" style="height: 400px;"></div>
   
