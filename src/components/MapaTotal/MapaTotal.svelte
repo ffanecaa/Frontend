@@ -31,7 +31,7 @@
         })
     }
     
-  
+  let latlng
     
   
     onMount(() => {
@@ -40,11 +40,12 @@
         attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
       }).addTo(map);
   
-     
+      L.circle(latlng,{radius:300}).addTo(map)
     });
     onMount( ()=>{
       manexadorTrae()
     })
+
 
   </script>
   <h1>mapa puntos</h1>
