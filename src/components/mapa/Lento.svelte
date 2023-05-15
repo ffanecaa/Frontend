@@ -3,7 +3,7 @@
     import L from "leaflet";
     import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css"
     import { MarkerClusterGroup } from 'leaflet.markercluster';
-    import { store } from "../../lib/store.js"
+    import { store } from "../../lib/store.js";
     
     
     let map;
@@ -37,11 +37,15 @@
       createLayerGroups(); // llamo a  la funcion q llama a la funcion
   
       // Agregamos todas las capas a un controlador de capas
-      const controlLayers = L.control.layers({}, layerGroups, {
+      let control = L.control.layers({}, layerGroups, {
         position: 'bottomright',
         collapsed: false,
       }).addTo(map);
     });
+
+   
   </script>
   
   <div id="mymap" style="height: 600px;width:900px" />
+
+ 

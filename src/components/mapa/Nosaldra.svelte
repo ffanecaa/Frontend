@@ -83,7 +83,7 @@
         }
         /* FIN EFECTO HOVER*/
         .image-hover-container .container .lake-district {
-          background-image: url(../../../duna.jpg);
+          background-image: url(../../../o.jpg);
           background-position: center;
           background-repeat:no-repeat  ;
           background-size: cover;
