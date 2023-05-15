@@ -1,10 +1,9 @@
 <script>  // busqueda de elemnto por nombre ... ARREGLAR EL TIPO DE BUSQUEDA QUE ES DEMASIADO ARBITRARIA  
     import L from "leaflet";
     import { onMount ,afterUpdate} from "svelte";
-  import App from "../../App.svelte";
-  import Cathegory from "../Cathegory/Cathegory.svelte";
-  import Counter from "../../lib/Counter.svelte";
-  import Delete from "../Elemento/Delete.svelte";
+ 
+  // import Cathegory from "../Cathegory/Cathegory.svelte"
+  // import Delete from "../Elemento/Delete.svelte";
     let map;
     let id = 1;
     let name = "lugares";

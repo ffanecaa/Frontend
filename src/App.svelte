@@ -15,9 +15,7 @@
    import Nosaldra from "./components/mapa/Nosaldra.svelte";
    import Geolocalizacion from "./components/Geolocalizacion/Geolocalizacion.svelte";
 
-
-    // import Principal from "./lib/vistas/Principal.svelte";
-    // import Privada from "./lib/vistas/Privada.svelte";
+ 
 
 
 
