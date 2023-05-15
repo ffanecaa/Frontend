@@ -13,7 +13,11 @@
     function createMarkerGroup(category) {
       const markerGroup = new MarkerClusterGroup();
       for (let element of $store[category]) {
-        const marker = L.marker([element.latitude, element.longitude]).bindPopup(element.name);
+        const contenido=`<h3>${element.name}</h3>
+          <p>${element.description}</p>
+          <a href="/mapa/${element.id}"> link</a>
+        `;
+        let marker = L.marker([element.latitude, element.longitude]).bindPopup(contenido);
         markerGroup.addLayer(marker);
       }
       return markerGroup;
@@ -38,8 +42,10 @@
   
       // Agregamos todas las capas a un controlador de capas
       let control = L.control.layers({}, layerGroups, {
-        position: 'bottomright',
-        collapsed: false,
+        position: 'topright',
+        collapsed: true,
+        autoZIndex:true
+     
       }).addTo(map);
     });
 
@@ -48,4 +54,8 @@
   
   <div id="mymap" style="height: 600px;width:900px" />
 
- 
+<style>
+  .capa{
+    background-color: transparent;
+  }
+</style>

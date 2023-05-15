@@ -13,6 +13,7 @@
   import Mapaelemento from "./components/Mapa/Mapaelemento.svelte";
   import MapaElementoNombre from "./components/Mapa/MapaElementoNombre.svelte";
    import Nosaldra from "./components/mapa/Nosaldra.svelte";
+   import Geolocalizacion from "./components/Geolocalizacion/Geolocalizacion.svelte";
 
 
     // import Principal from "./lib/vistas/Principal.svelte";
@@ -52,7 +53,7 @@
    
     <!-- <Route path="/cates" component={PaginacionCategoria} /> -->
     <Route path="/lento" component={Lento} />
- 
+ <Geolocalizacion/>
   </main>
 </Router>
 
