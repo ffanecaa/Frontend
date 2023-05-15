@@ -54,8 +54,3 @@
   
   <div id="mymap" style="height: 600px;width:900px" />
 
-<style>
-  .capa{
-    background-color: transparent;
-  }
-</style>
