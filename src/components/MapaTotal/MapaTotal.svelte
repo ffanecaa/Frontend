@@ -39,8 +39,31 @@
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
       }).addTo(map);
+   
+   
+      let customIcon = new L.Icon({
+  iconUrl: 'ico.png',
+  iconSize: [50, 50],
+  iconAnchor: [25, 50]
+});
   
-      L.circle(latlng,{radius:300}).addTo(map)
+      navigator.geolocation.getCurrentPosition(
+        (location) => {
+          const lat = location.coords.latitude;
+          const lng = location.coords.longitude;
+  
+          // Crea un objeto L.LatLng con las coordenadas obtenidas
+           latlng = L.latLng(lat, lng);
+          L.circle(latlng,{radius:300}).addTo(map)
+          L.marker(latlng,{icon:customIcon}).addTo(map).bindPopup("Localizado")
+          // Mueve el mapa a la ubicación obtenida
+          // map.flyTo(latlng, 15, {
+          //   animate: true,
+          //   duration: 2,
+          // });
+        },
+        (error) => {
+          console.error(error);})
     });
     onMount( ()=>{
       manexadorTrae()
