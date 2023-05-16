@@ -29,9 +29,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  color:whitesmoke;
 
 
-  background:rgb(26, 23, 23)
+  background:#2E2E2E
 }
 
 h1 {
@@ -67,6 +68,9 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+nav{
+  color:white;
 }
 
 @media (prefers-color-scheme: light) {

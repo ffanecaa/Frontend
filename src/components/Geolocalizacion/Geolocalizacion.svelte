@@ -3,7 +3,7 @@
   import L from "leaflet";
 
   let map;
-  export let latlng;
+let latlng;
   onMount(() => {
     // Crea el mapa y establece la vista en una ubicación inicial
     map = L.map("map").setView([51.505, -0.09], 13);

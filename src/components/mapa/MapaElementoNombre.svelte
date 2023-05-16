@@ -73,12 +73,12 @@
      cursor: grab;
      background-color: transparent;
       border-radius: 0.4em;
-      color: royalblue;
+      color: whitesmoke;
       padding: 0.4em 1em;
       border: 1px solid royalblue;   
     }
       div{
-      border: 19px inset #ADD19E;
+      border: 19px inset whitesmoke;
       
       }
       h2{

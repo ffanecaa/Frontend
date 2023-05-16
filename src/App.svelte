@@ -60,6 +60,7 @@
   nav{
  display: flex;
  justify-content: space-between;
+ color:whitesmoke
   }
 </style>
 
