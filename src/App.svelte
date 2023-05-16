@@ -38,7 +38,7 @@
     
     <!-- <Link to="/cates">busqueda Categoria</Link> -->
     
-    <Link to="/lento">lenta</Link>
+    <Link to="/lento">Categorias</Link>
   </nav>
   <main>
     <Route path="/" component={Nosaldra} />
