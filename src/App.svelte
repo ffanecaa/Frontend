@@ -26,6 +26,8 @@
   // import Mapas from "./components/mapa/Mapas.svelte";
   // import PaginacionCategoria from "./components/Paginacion/PaginacionCategoria.svelte";
   import Lento from "./components/Mapa/Lento.svelte";
+  import Traer from "./components/trozos/Traer.svelte";
+  import MapaModulo from "./components/trozos/MapaModulo.svelte";
   // Agrega esta línea para importar la variable `url`
 </script>
 
@@ -39,6 +41,8 @@
     <!-- <Link to="/cates">busqueda Categoria</Link> -->
     
     <Link to="/lento">Categorias</Link>
+    <Link to="/trozos">trozos</Link>
+    <Link to="/trozo">troz</Link>
   </nav>
   <main>
     <Route path="/" component={Nosaldra} />
@@ -48,6 +52,8 @@
     <Route path="/mapa/:id" component={Mapaelemento} />    
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
+    <Route path="/trozos" component={Traer} />
+    <Route path="/trozo" component={MapaModulo} />
    
     <!-- <Route path="/cates" component={PaginacionCategoria} /> -->
     <Route path="/lento" component={Lento} />

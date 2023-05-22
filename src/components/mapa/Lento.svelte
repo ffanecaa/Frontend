@@ -8,9 +8,9 @@
     
     let map;
 
-    export let lat = 42.88805200
-    export let lng = -8.0456900
-    export let zoom = 14
+   let lat 
+   let lng 
+let zoom 
   
     const layerGroups = {};
   
@@ -37,7 +37,7 @@
   
     onMount(() => {
       // Creamos un mapa de Leaflet
-      map = L.map('mymap').setView([lat, lng], zoom);
+      map = L.map('mymap').setView([ 42.88805200, -8.0456900], 14);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
       }).addTo(map);
