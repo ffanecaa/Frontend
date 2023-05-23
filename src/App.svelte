@@ -20,7 +20,7 @@
 
 
 
-   
+   import IconCathe from "./components/Iconos/IconCathe.svelte"
   import { Router, Link, Route } from "svelte-routing";
   import MapaTotal from "./components/MapaTotal/MapaTotal.svelte";
   // import Mapas from "./components/mapa/Mapas.svelte";
@@ -42,7 +42,7 @@
     
     <Link to="/lento">Categorias</Link>
     <Link to="/trozos">trozos</Link>
-    <Link to="/trozo">troz</Link>
+    <Link to="/trozoss">iconos</Link>
   </nav>
   <main>
     <Route path="/" component={Nosaldra} />
@@ -53,7 +53,8 @@
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
     <Route path="/trozos" component={Traer} />
-    <Route path="/trozo" component={MapaModulo} />
+
+    <Route path="/trozoss" component={IconCathe} />
    
     <!-- <Route path="/cates" component={PaginacionCategoria} /> -->
     <Route path="/lento" component={Lento} />

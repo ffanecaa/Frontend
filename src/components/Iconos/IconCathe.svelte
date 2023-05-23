@@ -17,8 +17,9 @@
     <button on:click={manexadorget}>icoca </button>
     
     <ul>
-        {#each icoCat as {id,file,cathegoryId}}
-        <li>{id} {file} {cathegoryId}</li>
+        {#each icoCat as {id,file}}
+        <li>{id}  </li>
+        <img src="{file}" alt="icono">
         {/each}
     </ul>
     
