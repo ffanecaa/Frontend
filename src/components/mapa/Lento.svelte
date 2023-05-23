@@ -20,10 +20,15 @@ let zoom
         const contenido=`<h3>${element.name}</h3>
           <p>${element.description}</p>
           <a href="/mapa/${element.id}"> link</a>
-        `;
-        let marker = L.marker([element.latitude, element.longitude]).bindPopup(contenido);
+        `
+        for(let icon of $store[category]){
+         icon.id= L.icon({
+    iconUrl: icon.file
+   
+        })
+        let marker = L.marker([element.latitude, element.longitude],{icon:icon.id}).bindPopup(contenido);
         markerGroup.addLayer(marker);
-      }
+      }}
       return markerGroup;
     }
     
