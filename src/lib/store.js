@@ -6,16 +6,20 @@ import { getElements, getCathegory,getIcon} from "./fetchs.mjs"
 
 function elementClassifier() {
   const clasificados = {}
+  const iconos = {}
   Promise.all( [getElements(), getCathegory(),getIcon()] ).then(
     ( [ elementos, categorias ,iconos] ) => { 
+
       for ( let categoria of categorias) {
-        
-        for (let icono of iconos){
-          if (icono.name === categoria.name)
-          clasificados[icono.file] = [categoria.name] = elementos.filter(element => element.icon === categoria.name)
-        }
+        clasificados[categoria.name] = elementos.filter(element => element.icon === categoria.name)
       }
       store.set(clasificados)
+
+      for (let icono of iconos){
+        if (icono.id in clasificados) iconos[icono.id.replaceAll("-", " ")] = icono.file
+      }
+      storeIconos.set(iconos)
+    
     }
   )
 }
@@ -25,5 +29,6 @@ function elementClassifier() {
 
 
 export const store = writable({}); // pq exporto un objeto
+export const storeIconos = writable({}); // pq exporto un objeto
 
 elementClassifier();

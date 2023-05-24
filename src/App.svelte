@@ -28,6 +28,7 @@
   import Lento from "./components/Mapa/Lento.svelte";
   import Traer from "./components/trozos/Traer.svelte";
   import MapaModulo from "./components/trozos/MapaModulo.svelte";
+  import Usuario from "./components/Usuarios/Usuario.svelte";
   // Agrega esta línea para importar la variable `url`
 </script>
 
@@ -59,6 +60,7 @@
     <!-- <Route path="/cates" component={PaginacionCategoria} /> -->
     <Route path="/lento" component={Lento} />
  <Geolocalizacion/>
+ <Usuario/>
   </main>
 </Router>
 
