@@ -1,0 +1,42 @@
+<script>
+
+import {navigate} from "svelte-routing"
+
+let name
+let password
+
+
+
+ async function manexadorEnvio(){
+  const response = await  fetch("http://localhost:8000/usuarios/",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({name,password})
+    })
+
+    if ( response.ok){
+        const token = await response.text()
+        localStorage.setItem("token" , token)
+        navigate("/Elements/")
+
+    }
+}
+
+
+
+    
+</script>
+
+
+<fieldset>
+    <legend>Registrate</legend>
+    
+    <label for="">nome
+        <input type="text" placeholder="introduce tu nombre"bind:value={name}>
+    </label>
+    <label for="">contrasinal
+        <input type="text" placeholder="introduce tu contrasinal" bind:value={password}>
+    </label>
+    
+    <button on:click={manexadorEnvio}>Logueate</button>
+    </fieldset>
