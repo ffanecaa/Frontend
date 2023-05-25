@@ -20,15 +20,16 @@
 
 
 
-   import IconCathe from "./components/Iconos/IconCathe.svelte"
+   //import IconCathe from "./components/Iconos/IconCathe.svelte"
   import { Router, Link, Route } from "svelte-routing";
   import MapaTotal from "./components/MapaTotal/MapaTotal.svelte";
   // import Mapas from "./components/mapa/Mapas.svelte";
   // import PaginacionCategoria from "./components/Paginacion/PaginacionCategoria.svelte";
   import Lento from "./components/Mapa/Lento.svelte";
-  import Traer from "./components/trozos/Traer.svelte";
-  import MapaModulo from "./components/trozos/MapaModulo.svelte";
+
+  
   import Usuario from "./components/Usuarios/Usuario.svelte";
+  import Sesion from "./components/Usuarios/Sesion.svelte";
   // Agrega esta línea para importar la variable `url`
 </script>
 
@@ -42,8 +43,7 @@
     <!-- <Link to="/cates">busqueda Categoria</Link> -->
     
     <Link to="/lento">Categorias</Link>
-    <Link to="/trozos">trozos</Link>
-    <Link to="/trozoss">iconos</Link>
+   
   </nav>
   <main>
     <Route path="/" component={Nosaldra} />
@@ -53,14 +53,15 @@
     <Route path="/mapa/:id" component={Mapaelemento} />    
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
-    <Route path="/trozos" component={Traer} />
+    
 
-    <Route path="/trozoss" component={IconCathe} />
+  
    
     <!-- <Route path="/cates" component={PaginacionCategoria} /> -->
     <Route path="/lento" component={Lento} />
  <Geolocalizacion/>
  <Usuario/>
+ <Sesion/>
   </main>
 </Router>
 

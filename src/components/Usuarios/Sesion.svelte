@@ -4,11 +4,11 @@ import {navigate} from "svelte-routing"
 
 let name
 let password
-
+let id
 
 
  async function manexadorEnvio(){
-  const response = await  fetch("http://localhost:8000/usuarios/",{
+  const response = await  fetch("http://localhost:8000/usuarios/sesion/",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({name,password})
@@ -29,7 +29,7 @@ let password
 
 
 <fieldset>
-    <legend>Registrate</legend>
+    <legend>Logueate</legend>
     
     <label for="">nome
         <input type="text" placeholder="introduce tu nombre"bind:value={name}>

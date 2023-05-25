@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import L from 'leaflet'
 	import 'leaflet/dist/leaflet.css'
 	import {onMount} from 'svelte'
@@ -63,4 +63,4 @@ navigator.geolocation.getCurrentPosition(location=>{
 </script>
 
 maps 
-<div id="mymaps" style="height:500px;width:700px"></div>
+<div id="mymaps" style="height:500px;width:700px"></div> -->
