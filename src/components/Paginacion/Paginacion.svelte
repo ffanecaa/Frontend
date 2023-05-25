@@ -12,7 +12,7 @@
     longitude:longitude
   }
  
-    import Mapas from '../mapa/Mapas.svelte';  
+    import Mapas from '../Mapa/Mapas.svelte';  
     import L from 'leaflet';
     let info = { elements: [], pagination: {} }
 

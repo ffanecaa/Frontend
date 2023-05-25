@@ -2,7 +2,7 @@
 
 <script>
   import Delete from "./Delete.svelte"
-   import Mapas from "../mapa/Mapas.svelte";
+   import Mapas from "../Mapa/Mapas.svelte";
    import L from 'leaflet';
  
   import Put from "./Put.svelte";

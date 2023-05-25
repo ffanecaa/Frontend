@@ -12,7 +12,7 @@
   import Paginacion from "./components/Paginacion/Paginacion.svelte";
   import Mapaelemento from "./components/Mapa/Mapaelemento.svelte";
   import MapaElementoNombre from "./components/Mapa/MapaElementoNombre.svelte";
-   import Nosaldra from "./components/mapa/Nosaldra.svelte";
+   import Nosaldra from "./components/Mapa/Nosaldra.svelte";
    import Geolocalizacion from "./components/Geolocalizacion/Geolocalizacion.svelte";
 
  
