@@ -3,7 +3,10 @@ const baseURL = "http://localhost:8000/"
    
 
 async function getElements(){
-    const response = await fetch(baseURL+"elements/")
+    const token = localStorage.getItem('token')
+    const response = await fetch(baseURL+"elements/",{
+        headers:{authorizacion:"Bearer ${token}"}
+    })
     const data = await response.json()
     return data
 }
