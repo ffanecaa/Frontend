@@ -30,10 +30,12 @@
   
   import Usuario from "./components/Usuarios/Usuario.svelte";
   import Sesion from "./components/Usuarios/Sesion.svelte";
+  import Header from "./components/Header/Header.svelte";
   // Agrega esta línea para importar la variable `url`
 </script>
 
 <Router >
+  <Header/>
   <nav>
     <Link to="/">Home</Link>
     <Link to="/mapa">Mapa</Link>
@@ -60,8 +62,7 @@
     <!-- <Route path="/cates" component={PaginacionCategoria} /> -->
     <Route path="/lento" component={Lento} />
  <!-- <Geolocalizacion/> -->
- <Usuario/>
- <Sesion/>
+
   </main>
 </Router>
 

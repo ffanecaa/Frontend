@@ -17,15 +17,34 @@ function manexadorEnvio(){
 </script>
 
 
-<fieldset>
-<legend>Registrate</legend>
+<div class="usuario">
+    <fieldset>
+    <legend>Registrate</legend>
+    
+    <label for="">nome
+        <input type="text" placeholder="introduce tu nombre"bind:value={name}>
+    </label>
+    <label for="">contrasinal
+        <input type="text" placeholder="introduce tu contrasinal" bind:value={password}>
+    </label>
+    
+    <button on:click={manexadorEnvio}>envia</button>
+    </fieldset>
+</div>
 
-<label for="">nome
-    <input type="text" placeholder="introduce tu nombre"bind:value={name}>
-</label>
-<label for="">contrasinal
-    <input type="text" placeholder="introduce tu contrasinal" bind:value={password}>
-</label>
 
-<button on:click={manexadorEnvio}>envia</button>
-</fieldset>
+
+<style>
+
+   .usuario{
+        width: 50px;}
+        
+    fieldset{
+        display: flex;
+        flex-direction: row;
+        gap:5px;
+        color:white;
+       
+    }
+  
+</style>

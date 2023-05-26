@@ -28,15 +28,34 @@ let id
 </script>
 
 
-<fieldset>
-    <legend>Logueate</legend>
+<div class="sesion">
+    <fieldset>
+        <legend>Login</legend>
     
-    <label for="">nome
-        <input type="text" placeholder="introduce tu nombre"bind:value={name}>
-    </label>
-    <label for="">contrasinal
-        <input type="text" placeholder="introduce tu contrasinal" bind:value={password}>
-    </label>
+        <label for="">nome
+            <input type="text" placeholder="introduce tu nombre"bind:value={name}>
+        </label>
+        <label for="">contrasinal
+            <input type="text" placeholder="introduce tu contrasinal" bind:value={password}>
+        </label>
     
-    <button on:click={manexadorEnvio}>Logueate</button>
-    </fieldset>
+        <button on:click={manexadorEnvio}>Logueate</button>
+        </fieldset>
+</div>
+
+
+    
+<style>
+
+    .sesion{
+         width: 50px;}
+         
+     fieldset{
+         display: flex;
+         flex-direction: row;
+         gap:5px;
+         color:white;
+        
+     }
+   
+ </style>
