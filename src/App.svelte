@@ -59,7 +59,7 @@
    
     <!-- <Route path="/cates" component={PaginacionCategoria} /> -->
     <Route path="/lento" component={Lento} />
- <Geolocalizacion/>
+ <!-- <Geolocalizacion/> -->
  <Usuario/>
  <Sesion/>
   </main>
