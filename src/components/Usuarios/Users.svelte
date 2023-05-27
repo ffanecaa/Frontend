@@ -297,8 +297,8 @@ function handleClickRegistro(){
     }
   
     .content {
-  margin-top: 20%;
- margin-left: 40%;
+    margin-top: 20%;
+    margin-left: 40%;
       align-content: center;
       width: 100%;
       height: 100%;

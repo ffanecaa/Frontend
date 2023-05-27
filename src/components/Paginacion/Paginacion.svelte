@@ -68,9 +68,6 @@ onMount(()=>{
 <div class="container_pagination">
  
   
- 
-  
-  
   <div class="container_title">
 
   {#each info.elements as elemento (elemento.id)}
@@ -97,12 +94,12 @@ onMount(()=>{
 
 
 <style>
-  .container_pagination {
+  /* .container_pagination {
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-  }
+  } */
   .paginacion {
     display: flex;
     justify-content: space-between;

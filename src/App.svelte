@@ -31,11 +31,13 @@
   import Usuario from "./components/Usuarios/Usuario.svelte";
   import Sesion from "./components/Usuarios/Sesion.svelte";
   import Header from "./components/Header/Header.svelte";
+  import Portada from "./components/modulares/portada.svelte";
   // Agrega esta línea para importar la variable `url`
 </script>
 
 <Router >
-  <Header/>
+  <div class="container">
+  <Portada/>
   <nav>
     <Link to="/">Home</Link>
     <Link to="/mapa">Mapa</Link>
@@ -55,6 +57,7 @@
     <Route path="/mapa/:id" component={Mapaelemento} />    
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
+    <Route path="/portada" component={Portada} />
     
 
   
@@ -64,6 +67,9 @@
  <!-- <Geolocalizacion/> -->
 
   </main>
+
+
+</div>
 </Router>
 
 
@@ -72,6 +78,15 @@
  display: flex;
  justify-content: space-between;
  color:whitesmoke
+  }
+
+  main{
+  width: 100%;
+ 
+  background-color:transparent;
+  display: flex;
+  justify-content: center;
+  margin:5% 0;
   }
 </style>
 

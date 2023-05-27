@@ -71,12 +71,14 @@
 
 
   </script>
-  <h1>mapa puntos</h1>
-  
-  <div id="mymap" style="height: 600px;width:800px"></div>
-  <!-- convendria fuera funcion load dispare cargue pagina mirar evento -->
-  <!-- <button on:click|once={manexadorTrae}>Cargar localizaciones</button> -->
-  
+  <div class="mapaTotal">
+    <h1>mapa puntos</h1>
+    
+    <div id="mymap" style="height: 600px;width:800px"></div>
+    <!-- convendria fuera funcion load dispare cargue pagina mirar evento -->
+    <!-- <button on:click|once={manexadorTrae}>Cargar localizaciones</button> -->
+    
+  </div>
 
 <style>
    
