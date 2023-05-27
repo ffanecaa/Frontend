@@ -18,33 +18,96 @@ function manexadorEnvio(){
 
 
 <div class="usuario">
+  
+    <h2>Registrate</h2>
     <fieldset>
-    <legend>Registrate</legend>
-    
-    <label for="">nome
-        <input type="text" placeholder="introduce tu nombre"bind:value={name}>
+    <label class="nome" for="nome">nome
+        <input class="input__nome" id="nome" type="text" placeholder="introduce tu nombre"bind:value={name}>
     </label>
-    <label for="">contrasinal
-        <input type="text" placeholder="introduce tu contrasinal" bind:value={password}>
+    <label class="pass">contrasinal
+        <input class="input__pass"type="text" placeholder="introduce tu contrasinal" bind:value={password}>
     </label>
     
     <button on:click={manexadorEnvio}>envia</button>
-    </fieldset>
+</fieldset>
 </div>
 
 
 
 <style>
 
-   .usuario{
-        width: 50px;}
-        
-    fieldset{
-        display: flex;
-        flex-direction: row;
-        gap:5px;
-        color:white;
-       
-    }
   
+    .usuario{
+        position: absolute;
+    top:50%;
+    left: 50%;
+    height: 600px;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    
+    }
+  h2{
+    position: absolute;
+    top:0%;
+    left: 50px;
+     text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    height: 600px;
+    color:#802525;
+text-shadow: 1px 1px 1px black;}
+ 
+fieldset{
+   position: absolute;
+   top:60px;
+   width: 98%;
+   height:500px ;
+   background-color: transparent;
+    box-sizing: border-box;
+    border:none ;
+   
+  }
+  input{
+    width: 80%;
+    padding:  0 5px;
+    height: 40px;
+    font-size: 16px;
+    border:none;
+    border-bottom: 3px solid #802525;
+    background: none;
+    outline:invert;
+    color: #adadad;
+    font-size: 16px;
+    padding: 5px;
+ 
+}
+.nome{
+    position: absolute;
+    top: 10%;
+    left: 15px;}
+
+.nome , .pass{
+    color: #802525;
+    font-size: 1.8rem;
+    padding: 5px;
+}
+
+.pass{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    
+}
+button{
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    padding: 10px;
+    width: 20%;
+    height: 8%;
+    border:2px inset
+}
+
 </style>

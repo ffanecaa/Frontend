@@ -84,12 +84,13 @@ img {
 }
 .gps-bg__bg {
   height: 1300px;
-  background-image: url(http://www.rastrac.com/hubfs/roads.svg);
-   background-position: 80%; 
+  background-image: url(../../../public/cami.jpg);
+  /* (http://www.rastrac.com/hubfs/roads.svg); */
+   background-position: 0%; 
  
   background-size:cover;
   position: absolute;
-  top: -150px;
+  top: -100px;
   width: 100%;
   transform: translateY(-650px);
   -webkit-animation: driving 10000ms linear 0ms infinite;
@@ -151,3 +152,5 @@ img {
 
     
 </style>
+
+

@@ -237,7 +237,7 @@ function handleClickRegistro(){
           
         {#if estado === "registro"}
           <div class="content">
-           <h2>Registro</h2>
+          
               <Usuario/>
           
           </div>

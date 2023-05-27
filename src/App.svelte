@@ -28,25 +28,46 @@
   import Lento from "./components/Mapa/Lento.svelte";
 
   
-  import Usuario from "./components/Usuarios/Usuario.svelte";
-  import Sesion from "./components/Usuarios/Sesion.svelte";
+ // import Usuario from "./components/Usuarios/Usuario.svelte";
+ // import Sesion from "./components/Usuarios/Sesion.svelte";
   import Header from "./components/Header/Header.svelte";
-  import Portada from "./components/modulares/portada.svelte";
+  // import Portada from "./components/modulares/portada.svelte";
   // Agrega esta línea para importar la variable `url`
 </script>
 
 <Router >
   <div class="container">
-  <Portada/>
+    <Header/>
+  <!-- <Portada/> -->
   <nav>
-    <Link to="/">Home</Link>
-    <Link to="/mapa">Mapa</Link>
-    <Link to="/paginacion">paginacion</Link>
-    <Link to="/nombre">busqueda por nombre </Link>
+    <ul>
+      <li>
+       
+					<span> <Link to="/">Home</Link></span>
+		
+       
+      </li>
+      <li>
+      
+					<span>   <Link to="/mapa">Mapa</Link></span>
+			
+      </li>
+      <li>  
+        <span>   <Link to="/paginacion">paginacion</Link></span>
+ 
+        
+      </li>
+      <li>  
+        <span>    <Link to="/nombre">busqueda por nombre </Link></span>
     
-    <!-- <Link to="/cates">busqueda Categoria</Link> -->
+      
+      </li>
+      <li>
+        <span>     <Link to="/lento">Categorias</Link></span>
     
-    <Link to="/lento">Categorias</Link>
+      
+      </li>
+    </ul>
    
   </nav>
   <main>
@@ -57,7 +78,7 @@
     <Route path="/mapa/:id" component={Mapaelemento} />    
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
-    <Route path="/portada" component={Portada} />
+    <!-- <Route path="/portada" component={Portada} /> -->
     
 
   
@@ -74,12 +95,51 @@
 
 
 <style>
-  nav{
- display: flex;
- justify-content: space-between;
- color:whitesmoke
-  }
 
+  nav ul {
+	list-style: none; overflow: hidden; position: relative;
+}
+	nav ul li {
+		float: left; margin: 0 20px 0 0;
+	}
+		nav ul li  {
+			display: block; width: 120px; height: 40px;
+		}
+			nav ul li:nth-child(1)  {
+				background-color: #5bb2fc;
+				background-position: 28px 28px;
+        
+			
+			}
+			nav ul li:nth-child(2)  {
+				background-color: #58ebd3;
+				background-position: 28px -96px;
+    
+			}
+			nav ul li:nth-child(3)  {
+				background-color: #ffa659;
+				background-position: 28px -222px;
+        
+			
+			}
+			nav ul li:nth-child(4)  {
+				background-color: #ff7a85;
+				background-position: 28px -342px;
+			}
+			nav ul li:nth-child(5)  {
+				background-color: #7aff81;
+				background-position: 28px -342px;
+			}
+		 span {
+					font: 1rem "Dosis", sans-serif; text-transform: uppercase; 
+	
+				}
+				 a:hover span {
+						display: block;
+					}
+				
+			
+					
   main{
   width: 100%;
  
