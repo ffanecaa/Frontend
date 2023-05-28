@@ -79,7 +79,7 @@
       border: 1px solid royalblue;   
     }
       div{
-      border: 19px inset whitesmoke;
+      border: 19px solid whitesmoke;
       
       }
       h2{

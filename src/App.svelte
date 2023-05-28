@@ -106,35 +106,35 @@
 			display: block; width: 120px; height: 40px;
 		}
 			nav ul li:nth-child(1)  {
-				background-color: #5bb2fc;
+				background-color: #C1D0B5;
 				background-position: 28px 28px;
         
 			
 			}
 			nav ul li:nth-child(2)  {
-				background-color: #58ebd3;
+				background-color: #C1D0B5;
 				background-position: 28px -96px;
     
 			}
 			nav ul li:nth-child(3)  {
-				background-color: #ffa659;
+				background-color: #C1D0B5;
 				background-position: 28px -222px;
         
 			
 			}
 			nav ul li:nth-child(4)  {
-				background-color: #ff7a85;
+				background-color: #C1D0B5;
 				background-position: 28px -342px;
 			}
 			nav ul li:nth-child(5)  {
-				background-color: #7aff81;
-				background-position: 28px -342px;
+				background-color: #C1D0B5;
+				background-position: 28px -462px;
 			}
 		 span {
 					font: 1rem "Dosis", sans-serif; text-transform: uppercase; 
 	
 				}
-				 a:hover span {
+				 :hover span {
 						display: block;
 					}
 				

@@ -74,13 +74,27 @@
   <div class="mapaTotal">
     <h1>mapa puntos</h1>
     
-    <div id="mymap" style="height: 600px;width:800px"></div>
-    <!-- convendria fuera funcion load dispare cargue pagina mirar evento -->
-    <!-- <button on:click|once={manexadorTrae}>Cargar localizaciones</button> -->
-    
+    <div class="container__map">
+      <div class="map" id="mymap" style="height: 600px;width:800px"></div>
+      <!-- convendria fuera funcion load dispare cargue pagina mirar evento -->
+      <!-- <button on:click|once={manexadorTrae}>Cargar localizaciones</button> -->
+      
+    </div>
   </div>
 
 <style>
    
+.container__map{
+  position: relative;
+  width: 850px;
+  height:650px ;
 
- </style>
+background-color: #C1D0B5;
+  }
+
+.map{
+  position: absolute;
+ top:25px;
+ right: 25px;
+}
+</style>

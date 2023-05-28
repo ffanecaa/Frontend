@@ -7,7 +7,7 @@
 </script>
 <header>
 
-<!-- <img src="../../../mapa.png" alt="logo palabra mapa"> -->
+<img src="../../../public/descarga.png" alt="letras">
 <h1>PATRIMONIO GALICIA </h1>
 
 
@@ -16,9 +16,22 @@
 
 <style>
     header{
-        background-color: #C5A401;
-        /* background-image: url(../../../public/peuntiger.jpg); */
+        background-color: #D6E8DB;
+        /* background-image: url(../../../public/vent.JPG);
+        background-size: cover ;
+        background-repeat: no-repeat;
+        background-position: 40% 70%; */
         padding: 20px;
-        color:#018C10;
+       
+    }
+
+h1{
+  transition: rotateX('300px');
+  animation: alternate-reverse;
+}
+    img{
+     position: absolute;
+     top:0;
+   right: 0;
     }
 </style>

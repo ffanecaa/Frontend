@@ -233,7 +233,7 @@ function handleClickRegistro(){
     {#if showModal}
     <div class="ventana">
      
-        <button class="close-button" on:click={handleCloseModal}>Cerrar</button>
+        <button class="close-button" on:click={handleCloseModal}>❌</button>
           
         {#if estado === "registro"}
           <div class="content">
@@ -281,19 +281,22 @@ function handleClickRegistro(){
       left: 0;
       width: 100%;
       height: 100%;
-      background-image:url(../../../public/fondo.jpg);
-    
+      background-image:url(../../../public/aquis.JPG);
+      background-position:center;
+      background-size: cover;
+      background-repeat: no-repeat;
       z-index: 10000;
      
     
     }
   
-
   
     .close-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
+      /* position: absolute;
+      top: 20px;
+      right: 10px; */
+      width: 100px;
+      height: 50px;
     }
   
     .content {
