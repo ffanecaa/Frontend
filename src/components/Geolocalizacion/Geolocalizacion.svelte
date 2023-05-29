@@ -1,14 +1,33 @@
 <script>
   import { onMount } from "svelte";
   import L from "leaflet";
-    
 
-  import { obterLocalizacion } from "../../lib/geolocation.mjs"
-
-
-
+let lat
+let lng
+  
   let map;
-let latlng;
+  let latlng;
+  let elementos;
+
+  function manexadorDistancias() {
+    fetch(`http://localhost:8000/distancia/?lat=${lat}&lng=${lng}`)
+      .then(res => res.json())
+      .then(data => {
+        elementos = data;
+
+        for (let elemento of elementos) {
+          const contenido = `
+            <h3>${elemento.name}</h3>
+            <p>${elemento.description}</p>
+            <a href="/mapa/${elemento.id}"> link</a>
+          `;
+          let marker = L.marker(
+            [elemento.latitude, elemento.longitude]
+          ).addTo(map).bindPopup(contenido);
+        }
+      });
+  }
+
   onMount(() => {
     // Crea el mapa y establece la vista en una ubicación inicial
     map = L.map("map").setView([51.505, -0.09], 13);
@@ -26,12 +45,12 @@ let latlng;
       iconSize: [50, 50],
       iconAnchor: [25, 50],
     });
-     let position = obterLocalizacion()
+
     // Obtiene la ubicación actual del usuario
     navigator.geolocation.getCurrentPosition(
       (location) => {
-        const lat = location.coords.latitude;
-        const lng = location.coords.longitude;
+        lat = location.coords.latitude;
+        lng = location.coords.longitude;
 
         // Crea un objeto L.LatLng con las coordenadas obtenidas
         latlng = L.latLng(lat, lng);
@@ -51,15 +70,28 @@ let latlng;
     );
   });
 
-
+  console.log(lat);
 </script>
 
 <h1>Geolocalización</h1>
 
-<div id="map" style="height: 400px;" />
+<div id="map" style="height: 400px;"></div>
+
+<input type="text" bind:value={lat}>
+<input type="text" bind:value={lng}>
+<button on:click={manexadorDistancias}>Buscar</button>
 
 <style>
   #map {
     height: 400px;
+  }
+
+  input {
+    display: none;
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
   }
 </style>
