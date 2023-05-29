@@ -10,7 +10,7 @@ let lng
   let elementos;
 
   function manexadorDistancias() {
-    fetch(`http://localhost:8000/distancia/?lat=${lat}&lng=${lng}`)
+    fetch(`http://localhost:8000/distancia/?latitude=${lat}&longitude=${lng}`)
       .then(res => res.json())
       .then(data => {
         elementos = data;
@@ -18,8 +18,7 @@ let lng
         for (let elemento of elementos) {
           const contenido = `
             <h3>${elemento.name}</h3>
-            <p>${elemento.description}</p>
-            <a href="/mapa/${elemento.id}"> link</a>
+  
           `;
           let marker = L.marker(
             [elemento.latitude, elemento.longitude]
