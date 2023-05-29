@@ -76,8 +76,7 @@ let lng
 
 <div id="map" style="height: 400px;"></div>
 
-<input type="text" bind:value={lat}>
-<input type="text" bind:value={lng}>
+
 <button on:click={manexadorDistancias}>Buscar</button>
 
 <style>
@@ -85,9 +84,7 @@ let lng
     height: 400px;
   }
 
-  input {
-    display: none;
-  }
+ 
 
   button {
     width: 50px;
