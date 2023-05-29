@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import L from "leaflet";
+  import {storeIconos} from "../../lib/store.js"
 
 let lat
 let lng
