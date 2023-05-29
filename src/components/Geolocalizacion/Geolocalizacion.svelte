@@ -9,7 +9,7 @@ let lng
   let map;
   let latlng;
   let elementos;
-
+let 
   function manexadorDistancias() {
     fetch(`http://localhost:8000/distancia/?latitude=${lat}&longitude=${lng}`)
       .then(res => res.json())
