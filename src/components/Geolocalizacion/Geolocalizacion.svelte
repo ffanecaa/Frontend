@@ -29,7 +29,7 @@ let lng
 
   onMount(() => {
     // Crea el mapa y establece la vista en una ubicación inicial
-    map = L.map("map").setView([51.505, -0.09], 13);
+    map = L.map("map").setView([51.505, -0.09], 16);
 
     // Agrega una capa de azulejos utilizando OpenStreetMap
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -58,7 +58,7 @@ let lng
           .addTo(map)
           .bindPopup("Localizado");
         // Mueve el mapa a la ubicación obtenida
-        map.flyTo(latlng, 15, {
+        map.flyTo(latlng, 11, {
           animate: true,
           duration: 2,
         });
@@ -74,7 +74,7 @@ let lng
 
 <h1>Geolocalización</h1>
 
-<div id="map" style="height: 400px;"></div>
+<div id="map" style="height: 500px;"></div>
 
 
 <button on:click={manexadorDistancias}>Buscar</button>
