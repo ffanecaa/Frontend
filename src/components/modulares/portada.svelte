@@ -84,8 +84,8 @@ img {
 }
 .gps-bg__bg {
   height: 1300px;
-  background-image: url(../../../public/cami.jpg);
-  /* (http://www.rastrac.com/hubfs/roads.svg); */
+  background-image: url(http://www.rastrac.com/hubfs/roads.svg);
+    /* (../../../public/cami.jpg);  */
    background-position: 0%; 
  
   background-size:cover;

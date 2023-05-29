@@ -61,7 +61,7 @@
 <input type="text" on:change={traerlinkm} bind:value={id} />
 <p>{elemento.description}</p>
 
-<div id={mapId} style="height: 600px;width:800px" />
+<div id={mapId} style="height: 600px;width:800px" ></div>
 
 <style>
   button {

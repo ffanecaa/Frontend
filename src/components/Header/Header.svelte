@@ -7,11 +7,11 @@
 </script>
 <header>
 
-<img src="../../../public/descarga.png" alt="letras">
+<!-- <img src="descarga.png" alt="letras"> -->
 <h1>PATRIMONIO GALICIA </h1>
 
 
-<Users/>
+<div class="users"><Users/></div>
 </header>
 
 <style>
@@ -22,16 +22,24 @@
         background-repeat: no-repeat;
         background-position: 40% 70%; */
         padding: 20px;
-       
+       display: flex;
+       flex-direction: column;
+       position: relative;
+
     }
 
 h1{
   transition: rotateX('300px');
   animation: alternate-reverse;
 }
-    img{
+.users{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+    /* img{
      position: absolute;
      top:0;
    right: 0;
-    }
+    } */
 </style>

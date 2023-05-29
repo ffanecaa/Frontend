@@ -62,7 +62,7 @@
     <input type="text" bind:value={name} />
     <p>{elemento.name}{elemento.description}</p>
     
-    <div id={mapId} style="height: 600px;width:800px" />
+    <div id={mapId} style="height: 600px;width:800px" ></div>
     <!-- <Mapa id={mapId} elemento={elemento}/> -->
   </div>
 

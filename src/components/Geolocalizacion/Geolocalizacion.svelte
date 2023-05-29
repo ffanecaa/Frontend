@@ -1,6 +1,11 @@
 <script>
   import { onMount } from "svelte";
   import L from "leaflet";
+    
+
+  import { obterLocalizacion } from "../../lib/geolocation.mjs"
+
+
 
   let map;
 let latlng;
@@ -21,7 +26,7 @@ let latlng;
       iconSize: [50, 50],
       iconAnchor: [25, 50],
     });
-
+     let position = obterLocalizacion()
     // Obtiene la ubicación actual del usuario
     navigator.geolocation.getCurrentPosition(
       (location) => {
@@ -45,6 +50,8 @@ let latlng;
       }
     );
   });
+
+
 </script>
 
 <h1>Geolocalización</h1>

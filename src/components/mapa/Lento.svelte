@@ -120,5 +120,5 @@ let zoom
    
   </script>
   
-  <div id="mymap" style="height: 600px;width:900px" />
+  <div id="mymap" style="height: 600px;width:900px" ></div>
 
