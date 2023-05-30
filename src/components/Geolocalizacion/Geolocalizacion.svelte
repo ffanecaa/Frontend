@@ -1,19 +1,25 @@
 <script>
   import { onMount } from "svelte";
   import L from "leaflet";
-  import {storeIconos} from "../../lib/store.js"
+  import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.css";
+  import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css";
+  import { MarkerClusterGroup } from "leaflet.markercluster";
+  import "leaflet-routing-machine";
+  import "../../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js";
 
-let lat
-let lng
-  
+  let markers = new MarkerClusterGroup();
+
+  let lat;
+  let lng;
+
   let map;
   let latlng;
   let elementos;
 
   function manexadorDistancias() {
     fetch(`http://localhost:8000/distancia/?latitude=${lat}&longitude=${lng}`)
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         elementos = data;
 
         for (let elemento of elementos) {
@@ -21,18 +27,21 @@ let lng
             <h3>${elemento.name}</h3>
   
           `;
-          let marker = L.marker(
-            [elemento.latitude, elemento.longitude]
-          ).addTo(map).bindPopup(contenido);
+          let marker = L.marker([
+            elemento.latitude,
+            elemento.longitude,
+          ]).bindPopup(contenido);
+          markers.addLayer(marker);
         }
+        map.addLayer(markers);
       });
   }
 
   onMount(() => {
-    // Crea el mapa y establece la vista en una ubicación inicial
+    // Crea el mapa y 
     map = L.map("map").setView([51.505, -0.09], 16);
 
-    // Agrega una capa de azulejos utilizando OpenStreetMap
+    // mosaic
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution:
@@ -46,19 +55,19 @@ let lng
       iconAnchor: [25, 50],
     });
 
-    // Obtiene la ubicación actual del usuario
+    //  ubicación actual del usuario
     navigator.geolocation.getCurrentPosition(
       (location) => {
         lat = location.coords.latitude;
         lng = location.coords.longitude;
 
-        // Crea un objeto L.LatLng con las coordenadas obtenidas
+        // crear marcador 
         latlng = L.latLng(lat, lng);
         L.circle(latlng, { radius: 300 }).addTo(map);
         L.marker(latlng, { icon: customIcon })
           .addTo(map)
           .bindPopup("Localizado");
-        // Mueve el mapa a la ubicación obtenida
+       // al punto 
         map.flyTo(latlng, 11, {
           animate: true,
           duration: 2,
@@ -68,15 +77,43 @@ let lng
         console.error(error);
       }
     );
-  });
 
-  console.log(lat);
+
+    
+
+  });
+ let waypoints=[]
+   
+ function calcularRuta(){
+  L.Routing.control({
+  waypoints: [
+    L.latLng(lat,lng),
+    L.latLng(57.6792, 11.949)
+  ]
+}).addTo(map);
+ }
+
+
+// function onMapClick(e) {
+//   // Obtén las coordenadas del clic
+//   var lat = e.latlng.lat;
+//   var lng = e.latlng.lng;
+
+//   // Envía las coordenadas al servidor o úsalas según tus necesidades
+//   enviarCoordenadasAlServidor(lat, lng);
+// }
+
+// map.on('click', onMapClick);
+
+
+
+
+
 </script>
 
 <h1>Geolocalización</h1>
 
-<div id="map" style="height: 500px;"></div>
-
+<div id="map" style="height: 500px;" />
 
 <button on:click={manexadorDistancias}>Buscar</button>
 
@@ -84,8 +121,6 @@ let lng
   #map {
     height: 400px;
   }
-
- 
 
   button {
     width: 50px;
