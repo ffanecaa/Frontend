@@ -4,6 +4,7 @@
     import {onMount} from "svelte"
   import { obterLocalizacion } from "../../lib/geolocation.mjs"
   import { getElements, getCathegory,getIcon} from "../../lib/fetchs.mjs"
+  let localizacion
 
 
 
@@ -36,8 +37,8 @@ let lng
   });
 
 
-    obterLocalizacion()
- console.log(obterLocalizacion);
+  obterLocalizacion().then( novaLocalizacion => localizacion = novaLocalizacion )
+
     
   
 

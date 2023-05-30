@@ -88,22 +88,22 @@
   L.Routing.control({
   waypoints: [
     L.latLng(lat,lng),
-    L.latLng(57.6792, 11.949)
+    L.latLng(57.6792, -8.354254)
   ]
 }).addTo(map);
  }
 
-let  latClick
-let lngClick
-map.on('click', function(e){
+// let  latClick
+// let lngClick
+// map.on('click', function(e){
 
-  // Obtén las coordenadas del clic
- latClick = e.latlng.lat;
- lngClick = e.latlng.lng;
+//   // Obtén las coordenadas del clic
+//  latClick = e.latlng.lat;
+//  lngClick = e.latlng.lng;
 
-  // Envía las coordenadas al servidor o úsalas según tus necesidades
+//   // Envía las coordenadas al servidor o úsalas según tus necesidades
  
-})
+// })
 // map.on('click', onMapClick);
 
 

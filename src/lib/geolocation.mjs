@@ -1,5 +1,5 @@
 function obterLocalizacion() {
-    new Promise(
+    return new Promise(
         (resolve, rexeita)=>{
             navigator.geolocation.getCurrentPosition(
                 (location) => {
