@@ -93,16 +93,17 @@
 }).addTo(map);
  }
 
+let  latClick
+let lngClick
+map.on('click', function(e){
 
-// function onMapClick(e) {
-//   // Obtén las coordenadas del clic
-//   var lat = e.latlng.lat;
-//   var lng = e.latlng.lng;
+  // Obtén las coordenadas del clic
+ latClick = e.latlng.lat;
+ lngClick = e.latlng.lng;
 
-//   // Envía las coordenadas al servidor o úsalas según tus necesidades
-//   enviarCoordenadasAlServidor(lat, lng);
-// }
-
+  // Envía las coordenadas al servidor o úsalas según tus necesidades
+ 
+})
 // map.on('click', onMapClick);
 
 
@@ -113,7 +114,7 @@
 
 <h1>Geolocalización</h1>
 
-<div id="map" style="height: 500px;" />
+<div  id="map" style="height: 500px;" ></div>
 
 <button on:click={manexadorDistancias}>Buscar</button>
 
