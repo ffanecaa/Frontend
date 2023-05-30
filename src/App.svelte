@@ -37,7 +37,7 @@
 </script>
 
 <Router >
-  <Geolocalizacion/>
+  <Rutas/>
   <div class="container">
     <Header/>
   <!-- <Portada/> -->
