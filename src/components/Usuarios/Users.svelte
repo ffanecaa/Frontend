@@ -3,8 +3,8 @@
 
    <script>
   
-    import Sesion from "../Usuarios/Sesion.svelte";
-    import Usuario from "../Usuarios/Usuario.svelte";
+    import Sesion from "../Usuarios/Sesion.svelte"; // login
+    import Usuario from "../Usuarios/Usuario.svelte";//registro
   
     let estado = "registro";
   
@@ -87,7 +87,7 @@
       background-position:center;
       background-size: cover;
       background-repeat: no-repeat;
-      z-index: 10000;
+      z-index: 100000;
      
     
     }
