@@ -15,7 +15,7 @@
   let map;
   let latlng;
   let elementos;
-
+ let cosa
   function manexadorDistancias() {
     fetch(`http://localhost:8000/distancia/?latitude=${lat}&longitude=${lng}`)
       .then((res) => res.json())
@@ -83,45 +83,36 @@
 
   
 
-function punto (e){
-let secondMarker = L.marker([e.latlng.lat,e.latlng.lng]).addTo(map)
-}
+// function punto (e){
+// let secondMarker = L.marker([e.latlng.lat,e.latlng.lng]).addTo(map)
+// }
 
-map.on('click', (event) =>{
+ cosa =map.on('click', (event) =>{
 let secondMarker = L.marker([event.latlng.lat,event.latlng.lng]).addTo(map)
+   return ([event.latlng.lat,event.latlng.lng])
   })
 
 
 
 
-})
- let waypoints=[]
-   
-//  function calcularRuta(){
-//   L.Routing.control({
-//   waypoints: [
-//     L.latLng(lat,lng),
-//     L.latLng(47.6792, -8.354254)
-//   ]
-// }).addTo(map);
-//  }
-
-// let  latClick
-// let lngClick
-// map.on('click', function(e){
-
-//   // Obtén las coordenadas del clic
-//  latClick = e.latlng.lat;
-//  lngClick = e.latlng.lng;
-
-//   // Envía las coordenadas al servidor o úsalas según tus necesidades
- 
-// })
-// map.on('click', onMapClick);
 
 
+  console.log(map._lastCenter.lat); // Acceder a la latitud
+console.log(map._lastCenter.lng); 
 
 
+  })
+
+ function calcularRuta(){
+  L.Routing.control({
+  waypoints: [
+    L.latLng(lat,lng),
+    L.latLng(map._lastCenter.lat,map._lastCenter.lng)
+  ]
+}).addTo(map);
+}
+
+  
 
 </script>
 
@@ -130,7 +121,7 @@ let secondMarker = L.marker([event.latlng.lat,event.latlng.lng]).addTo(map)
 <div id="map" style="height: 500px;" ></div>
 
 <button on:click={manexadorDistancias}>Buscar</button>
-<!-- <button on:click={calcularRuta}>ruta</button> -->
+ <button on:click={calcularRuta}>ruta</button>
 
 <style>
   #map {
