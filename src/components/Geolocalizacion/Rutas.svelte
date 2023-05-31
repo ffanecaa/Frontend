@@ -23,7 +23,7 @@ let lat
 let lng 
 
 function manexadorDistancias() {
-    fetch(`http://localhost:8000/distancia/?latitude=${lat}&longitude=${lng}`)
+    fetch(`http://localhost:8000/distancia/?latitude=${localizacion.lat}&longitude=${localizacion.lng}`)
       .then((res) => res.json())
       .then((data) => {
         elementos = data;
@@ -54,7 +54,7 @@ function manexadorDistancias() {
       iconAnchor: [25, 50],
     });
     obterLocalizacion().then( novaLocalizacion => localizacion = novaLocalizacion )
-    console.log(localizacion.lat, localizacion.lng)
+
     L.marker([localizacion.lat,localizacion.lng], { icon: customIcon })
           .addTo(map)
           .bindPopup("Localizado");
