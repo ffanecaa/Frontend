@@ -42,6 +42,7 @@ function manexadorDistancias() {
         map.addLayer(markers);
       });
   }
+  
   onMount(() => {
     map = L.map("map").setView([42.812, -7.90005], 8);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -54,11 +55,11 @@ function manexadorDistancias() {
       iconAnchor: [25, 50],
     });
     obterLocalizacion().then( novaLocalizacion => localizacion = novaLocalizacion )
-
-    L.marker([localizacion.lat,localizacion.lng], { icon: customIcon })
+    L.marker([localizacion.lat,localizacion.lng])
           .addTo(map)
           .bindPopup("Localizado");
           
+ 
   })
 
 //  function calcularRuta(){

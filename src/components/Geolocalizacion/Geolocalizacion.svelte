@@ -39,7 +39,7 @@
 
   onMount(() => {
     // Crea el mapa y 
-    map = L.map("map").setView([51.505, -0.09], 16);
+    map = L.map("map").setView([42.33642 ,-7.862982], 16);
 
     // mosaic
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -61,17 +61,17 @@
         lat = location.coords.latitude;
         lng = location.coords.longitude;
 
-        // crear marcador 
-        latlng = L.latLng(lat, lng);
-        L.circle(latlng, { radius: 300 }).addTo(map);
-        L.marker(latlng, { icon: customIcon })
-          .addTo(map)
-          .bindPopup("Localizado");
-       // al punto 
-        map.flyTo(latlng, 11, {
-          animate: true,
-          duration: 2,
-        });
+      //   // crear marcador 
+      //   latlng = L.latLng(lat, lng);
+      //   L.circle(latlng, { radius: 300 }).addTo(map);
+      //   L.marker(latlng, { icon: customIcon })
+      //     .addTo(map)
+      //     .bindPopup("Localizado");
+      //  // al punto 
+      //   map.flyTo(latlng, 11, {
+      //     animate: true,
+      //     duration: 2,
+      //   });
       },
       (error) => {
         console.error(error);
@@ -81,17 +81,30 @@
 
     
 
-  });
+  
+
+function punto (e){
+let secondMarker = L.marker([e.latlng.lat,e.latlng.lng]).addTo(map)
+}
+
+map.on('click', (event) =>{
+let secondMarker = L.marker([event.latlng.lat,event.latlng.lng]).addTo(map)
+  })
+
+
+
+
+})
  let waypoints=[]
    
- function calcularRuta(){
-  L.Routing.control({
-  waypoints: [
-    L.latLng(lat,lng),
-    L.latLng(57.6792, -8.354254)
-  ]
-}).addTo(map);
- }
+//  function calcularRuta(){
+//   L.Routing.control({
+//   waypoints: [
+//     L.latLng(lat,lng),
+//     L.latLng(47.6792, -8.354254)
+//   ]
+// }).addTo(map);
+//  }
 
 // let  latClick
 // let lngClick
@@ -114,9 +127,10 @@
 
 <h1>Geolocalización</h1>
 
-<div  id="map" style="height: 500px;" ></div>
+<div id="map" style="height: 500px;" ></div>
 
 <button on:click={manexadorDistancias}>Buscar</button>
+<!-- <button on:click={calcularRuta}>ruta</button> -->
 
 <style>
   #map {
