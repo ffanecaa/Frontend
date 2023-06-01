@@ -8,7 +8,8 @@
 <header>
 
 <!-- <img src="descarga.png" alt="letras"> -->
-<h1>PATRIMONIO GALICIA </h1>
+<h1>Vagando y vagueando:
+Galicia Monumental </h1>
 
 
 <div class="users"><Users/></div>
@@ -16,21 +17,25 @@
 
 <style>
     header{
-        background-color: #D6E8DB;
-        /* background-image: url(../../../public/vent.JPG);
+        /* background-color: #D6E8DB; */
+         background-image: url(bus.jpg);
         background-size: cover ;
         background-repeat: no-repeat;
-        background-position: 40% 70%; */
-        padding: 20px;
+        background-position: 80% 80%; 
+        padding: 0 20px;
        display: flex;
        flex-direction: column;
        position: relative;
-
+       height:350px ;
+margin-top:0
     }
 
 h1{
-  transition: rotateX('300px');
-  animation: alternate-reverse;
+color:white;
+font-size: 4rem;
+font-weight:bold;
+margin-top:10%;
+text-shadow: 2px 2px 2px greenyellow;
 }
 .users{
   position: absolute;

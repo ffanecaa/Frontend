@@ -31,14 +31,14 @@
  // import Usuario from "./components/Usuarios/Usuario.svelte";
  // import Sesion from "./components/Usuarios/Sesion.svelte";
   import Header from "./components/Header/Header.svelte";
-  import Rutas from "./components/Geolocalizacion/Rutas.svelte";
+  //import Rutas from "./components/Geolocalizacion/Rutas.svelte";
   //  import Portada from "./components/modulares/portada.svelte";
   // Agrega esta línea para importar la variable `url`
 </script>
 
 <Router >
   <!-- <Rutas/> -->
-  <Geolocalizacion/>
+
   <div class="container">
     <Header/>
   <!-- <Portada/> -->
@@ -70,6 +70,11 @@
     
       
       </li>
+      <li>
+        <span>     <Link to="/rutass">Rutas</Link></span>
+    
+      
+      </li>
     </ul>
    
   </nav>
@@ -81,6 +86,7 @@
     <Route path="/mapa/:id" component={Mapaelemento} />    
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
+    <Route path="/rutass" component={Geolocalizacion} />
     <!-- <Route path="/portada" component={Portada} /> -->
     
 
@@ -132,6 +138,10 @@
 			nav ul li:nth-child(5)  {
 				background-color: #C1D0B5;
 				background-position: 28px -462px;
+			}
+			nav ul li:nth-child(6)  {
+				background-color: #C1D0B5;
+				background-position: 28px -582px;
 			}
 		 span {
 					font: 1rem "Dosis", sans-serif; text-transform: uppercase; 

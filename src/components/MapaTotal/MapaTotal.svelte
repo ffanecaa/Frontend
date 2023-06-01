@@ -96,5 +96,6 @@ background-color: #C1D0B5;
   position: absolute;
  top:25px;
  right: 25px;
+ 
 }
 </style>

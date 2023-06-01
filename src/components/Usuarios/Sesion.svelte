@@ -48,14 +48,18 @@ let id
 <style>
 
 .sesion{
-        position: absolute;
+    position: absolute;
     top:50%;
     left: 50%;
     height: 600px;
     transform: translate(-50%, -50%);
-    width: 400px;
-    background: white;
-    border-radius: 10px;
+   width: 400px;
+background: rgba(255, 255, 255, 0.31);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.8px);
+-webkit-backdrop-filter: blur(6.8px);
+border: 1px solid rgba(255, 255, 255, 0.21);
     
     }
   h2{

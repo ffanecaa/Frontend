@@ -119,32 +119,114 @@ console.log(map._lastCenter.lng);
   L.Routing.control({
   waypoints: [
     L.latLng(lat,lng),
-    L.latLng(selecteTarget.lat,selecteTarget.lng)
-  // ].on('routesFound', function (e){
-  ]
-  // }
-  languaje:es
-}).addTo(map);
-}
+    L.latLng(selecteTarget.lat,selecteTarget.lng),
 
+  ],
+ 
+
+  language:"es"
+})
+.addTo(map);
+}
   
 
 </script>
+<div class="container__geolocalizacion">
+ 
+  
+<div class="map">
+  <div id="map" ></div>
+  
+  <button class="button__1" on:click={manexadorDistancias}>Buscar</button>
+   <button class="button__2"on:click={calcularRuta}>ruta</button>
+  </div>
 
-<h1>Geolocalización</h1>
+   <div class="container__image">
+        
+       
+    <h2 class="texto__horizontal"> RUTAS</h2>
+    <h2 class="texto__vertical">10km a la redonda</h2>   
+        
+    <figure>
+  
+      <img src="niñaMapa.jpg" alt="nina">
+      
+  </figure> 
+</div>
+</div>
 
-<div id="map" style="height: 500px;" ></div>
-
-<button on:click={manexadorDistancias}>Buscar</button>
- <button on:click={calcularRuta}>ruta</button>
 
 <style>
+
+.container__geolocalizacion{
+  display: flex;
+  flex-direction: column;
+
+
+ 
+
+}
+
+.map{
+  position:relative ;
+}
   #map {
-    height: 400px;
+   
+    position: absolute;
+ top:25px;
+ right: 25px;
+ width: 800px;
+ height: 800px;
+}
+  button{
+    width: 150px;
+    height: 50px;
+    border:3px solid #516007;
+    border-radius: 10px;
+    cursor:pointer;
+    box-shadow: 2px 2px 2px #516007;
   }
 
-  button {
-    width: 50px;
-    height: 50px;
+.button__1 {
+    
+    position: absolute;
+    left:900px;
+    top:360px
+  }
+  .button__2 {
+    position: absolute;
+    left:900px;
+    top:520px
+  }
+
+   .container__image{
+  display: flex;
+  flex-direction: row;
+  align-content: end;
+  justify-content: end;
+
+
+  } 
+  figure{
+    width: 400px;
+    height: 600px;
+
+  }
+  img{
+ width: 300px;
+ height: 500px;
+  }
+
+
+  .texto__vertical{
+    writing-mode:vertical-rl;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+
+  .texto__horizontal{
+   font-size: 4rem;
+   font-weight: bold;
   }
 </style>

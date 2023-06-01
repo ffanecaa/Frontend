@@ -43,9 +43,13 @@ function manexadorEnvio(){
     left: 50%;
     height: 600px;
     transform: translate(-50%, -50%);
-    width: 400px;
-    background: white;
-    border-radius: 10px;
+   width: 400px;
+background: rgba(255, 255, 255, 0.31);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.8px);
+-webkit-backdrop-filter: blur(6.8px);
+border: 1px solid rgba(255, 255, 255, 0.21);
     
     }
   h2{
@@ -56,7 +60,7 @@ function manexadorEnvio(){
     padding: 0 0 20px 0;
     border-bottom: 1px solid silver;
     height: 600px;
-    color:#802525;
+
 text-shadow: 1px 1px 1px black;}
  
 fieldset{
@@ -75,10 +79,10 @@ fieldset{
     height: 40px;
     font-size: 16px;
     border:none;
-    border-bottom: 3px solid #802525;
+    border-bottom: 3px solid #516007;
     background: none;
     outline:invert;
-    color: #adadad;
+    color: #516007;
     font-size: 16px;
     padding: 5px;
  

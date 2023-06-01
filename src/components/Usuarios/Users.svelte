@@ -67,14 +67,20 @@
   
     button {
       padding: 5px;
-      width: 60px;
-      height: 25px;
+      width: 80px;
+      height: 30px;
+      border:3px solid #516007;
+  
+    cursor:pointer;
+    box-shadow: 2px 2px 2px #516007;
     }
   
     .botones {
       display: flex;
       flex-direction: row;
-      gap: 5px;
+      gap: 10px;
+    
+ 
     }
   
     .ventana {
@@ -83,8 +89,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image:url(aquis.JPG);
-      background-position:center;
+      background-image:url(mapco.jpg);
+      background-position:80%;
       background-size: cover;
       background-repeat: no-repeat;
       z-index: 100000;
@@ -99,6 +105,10 @@
       right: 10px; */
       width: 100px;
       height: 50px;
+      border:3px solid #516007;
+      border-radius: 10px;
+      cursor:pointer;
+      box-shadow: 2px 2px 2px #516007;
     }
   
     .content {
