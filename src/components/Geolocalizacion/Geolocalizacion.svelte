@@ -6,6 +6,7 @@
   import { MarkerClusterGroup } from "leaflet.markercluster";
   import "leaflet-routing-machine";
   import "../../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js";
+  import "../../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css";
 
   let markers = new MarkerClusterGroup();
 
@@ -15,7 +16,16 @@
   let map;
   let latlng;
   let elementos;
+  let mapMakerToElemen = new Map()
+  let selecteTarget
+
  let cosa
+
+ function saveMarkerTarget(event) {
+  selecteTarget = event.latlng
+   console.log(selecteTarget);
+ }
+
   function manexadorDistancias() {
     fetch(`http://localhost:8000/distancia/?latitude=${lat}&longitude=${lng}`)
       .then((res) => res.json())
@@ -30,8 +40,10 @@
           let marker = L.marker([
             elemento.latitude,
             elemento.longitude,
-          ]).bindPopup(contenido);
+          ]).bindPopup(contenido).on("click",saveMarkerTarget);
           markers.addLayer(marker);
+          mapMakerToElemen.set(marker, elemento)
+          // Para obetener el elemento del marker: const elemento = mpaMarkerToElemen.get(marker)
         }
         map.addLayer(markers);
       });
@@ -61,17 +73,17 @@
         lat = location.coords.latitude;
         lng = location.coords.longitude;
 
-      //   // crear marcador 
-      //   latlng = L.latLng(lat, lng);
-      //   L.circle(latlng, { radius: 300 }).addTo(map);
-      //   L.marker(latlng, { icon: customIcon })
-      //     .addTo(map)
-      //     .bindPopup("Localizado");
-      //  // al punto 
-      //   map.flyTo(latlng, 11, {
-      //     animate: true,
-      //     duration: 2,
-      //   });
+        // crear marcador 
+        latlng = L.latLng(lat, lng);
+        L.circle(latlng, { radius: 300 }).addTo(map);
+        L.marker(latlng, { icon: customIcon })
+          .addTo(map)
+          .bindPopup("Localizado");
+       // al punto 
+        map.flyTo(latlng, 11, {
+          animate: true,
+          duration: 2,
+        });
       },
       (error) => {
         console.error(error);
@@ -86,11 +98,11 @@
 // function punto (e){
 // let secondMarker = L.marker([e.latlng.lat,e.latlng.lng]).addTo(map)
 // }
-
- cosa =map.on('click', (event) =>{
-let secondMarker = L.marker([event.latlng.lat,event.latlng.lng]).addTo(map)
-   return ([event.latlng.lat,event.latlng.lng])
-  })
+/* seleccionar click mapa*/
+//  cosa =map.on('click', (event) =>{
+// let secondMarker = L.marker([event.latlng.lat,event.latlng.lng]).addTo(map)
+//    return ([event.latlng.lat,event.latlng.lng])
+//   })
 
 
 
@@ -107,8 +119,10 @@ console.log(map._lastCenter.lng);
   L.Routing.control({
   waypoints: [
     L.latLng(lat,lng),
-    L.latLng(map._lastCenter.lat,map._lastCenter.lng)
+    L.latLng(selecteTarget.lat,selecteTarget.lng)
+  // ].on('routesFound', function (e){
   ]
+  // }
 }).addTo(map);
 }
 

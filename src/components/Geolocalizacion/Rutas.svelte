@@ -22,6 +22,12 @@
 let lat 
 let lng 
 
+obterLocalizacion().then( novaLocalizacion => localizacion = novaLocalizacion)
+
+$: if (localizacion) L.marker([localizacion.lat,localizacion.lng]).addTo(map).bindPopup("Localizado")
+
+
+
 function manexadorDistancias() {
     fetch(`http://localhost:8000/distancia/?latitude=${localizacion.lat}&longitude=${localizacion.lng}`)
       .then((res) => res.json())
@@ -54,13 +60,10 @@ function manexadorDistancias() {
       iconSize: [50, 50],
       iconAnchor: [25, 50],
     });
-    obterLocalizacion().then( novaLocalizacion => localizacion = novaLocalizacion )
-    L.marker([localizacion.lat,localizacion.lng])
-          .addTo(map)
-          .bindPopup("Localizado");
+    } )
+
           
- 
-  })
+
 
 //  function calcularRuta(){
 //   L.Routing.control({
