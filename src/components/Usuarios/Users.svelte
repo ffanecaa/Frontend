@@ -69,10 +69,10 @@
       padding: 5px;
       width: 80px;
       height: 30px;
-      border:3px solid #516007;
+      border:3px solid #99AB25;
   
     cursor:pointer;
-    box-shadow: 2px 2px 2px #516007;
+    box-shadow: 2px 2px 2px #99AB25;
     }
   
     .botones {
