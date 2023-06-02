@@ -137,7 +137,7 @@ color:black ;
 				background-position: 28px -342px;
 			}
 			nav ul li:nth-child(5)  {
-				background-color: #D3975B;
+				background-color: #E6E7EB;
 				background-position: 28px -462px;
 			}
 			nav ul li:nth-child(6)  {
