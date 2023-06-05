@@ -111,37 +111,38 @@ color:black ;
 }
 	nav ul li {
 		float: left; margin: 0 20px 0 0;
+    background-color: #D5C4A4
 	}
 		nav ul li  {
 			display: block; width: 120px; height: 40px;
 		}
 			nav ul li:nth-child(1)  {
-				background-color: #D3975B;
+				/* background-color: #D3975B; */
 				background-position: 28px 28px;
         
 			
 			}
 			nav ul li:nth-child(2)  {
-				background-color: #D3975B;
+				/* background-color: #D3975B; */
 				background-position: 28px -96px;
     
 			}
 			nav ul li:nth-child(3)  {
-				background-color: #D3975B;
+				/* background-color: #D3975B; */
 				background-position: 28px -222px;
         
 			
 			}
 			nav ul li:nth-child(4)  {
-				background-color: #D3975B;
+				/* background-color: #D3975B; */
 				background-position: 28px -342px;
 			}
 			nav ul li:nth-child(5)  {
-				background-color: #E6E7EB;
+				/* background-color: #E6E7EB; */
 				background-position: 28px -462px;
 			}
 			nav ul li:nth-child(6)  {
-				background-color: #D3975B;
+				/* background-color: #D3975B; */
 				background-position: 28px -582px;
 			}
 		 span {

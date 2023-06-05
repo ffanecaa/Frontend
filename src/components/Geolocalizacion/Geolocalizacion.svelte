@@ -137,7 +137,7 @@ console.log(map._lastCenter.lng);
 <div class="map">
   <div id="map" ></div>
   
-  <button class="button__1" on:click={manexadorDistancias}>Buscar</button>
+  <button class="button__1" on:click|once={manexadorDistancias}>Buscar</button>
    <button class="button__2"on:click={calcularRuta}>ruta</button>
   </div>
 

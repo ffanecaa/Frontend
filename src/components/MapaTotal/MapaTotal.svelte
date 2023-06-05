@@ -89,7 +89,7 @@
   width: 850px;
   height:650px ;
 
-background-color: #C1D0B5;
+background-color:  #D5C4A4;;
   }
 
 .map{

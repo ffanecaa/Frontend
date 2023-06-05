@@ -79,10 +79,10 @@ fieldset{
     height: 40px;
     font-size: 16px;
     border:none;
-    border-bottom: 3px solid #516007;
+    border-bottom: 3px solid #D5C4A4;
     background: none;
     outline:invert;
-    color: #516007;
+    color: #ADD19E;
     font-size: 16px;
     padding: 5px;
  
@@ -93,7 +93,7 @@ fieldset{
     left: 15px;}
 
 .nome , .pass{
-    color: #802525;
+    color: #D5C4A4;
     font-size: 1.8rem;
     padding: 5px;
 }
