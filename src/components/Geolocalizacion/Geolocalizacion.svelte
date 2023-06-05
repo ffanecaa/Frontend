@@ -181,10 +181,10 @@ console.log(map._lastCenter.lng);
   button{
     width: 150px;
     height: 50px;
-    border:3px solid #516007;
+    border:3px solid #D5C4A4;
     border-radius: 10px;
     cursor:pointer;
-    box-shadow: 2px 2px 2px #516007;
+    box-shadow: 2px 2px 2px #D5C4A4;
   }
 
 .button__1 {

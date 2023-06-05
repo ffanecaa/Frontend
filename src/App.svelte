@@ -153,7 +153,7 @@ color:black ;
 						display: block;
 					}
 				
-			link{color:black}
+
 					
   main{
   width: 100%;
