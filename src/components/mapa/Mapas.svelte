@@ -2,7 +2,7 @@
 
 <script>
     //  import L from 'leaflet';
-    import  {lugares} from "../../../sitios.js"
+
      import {onMount} from 'svelte'
   let map;
  export let latitude= 0
@@ -29,7 +29,7 @@ $: markers = [
       attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     }).addTo(map);
   
-    L.geoJSON(lugares).addTo(map);
+
 
 /* bucle metodo con funcion dentro 
 para cada marca que lo envie al marker */

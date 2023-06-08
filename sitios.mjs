@@ -2,7 +2,22 @@ let lugares = {
 "type": "FeatureCollection",
 "name": "03ACS_202212_PC_BicEltos_BIC_Elementos",
 "features": [
-{ "type": "Feature", "properties": { "ID_BIC": "BIC.000.366", "ID_RAGE": "53-0000325-00000", "NOME": "Conxunto histórico de Corcubión", "CONCELLO": "Corcubión", "LUGAR": "Corcubión", "X": "484255", "Y": "4754660", "INTERESE": "ART", "NATUREZA": "Material", "CONDICION": "Inmoble", "CATEGORIA": "Conxunto hist¢rico", "XENERICO": "-", "DISPOSICIO": 1, "DATA": "31\/01\/1985", "DOG": "DOG 042 - 28.02.1985", "BOE": "-", "COD_INE": 15028 }, "geometry": { "type": "Point", "coordinates": [ 484255.0, 4754660.0 ] } },
+{ "type": "Feature", 
+
+"properties": 
+{ "ID_BIC": "BIC.000.366", "ID_RAGE": "53-0000325-00000", 
+"NOME": "Conxunto histórico de Corcubión", "CONCELLO": "Corcubión", "LUGAR": "Corcubión", "X": "484255",
+ "Y": "4754660",
+  "INTERESE": "ART", 
+  "NATUREZA": "Material", 
+  "CONDICION": "Inmoble", 
+  "CATEGORIA": "Conxunto hist¢rico",
+   "XENERICO": "-",
+    "DISPOSICIO": 1, 
+    "DATA": "31\/01\/1985",
+     "DOG": "DOG 042 - 28.02.1985", "BOE": "-", "COD_INE": 15028 },
+
+      "geometry": { "type": "Point", "coordinates": [ 484255.0, 4754660.0 ] } },
 { "type": "Feature", "properties": { "ID_BIC": "BIC.000.408", "ID_RAGE": "51-0008839-00000", "NOME": "Castelo do Cardenal", "CONCELLO": "Corcubión", "LUGAR": "Olveira", "X": "484906", "Y": "4753045", "INTERESE": "ART", "NATUREZA": "Material", "CONDICION": "Inmoble", "CATEGORIA": "Xen‚rica", "XENERICO": "Castelo", "DISPOSICIO": 1, "DATA": "17\/10\/1994", "DOG": "-", "BOE": "-", "COD_INE": 15028 }, "geometry": { "type": "Point", "coordinates": [ 484906.0, 4753045.0 ] } },
 { "type": "Feature", "properties": { "ID_BIC": "BIC.000.409", "ID_RAGE": "51-0008840-00000", "NOME": "Torre de Nogueira", "CONCELLO": "Coristanco", "LUGAR": "Nogueira", "X": "519381", "Y": "4777918", "INTERESE": "ART", "NATUREZA": "Material", "CONDICION": "Inmoble", "CATEGORIA": "Xen‚rica", "XENERICO": "Castelo", "DISPOSICIO": 1, "DATA": "17\/10\/1994", "DOG": "-", "BOE": "-", "COD_INE": 15029 }, "geometry": { "type": "Point", "coordinates": [ 519381.0, 4777918.0 ] } },
 { "type": "Feature", "properties": { "ID_BIC": "BIC.000.779", "ID_RAGE": "30340", "NOME": "Dolmen da Pedra Embarrada", "CONCELLO": "Coristanco", "LUGAR": "Bieite de Abaixo", "X": "517272", "Y": "4779544", "INTERESE": "ARQ", "NATUREZA": "Material", "CONDICION": "Inmoble", "CATEGORIA": "Xacemento arqueol¢xico", "XENERICO": "Arte rupestre", "DISPOSICIO": 1, "DATA": "23\/02\/2022", "DOG": "DOG 044 - 04.03.2022", "BOE": "-", "COD_INE": 15029 }, "geometry": { "type": "Point", "coordinates": [ 517272.0, 4779544.0 ] } },
@@ -657,3 +672,4 @@ let lugares = {
 { "type": "Feature", "properties": { "ID_BIC": "BIC.000.289", "ID_RAGE": "51-0004126-00000", "NOME": "Petróglifo de Montecelo 8\/Pedra Grande de Montecelo", "CONCELLO": "Poio", "LUGAR": "Poio de Arriba", "X": "527955.821938236", "Y": "4698920.0863350965", "INTERESE": "ARQ", "NATUREZA": "Material", "CONDICION": "Inmoble", "CATEGORIA": "Xenérica", "XENERICO": "Arte rupestre", "DISPOSICIO": 1, "DATA": "20\/12\/1974", "DOG": "-", "BOE": "BOE 059 - 10.03.1975", "COD_INE": 36041 }, "geometry": { "type": "Point", "coordinates": [ 527955.821899999864399, 4698920.0863 ] } }
 ]
 }
+export {lugares}
