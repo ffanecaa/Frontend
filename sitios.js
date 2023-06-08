@@ -1,4 +1,4 @@
-{
+let lugares = {
 "type": "FeatureCollection",
 "name": "03ACS_202212_PC_BicEltos_BIC_Elementos",
 "features": [
