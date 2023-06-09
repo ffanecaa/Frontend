@@ -40,7 +40,7 @@
         })
   </script>
   <div class="geo">
-    <h2>Elementos catalogados como Bic </h2>
+    <h2><span> Bienes </span> <span> Interes </span><span> Cultural</span> </h2>
   <div id="map" style="width: 100%; height: 400px; "></div>
   
 </div>
@@ -52,5 +52,24 @@
     display: flex;
     flex-direction: column;
 
+  }
+  h2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:12px;
+    color:#c5455a;
+  }
+  h2 span{
+    display: block;  /* no funciona con elementos de liena elletter*/
+  }
+
+h2 span::first-letter{
+    
+    font-size: 3.5rem;
+    font-weight:900;
+    text-shadow: 4px 4px 4px  #6b2430;;
+   
+  
   }
 </style>

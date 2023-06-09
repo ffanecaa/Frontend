@@ -19,13 +19,13 @@ function manexadorEnvio(){
 
 <div class="usuario">
   
-    <h2>Registrate</h2>
+    <h1>Rexístrate</h1>
     <fieldset>
     <label class="nome" for="nome">nome
-        <input class="input__nome" id="nome" type="text" placeholder="introduce tu nombre"bind:value={name}>
+        <input class="input__nome" id="nome" type="text" placeholder="introduce o teu nome"bind:value={name}>
     </label>
     <label class="pass">contrasinal
-        <input class="input__pass"type="text" placeholder="introduce tu contrasinal" bind:value={password}>
+        <input class="input__pass"type="text" placeholder="introduce o teu contrasinal" bind:value={password}>
     </label>
     
     <button on:click={manexadorEnvio}>envia</button>
@@ -52,7 +52,7 @@ backdrop-filter: blur(6.8px);
 border: 1px solid rgba(255, 255, 255, 0.21);
     
     }
-  h2{
+  h1{
     position: absolute;
     top:0%;
     left: 50px;
@@ -96,6 +96,7 @@ fieldset{
     color: #D5C4A4;
     font-size: 1.8rem;
     padding: 5px;
+    text-shadow: 2px 2px 2px black;
 }
 
 .pass{

@@ -30,16 +30,16 @@ let id
 
 <div class="sesion">
     <fieldset>
-        <h2>Login</h2>
+        <h1>Login</h1>
     
         <label for="" class="nome">nome
-            <input class="input__nome" type="text" placeholder="introduce tu nombre"bind:value={name}>
+            <input class="input__nome" type="text" placeholder="introduce o teu nome"bind:value={name}>
         </label>
         <label for="" class="pass">contrasinal
-            <input class="input__pass" type="text" placeholder="introduce tu contrasinal" bind:value={password}>
+            <input class="input__pass" type="text" placeholder="introduce o teu contrasinal" bind:value={password}>
         </label>
     
-        <button on:click={manexadorEnvio}>Logueate</button>
+        <button on:click={manexadorEnvio}>LOGIN</button>
         </fieldset>
 </div>
 
@@ -62,7 +62,7 @@ backdrop-filter: blur(6.8px);
 border: 1px solid rgba(255, 255, 255, 0.21);
     
     }
-  h2{
+    h1{
     position: absolute;
     top:0%;
     left: 50px;
@@ -70,8 +70,8 @@ border: 1px solid rgba(255, 255, 255, 0.21);
     padding: 0 0 20px 0;
     border-bottom: 1px solid silver;
     height: 600px;
-    color:#802525;
-text-shadow: 1px 1px 1px black;}
+
+text-shadow: 2px 2px 2px black;}
  
 fieldset{
    position: absolute;
@@ -89,10 +89,10 @@ fieldset{
     height: 40px;
     font-size: 16px;
     border:none;
-    border-bottom: 3px solid #802525;
+    border-bottom: 3px solid #D5C4A4;
     background: none;
     outline:invert;
-    color: #adadad;
+    color: #ADD19E;
     font-size: 16px;
     padding: 5px;
  
@@ -103,9 +103,10 @@ fieldset{
     left: 15px;}
 
 .nome , .pass{
-    color: #802525;
+    color: #D5C4A4;
     font-size: 1.8rem;
     padding: 5px;
+    text-shadow: 2px 2px 2px black;
 }
 
 .pass{
@@ -124,5 +125,4 @@ button{
     border:2px inset
 }
 
-   
- </style>
+</style>
