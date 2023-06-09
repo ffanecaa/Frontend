@@ -2,9 +2,30 @@
     import { onMount } from 'svelte';
     import L from 'leaflet';
     import { lugares} from "../../../sitios.mjs"
+    
     const datas = lugares.features
 
     let map
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     onMount(() => {
       // Crear el mapa y establecer la vista inicial
      map = L.map('map').setView([42.812000, -7.90005], 13);
@@ -18,10 +39,24 @@
         
 
           for( let data of datas){
-        let marker = L.marker(data.geometry.coordinates).bindPopup(data.properties.NOME).addTo(map)
+
+// Suponiendo que `data.geometry.coordinates` es el array de coordenadas UTM
+const latLonCoordinates = data.geometry.coordinates.map(coord => {
+  const utm = new Utm(29, "N", coord[0], coord[1]); // Crea un objeto Utm con las coordenadas UTM
+  return utm.toLatLon(); // 
+});
+
+
+  
+        let marker = L.marker(latLong).bindPopup(data.properties.NOME).addTo(map)
         console.log(data.geometry.coordinates);
           }
         })
+
+
+
+
+
   </script>
   
   <div id="map" style="width: 100%; height: 400px;"></div>

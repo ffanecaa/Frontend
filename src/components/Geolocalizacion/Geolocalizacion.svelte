@@ -19,7 +19,7 @@
   let mapMakerToElemen = new Map()
   let selecteTarget
 
- let cosa
+
 
  function saveMarkerTarget(event) {
   selecteTarget = event.latlng
@@ -79,7 +79,7 @@
         L.marker(latlng, { icon: customIcon })
           .addTo(map)
           .bindPopup("Localizado");
-       // al punto 
+     //  al punto 
         map.flyTo(latlng, 11, {
           animate: true,
           duration: 2,
@@ -124,7 +124,9 @@ console.log(map._lastCenter.lng);
   ],
  
 
-  language:"es"
+  language:"es",
+  routeWhileDragging: true,
+  waypointMode: 'snap',
 })
 .addTo(map);
 }

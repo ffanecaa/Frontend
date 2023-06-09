@@ -31,7 +31,7 @@
  // import Usuario from "./components/Usuarios/Usuario.svelte";
  // import Sesion from "./components/Usuarios/Sesion.svelte";
   import Header from "./components/Header/Header.svelte";
-  import Geojson from "./components/geojson/Geojson.svelte";
+ import Geojson from "./components/geojson/Geojson.svelte";
   //import Rutas from "./components/Geolocalizacion/Rutas.svelte";
   //  import Portada from "./components/modulares/portada.svelte";
   // Agrega esta línea para importar la variable `url`

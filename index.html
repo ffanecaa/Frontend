@@ -8,6 +8,10 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+<script type="module">
+  import LatLon from 'https://cdn.jsdelivr.net/npm/geodesy@2.3.0/latlon-spherical.min.js';
+  const d = new LatLon(52.205, 0.119).distanceTo(new LatLon(48.857, 2.351));
+</script>
   </head>
   <body>
     <div id="app"></div>

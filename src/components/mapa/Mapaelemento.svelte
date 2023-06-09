@@ -56,28 +56,28 @@
   });
 </script>
 
-<h2>{elemento.name}</h2>
-<!-- <button on:click={traerlinkm}>id</button> -->
-<input type="text" on:change={traerlinkm} bind:value={id} />
-<p>{elemento.description}</p>
-
-<div id={mapId} style="height: 600px;width:800px" ></div>
+<div class="elemento">
+  <h2>{elemento.name}</h2>
+  <!-- <button on:click={traerlinkm}>id</button> -->
+  <input type="text" on:change={traerlinkm} bind:value={id} />
+  <p>{elemento.description}</p>
+  
+  <div id={mapId} style="height: 600px;width:800px" ></div>
+</div>
 
 <style>
-  button {
-    border-radius: 0.4em;
-    padding: 0.4em 1em;
-    border: none;
-    cursor: grab;
-    background-color: transparent;
-    border-radius: 0.4em;
-    color: royalblue;
-    padding: 0.4em 1em;
-    border: 1px solid royalblue;
-  }
-  div {
-    border: 9px inset #add19e;
-  }
+
+
+.elemento {
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  display:none
+}
+
+ 
   h2 {
     text-transform: uppercase;
   }
