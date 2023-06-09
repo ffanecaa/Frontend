@@ -28,7 +28,8 @@
   const contenido=`
           <h3>${data.properties.NOME}</h3>
           <p>${data.properties.ID_BIC}</p>
-          <img src =${data.properties.IMG} style="width: 100px; height: 50px;">
+          
+          <img src =${data.properties.IMG} style="width: 150px; height: 80px;object-fit:contain">
         `;
         let marker = L.marker(latLon).bindPopup(contenido)
         markers.addLayer(marker)
@@ -38,6 +39,18 @@
           
         })
   </script>
+  <div class="geo">
+    <h2>Elementos catalogados como Bic </h2>
+  <div id="map" style="width: 100%; height: 400px; "></div>
   
-  <div id="map" style="width: 100%; height: 400px;"></div>
-  
+</div>
+
+
+<style>
+  .geo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+</style>
