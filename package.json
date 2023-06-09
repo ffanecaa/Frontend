@@ -15,6 +15,7 @@
     "vite": "^4.1.0"
   },
   "dependencies": {
+    "geodesy": "^2.4.0",
     "leaflet-routing-machine": "^3.2.12",
     "leaflet.markercluster": "^1.5.3",
     "svelte-map-leaflet": "^0.5.0"

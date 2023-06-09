@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import L from 'leaflet';
     import { lugares} from "../../../sitios.mjs"
+    import Utm from 'geodesy/utm.js'
     const datas = lugares.features
 
     let map
@@ -18,8 +19,19 @@
         
 
           for( let data of datas){
-        let marker = L.marker(data.geometry.coordinates).bindPopup(data.properties.NOME).addTo(map)
-        console.log(data.geometry.coordinates);
+    
+  const utm = new Utm(29, "N", data.geometry.coordinates[0], data.geometry.coordinates[1]);
+
+  // Crea un objeto Utm con las coordenadas UTM
+  const latLon = utm.toLatLon(); 
+  const contenido=`
+          <h3>${data.properties.NOME}</h3>
+          <p>${data.properties.ID_BIC}</p>
+          <p>${data.properties.LUGAR}"</p>
+        `;
+        let marker = L.marker(latLon).bindPopup(contenido).addTo(map)
+    
+
           }
         })
   </script>
