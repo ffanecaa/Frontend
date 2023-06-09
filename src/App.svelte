@@ -39,7 +39,7 @@
 
 <Router >
   <!-- <Rutas/> -->
-<Geojson/>
+
   <div class="container">
     <Header/>
   <!-- <Portada/> -->
@@ -76,6 +76,11 @@
     
       
       </li>
+      <li>
+        <span>     <Link to="/bic">Bic</Link></span>
+    
+      
+      </li>
     </ul>
    
   </nav>
@@ -88,6 +93,7 @@
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
     <Route path="/rutass" component={Geolocalizacion} />
+    <Route path="/bic" component={Geojson} />
     <!-- <Route path="/portada" component={Portada} /> -->
     
 
