@@ -3,8 +3,9 @@
     import L from 'leaflet';
     import { lugares} from "../../../sitios.mjs"
     import Utm from 'geodesy/utm.js'
+    import { MarkerClusterGroup } from 'leaflet.markercluster';
     const datas = lugares.features
-
+    let markers = new MarkerClusterGroup()
     let map
     onMount(() => {
       // Crear el mapa y establecer la vista inicial
@@ -27,12 +28,14 @@
   const contenido=`
           <h3>${data.properties.NOME}</h3>
           <p>${data.properties.ID_BIC}</p>
-          <p>${data.properties.LUGAR}"</p>
+          <img src =${data.properties.IMG} style="width: 100px; height: 50px;">
         `;
-        let marker = L.marker(latLon).bindPopup(contenido).addTo(map)
+        let marker = L.marker(latLon).bindPopup(contenido)
+        markers.addLayer(marker)
+          } map.addLayer(markers)
     
 
-          }
+          
         })
   </script>
   
