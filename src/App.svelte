@@ -32,18 +32,18 @@
  // import Sesion from "./components/Usuarios/Sesion.svelte";
   import Header from "./components/Header/Header.svelte";
   import Geojson from "./components/geojson/Geojson.svelte";
-  import Home from "./components/Home/Home.svelte";
+ 
   //import Rutas from "./components/Geolocalizacion/Rutas.svelte";
   //  import Portada from "./components/modulares/portada.svelte";
   // Agrega esta línea para importar la variable `url`
 </script>
 
 <Router >
-  <!-- <Rutas/> -->
+  <Header/>
 
   <div class="container">
-    <Header/>
-  <!-- <Portada/> -->
+  
+
   <nav>
     <ul>
       <li>
@@ -67,11 +67,11 @@
     
       
       </li>
-      <li>
+      <!-- <li>
         <span>     <Link to="/lento">Categorias</Link></span>
     
       
-      </li>
+      </li> -->
       <li>
         <span>     <Link to="/rutass">Rutas</Link></span>
     
@@ -86,23 +86,19 @@
    
   </nav>
   <main>
-    <Route path="/" component={Home} />
+   
     <Route path="/mapa" component={MapaTotal} />
 
-    <!-- genera el link  -->
+  
     <Route path="/mapa/:id" component={Mapaelemento} />    
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
     <Route path="/rutass" component={Geolocalizacion} />
     <Route path="/bic" component={Geojson} />
     <!-- <Route path="/portada" component={Portada} /> -->
-    
 
-  
-   
-    <!-- <Route path="/cates" component={PaginacionCategoria} /> -->
     <Route path="/lento" component={Lento} />
- <!-- <Geolocalizacion/> -->
+
 
   </main>
 
