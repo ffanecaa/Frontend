@@ -22,12 +22,16 @@ async function getIcon(){
     return data
 }
 
-
+async function getElementsBusqueda(name){
+    const response = await fetch(baseURL +`varios/?name=${name}`)
+    const data = await response.json()
+    return data
+}
 
 
 export {
     getElements,
     getCathegory,
-    getIcon
-
+    getIcon,
+    getElementsBusqueda
 }

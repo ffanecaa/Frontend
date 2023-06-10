@@ -1,4 +1,4 @@
-<div style='opacity: 1;' id='imageHover'>
+<!-- <div style='opacity: 1;' id='imageHover'>
     <div class="image-hover-container">
         <div class='container'>
             <div class='middle'>
@@ -266,4 +266,4 @@
   
 	hoverImagesContainer.style.opacity = '1';
     }) 
-        </script>
+        </script> -->
