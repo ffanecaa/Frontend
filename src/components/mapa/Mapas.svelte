@@ -34,7 +34,7 @@ $: markers = [
 /* bucle metodo con funcion dentro 
 para cada marca que lo envie al marker */
   markers.forEach(marker => {
-      L.marker(marker.position).addTo(map).bindPopup(marker.name,);
+      L.marker(marker.position).addTo(map).bindPopup(marker.name);
     });
 });
 </script>
