@@ -38,7 +38,7 @@
     console.log(info);
   }
   function menos() {
-    traerpaxPosterior(info.pagination.previousPage).then((datosrecibidos) => (info = datosrecibidos));
+    traerpaxAnterior(info.pagination.previousPage).then((datosrecibidos) => (info = datosrecibidos));
     console.log(info);
   }
 </script>
@@ -69,10 +69,10 @@
   </div>
 
 <div class="paginacion">
-   <!-- <button on:click={menos} >◀</button> --> 
   
+   <button on:click={menos}>◀</button>
   <button on:click={mas}>▶</button>
-  <button on:click={menos}>▶</button>
+ 
 </div>
 </div>
 
