@@ -134,7 +134,7 @@ color:black ;
 }
 	nav ul li {
 		float: left; margin: 0 20px 0 0;
-    background-color: #c5455a8f;
+    background-color: #C59378;
 	}
 		nav ul li  {
 			display: block; width: 120px; height: 40px;

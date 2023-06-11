@@ -86,7 +86,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  background-color: aqua;
+  background-image: url('friki.jpg');
+  /* background-color: #9fb12978; */
 }
 
 .container_ficha{
@@ -95,7 +96,7 @@
   justify-content:space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: blueviolet;
+  background-color:#c5455a6c ;
   width:180%;
 }
 
