@@ -44,6 +44,14 @@ async function traerpaxPosterior(nextPage){
         return datos
        ;
   }
+//--------------- anterior --------------
+async function traerpaxAnterior(previousPage){
+    
+    const resposta = fetch(baseURL +`${previousPage}`)
+        const datos = (await resposta).json()
+        return datos
+       ;
+  }
 
 
 
@@ -53,5 +61,6 @@ export {
     getIcon,
     getElementsBusqueda,
     getElementsBusquedaPax,
-    traerpaxPosterior
+    traerpaxPosterior,
+    traerpaxAnterior
 }

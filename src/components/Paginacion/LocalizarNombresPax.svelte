@@ -5,6 +5,7 @@
   import {
     getElementsBusquedaPax,
     traerpaxPosterior,
+    traerpaxAnterior
   } from "../../lib/fetchs.mjs";
 
   let info = { elements: [], pagination: {} };
@@ -33,7 +34,11 @@
   
 
   function mas() {
-    traerpaxPosterior(info.pagination.nextPAge,name).then((datosrecibidos) => (info = datosrecibidos));
+    traerpaxPosterior(info.pagination.nextPAge).then((datosrecibidos) => (info = datosrecibidos));
+    console.log(info);
+  }
+  function menos() {
+    traerpaxPosterior(info.pagination.previousPage).then((datosrecibidos) => (info = datosrecibidos));
     console.log(info);
   }
 </script>
@@ -67,6 +72,7 @@
    <!-- <button on:click={menos} >◀</button> --> 
   
   <button on:click={mas}>▶</button>
+  <button on:click={menos}>▶</button>
 </div>
 </div>
 
