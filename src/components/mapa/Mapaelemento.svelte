@@ -64,7 +64,7 @@
 <div id={mapId} style="height: 600px;width:800px" ></div>
 
 <style>
-  button {
+  /* button {
     border-radius: 0.4em;
     padding: 0.4em 1em;
     border: none;
@@ -74,7 +74,7 @@
     color: royalblue;
     padding: 0.4em 1em;
     border: 1px solid royalblue;
-  }
+  } */
   div {
     border: 9px inset #add19e;
   }

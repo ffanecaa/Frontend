@@ -1,69 +1,49 @@
-<div id="map" style="width:300px;heigth:600px"></div>
-
-<input type="text" bind:value={name}>
-<button on:click={busqueda}></button>
-
-
 <script>
-    import {onMount} from  "svelte"
-    import L from "leaflet"
-    import {getElementsBusqueda}from "../../lib/fetchs.mjs"
+  import { onMount,afterUpdate } from "svelte";
+  import L from "leaflet";
+  import { getElementsBusqueda } from "../../lib/fetchs.mjs";
 
-let map 
+  let map;
 
-let name = "catedral"
-let infos = []
+  let name = "catedral";
+  let infos = [];
+let marker
+  function busqueda() {
+    getElementsBusqueda(name).then((datosRecibidos) => {
+      infos = datosRecibidos;
 
-async function busqueda (){
-    getElementsBusqueda(name)
-    .then (datosRecibidos =>{infos = datosRecibidos})
+     
 
-}
+      for(let info of infos){
+      
+       marker = L.marker([info.latitude, info.longitude]).bindPopup(info.name).addTo(map)
+      console.log(info.latitude)
+  }
+    });
+  }
+  console.log(infos[0]);
+  onMount(() => {
+    map = L.map("mymap").setView([42.888052, -8.04569], 14);
 
-
-onMount(()=>{
-
-map = L.map("map").setView([ 42.88805200, -8.0456900], 14)
-
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
-      attribution: '&copy; <a href="https://1938.com.es/">Web Inteligencia Artificial</a>'
-    }).addTo(map)
+      attribution:
+        '&copy; <a href="https://1938.com.es/">Web Inteligencia Artificial</a>',
+    }).addTo(map);
 
-for(let info of infos){
-    let contenido = info.name
-     L.marker([info.latitude, info.longitude]).bindPopup(contenido).addTo(map)
-}
-
-
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+  });
 </script>
 
+<div class="busqueda">
+  <input type="text" bind:value={name} />
+  <button on:click={busqueda} />
+  <div id="mymap" style="height: 600px;width:900px" />
+</div>
 
-
-
-
-
-
-
-
+<style>
+  .busqueda {
+    width: 100%;
+    height: 400px;
+  }
+</style>

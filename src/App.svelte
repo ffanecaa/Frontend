@@ -32,6 +32,7 @@
  // import Sesion from "./components/Usuarios/Sesion.svelte";
   import Header from "./components/Header/Header.svelte";
   import Geojson from "./components/geojson/Geojson.svelte";
+  import LocalizarNombres from "./components/Mapa/LocalizarNombres.svelte";
  
   //import Rutas from "./components/Geolocalizacion/Rutas.svelte";
   //  import Portada from "./components/modulares/portada.svelte";
@@ -95,6 +96,7 @@
     <Route path="/nombre" component={MapaElementoNombre} />
     <Route path="/rutass" component={Geolocalizacion} />
     <Route path="/bic" component={Geojson} />
+    <Route path="/bics" component={LocalizarNombres} />
     <!-- <Route path="/portada" component={Portada} /> -->
 
     <Route path="/lento" component={Lento} />
