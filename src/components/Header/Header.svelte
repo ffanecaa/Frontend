@@ -18,7 +18,7 @@ Galicia Monumental </h1>
 <style>
     header{
         /* background-color: #D6E8DB; */
-         background-image: url('bus.jpg');
+         background-image: url(bus.jpg);
         background-size: cover ;
         background-repeat: no-repeat;
         background-position: 80% 80%; 

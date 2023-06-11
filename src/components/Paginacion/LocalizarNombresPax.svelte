@@ -86,7 +86,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  background-image: url('friki.jpg');
+  background-image: url(descarga.png);
   /* background-color: #9fb12978; */
 }
 
