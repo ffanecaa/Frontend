@@ -28,10 +28,30 @@ async function getElementsBusqueda(name){
     return data
 }
 
+/// elementos por nombre paginados////////
+
+async function getElementsBusquedaPax(name,page,limit){
+    const response = await fetch(baseURL +`elements/pax/?name=${name}&page=${page}&limit=${limit}`)
+    const datos =await response.json()
+    return datos
+}
+
+//--------------- posterior --------------
+async function traerpaxPosterior(nextPage){
+    
+    const resposta = fetch(`http://localhost:8000${nextPage}`)
+        const datos = (await resposta).json()
+        return datos
+       ;
+  }
+
+
 
 export {
     getElements,
     getCathegory,
     getIcon,
-    getElementsBusqueda
+    getElementsBusqueda,
+    getElementsBusquedaPax,
+    traerpaxPosterior
 }

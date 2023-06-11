@@ -7,7 +7,7 @@
   let map;
  export let latitude= 0
 export let longitude=0
-export let name='catedral'
+export let name=""
 export let L
 $: mapId = name ; // neceito que cada mapa tenga un nombre sino no se genera
 

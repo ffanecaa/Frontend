@@ -35,7 +35,8 @@ color:white;
 font-size: 4rem;
 font-weight:bold;
 margin-top:10%;
-text-shadow: 2px 2px 2px greenyellow;
+    
+text-shadow: 2px 2px 3px #c5455a8f;
 }
 .users{
   position: absolute;

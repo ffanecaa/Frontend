@@ -33,6 +33,7 @@
   import Header from "./components/Header/Header.svelte";
   import Geojson from "./components/geojson/Geojson.svelte";
   import LocalizarNombres from "./components/Mapa/LocalizarNombres.svelte";
+  import LocalizarNombresPax from "./components/Paginacion/LocalizarNombresPax.svelte";
  
   //import Rutas from "./components/Geolocalizacion/Rutas.svelte";
   //  import Portada from "./components/modulares/portada.svelte";
@@ -83,6 +84,16 @@
     
       
       </li>
+      <li>
+        <span>     <Link to="/bics">Busqueda Nombre</Link></span>
+    
+      
+      </li>
+      <li>
+        <span>     <Link to="/pagina/busquedas">pagina Nombre</Link></span>
+    
+      
+      </li>
     </ul>
    
   </nav>
@@ -100,6 +111,7 @@
     <!-- <Route path="/portada" component={Portada} /> -->
 
     <Route path="/lento" component={Lento} />
+    <Route path="/pagina/busquedas" component={LocalizarNombresPax} />
 
 
   </main>
@@ -117,7 +129,7 @@ color:black ;
 }
 	nav ul li {
 		float: left; margin: 0 20px 0 0;
-    background-color: #D5C4A4
+    background-color: #c5455a8f;
 	}
 		nav ul li  {
 			display: block; width: 120px; height: 40px;
