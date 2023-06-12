@@ -64,6 +64,16 @@
     
       
       </li>
+      <li>
+        <span>     <Link to="/pagina/busquedas">paginas Nombre</Link></span>
+    
+      
+      </li>
+      <li>
+        <span>     <Link to="/pagina/categorias">categorias</Link></span>
+    
+      
+      </li>
      
     </ul>
    
@@ -90,7 +100,7 @@
     <Route path="/bics" component={ElementosMapaNombre} />
  
       <!-- busca y agrupa por categoria mapa -->
-    <Route path="/lento" component={ClasificaCategorias} />
+    <Route path="/pagina/categorias" component={ClasificaCategorias} />
 
      <!-- busqueda por nombre y genera fichas paginadas -->
     <Route path="/pagina/busquedas" component={LocalizarNombresPaginados} />

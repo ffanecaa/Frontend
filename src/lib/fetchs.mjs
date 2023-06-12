@@ -58,7 +58,12 @@ async function traerpaxAnterior(previousPage){
     const datos = await resposta.json();
     return datos;
   }
-
+// buscar por nombre
+async function traerlinkName(name) {
+    const resposta = await fetch(`http://localhost:8000/links/${name}`);
+    const datos = await resposta.json();
+    return datos;
+  }
 export {
     getElements,
     getCathegory,
@@ -67,5 +72,6 @@ export {
     getElementsBusquedaPax,
     traerpaxPosterior,
     traerpaxAnterior,
-    traerlink
+    traerlink,
+    traerlinkName,
 }
