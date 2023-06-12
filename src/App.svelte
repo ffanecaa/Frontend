@@ -1,43 +1,20 @@
 <script>
-//   import Registro from "./components/Elemento/Registro.svelte";
-//   import Leer from "./components/Elemento/Leer.svelte";
-
-// import Iconos from "./components/Iconos/Iconos.svelte";
-// import Iconostraer from "./components/Iconos/Iconostraer.svelte";
-// import Cathegory from "./components/Cathegory/Cathegory.svelte"
-   
-  //  import MapaTotal from "./components/MapaTotal/MapaTotal.svelte"
-  // import IconCathe from "./components/Iconos/icon-Cathe.svelte";
-  // import Pruebass from "./components/Elemento/Pruebass.svelte";
   import Paginacion from "./components/Paginacion/Paginacion.svelte";
-  import Mapaelemento from "./components/Mapa/Mapaelemento.svelte";
+  import Mapaelemento from "./components/Mapa/FichasElementoMapa.svelte";
   import MapaElementoNombre from "./components/Mapa/MapaElementoNombre.svelte";
-  //  import Nosaldra from "./components/Mapa/Nosaldra.svelte";
    import Geolocalizacion from "./components/Geolocalizacion/Geolocalizacion.svelte";
-
- 
-
-
-
-
-   //import IconCathe from "./components/Iconos/IconCathe.svelte"
   import { Router, Link, Route } from "svelte-routing";
-  import MapaTotal from "./components/MapaTotal/MapaTotal.svelte";
-  // import Mapas from "./components/mapa/Mapas.svelte";
-  // import PaginacionCategoria from "./components/Paginacion/PaginacionCategoria.svelte";
-  import Lento from "./components/Mapa/Lento.svelte";
-
-  
- // import Usuario from "./components/Usuarios/Usuario.svelte";
- // import Sesion from "./components/Usuarios/Sesion.svelte";
   import Header from "./components/Header/Header.svelte";
-  import Geojson from "./components/geojson/Geojson.svelte";
-  import LocalizarNombres from "./components/Mapa/LocalizarNombres.svelte";
-  import LocalizarNombresPax from "./components/Paginacion/LocalizarNombresPax.svelte";
+  import ClasificaCategorias from "./components/Mapa/ClasificaCategorias.svelte";
+  import Bic from "./components/Bic/Bic.svelte";
+  import MapaElementosAgrupados from "./components/MapaElementosAgrupados/MapaElementosAgrupados.svelte";
+  import ElementosMapaNombre from "./components/Mapa/ElementosMapaNombre.svelte";
+  import LocalizarNombresPaginados from "./components/Paginacion/LocalizarNombresPaginados.svelte";
+  import FichasElementoMapa from "./components/Mapa/FichasElementoMapa.svelte";
  
-  //import Rutas from "./components/Geolocalizacion/Rutas.svelte";
-  //  import Portada from "./components/modulares/portada.svelte";
-  // Agrega esta línea para importar la variable `url`
+ 
+  
+
 </script>
 
 <Router >
@@ -90,29 +67,26 @@
     
       
       </li>
-      <li>
-        <span>     <Link to="/lento">Categorias</Link></span>
-    
-      
-      </li>
+     
     </ul>
    
   </nav>
   <main>
    
-    <Route path="/mapa" component={MapaTotal} />
+    <Route path="/mapa" component={MapaElementosAgrupados} />
 
   
-    <Route path="/mapa/:id" component={Mapaelemento} />    
+    <Route path="/mapa/:id" component={FichasElementoMapa} />    
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
     <Route path="/rutass" component={Geolocalizacion} />
-    <Route path="/bic" component={Geojson} />
-    <Route path="/bics" component={LocalizarNombres} />
+    <Route path="/bic" component={Bic} />
+    <Route path="/bics" component={ElementosMapaNombre} />
     <!-- <Route path="/portada" component={Portada} /> -->
 
-    <Route path="/lento" component={Lento} />
-    <Route path="/pagina/busquedas" component={LocalizarNombresPax} />
+    <Route path="/lento" component={ClasificaCategorias} />
+    <Route path="/pagina/busquedas" component={LocalizarNombresPaginados} />
+    <Route path="/pagina/busquedassss" component={Mapaelemento} />
 
 
   </main>
@@ -125,15 +99,24 @@
 <style>
 
   nav ul {
-	list-style: none; overflow: hidden; position: relative;
+	list-style: none; 
+  overflow: hidden; 
+  position: relative;
 color:black ;
+
+
 }
+
 	nav ul li {
-		float: left; margin: 0 20px 0 0;
-    background-color: #C59378;
-	}
-		nav ul li  {
-			display: block; width: 120px; height: 40px;
+		float: left;
+     margin: 0 10px 0 0;
+    background-color: whitesmoke;
+      box-shadow: 3px 3px 10px rgb(129, 125, 125);
+      border-radius: 5%;
+      margin-left: 50px;
+			display: block;
+       width: 120px; 
+       height: 40px;
 		}
 			nav ul li:nth-child(1)  {
 				/* background-color: #D3975B; */
@@ -165,7 +148,9 @@ color:black ;
 				background-position: 28px -582px;
 			}
 		 span {
-					font: 1rem "Dosis", sans-serif; text-transform: uppercase; 
+					font: 1rem "Dosis", sans-serif; 
+          text-transform: uppercase; 
+       
 	
 				}
 				 :hover span {
@@ -173,7 +158,13 @@ color:black ;
 					}
 				
 
-					
+          :global(a) {
+      text-decoration: none;
+      color:#c5455a8f;
+      text-align: center;
+      font-weight: bold;
+  
+    }		
   main{
   width: 100%;
  

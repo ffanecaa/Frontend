@@ -72,13 +72,19 @@
       border:3px solid #D5C4A4;
   
     cursor:pointer;
-    box-shadow: 2px 2px 2px #D5C4A4
+
+      background-color: whitesmoke;
+      box-shadow: 3px 3px 10px rgb(129, 125, 125);
+      border-radius: 5%;
+     
     }
   
     .botones {
       display: flex;
       flex-direction: row;
-      gap: 10px;
+      gap: 10px; 
+      
+
     
  
     }
