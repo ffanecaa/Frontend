@@ -10,6 +10,7 @@
   let longitude = -7.90005;
   let description = " por descubrir";
   let elemento = {};
+
   $: elemento = {
     id: id,
     name: name,
@@ -20,9 +21,9 @@
   
  
   function traerlinkm() {
-    traerlink().then((datosrecibidos) => {
+    traerlink(id).then((datosrecibidos) => {
       elemento = datosrecibidos;
-      console.log(elemento);
+     
     });
   }
   $: mapId = elemento.name;
@@ -51,6 +52,7 @@
   onMount(() => {
     traerlinkm();
   });
+  
 </script>
 
 <div class="container__Fichas">

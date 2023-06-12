@@ -53,8 +53,8 @@ async function traerpaxAnterior(previousPage){
        ;
   }
 // funcion ficha elementos busqueda por id 
-  async function traerlink() {
-    const resposta = await fetch(`http://localhost:8000/link/${id}`);
+  async function traerlink(id) {
+    const resposta = await fetch(baseURL + `/link/${id}`);
     const datos = await resposta.json();
     return datos;
   }
