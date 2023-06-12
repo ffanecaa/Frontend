@@ -1,7 +1,7 @@
 <script>
   import Paginacion from "./components/Paginacion/Paginacion.svelte";
-  import Mapaelemento from "./components/Mapa/FichasElementoMapa.svelte";
-  import MapaElementoNombre from "./components/Mapa/MapaElementoNombre.svelte";
+ 
+  
    import Geolocalizacion from "./components/Geolocalizacion/Geolocalizacion.svelte";
   import { Router, Link, Route } from "svelte-routing";
   import Header from "./components/Header/Header.svelte";
@@ -11,6 +11,7 @@
   import ElementosMapaNombre from "./components/Mapa/ElementosMapaNombre.svelte";
   import LocalizarNombresPaginados from "./components/Paginacion/LocalizarNombresPaginados.svelte";
   import FichasElementoMapa from "./components/Mapa/FichasElementoMapa.svelte";
+
  
  
   
@@ -41,11 +42,7 @@
  
         
       </li>
-      <li>  
-        <span>    <Link to="/nombre">busqueda por nombre </Link></span>
-    
       
-      </li>
     
       <li>
         <span>     <Link to="/rutass">Rutas</Link></span>
@@ -58,12 +55,12 @@
       
       </li>
       <li>
-        <span>     <Link to="/bics">Busqueda Nombre</Link></span>
+        <span>     <Link to="/bics">puntos mapa nombre</Link></span>
     
       
       </li>
       <li>
-        <span>     <Link to="/pagina/busquedas">pagina Nombre</Link></span>
+        <span>     <Link to="/pagina/busquedas">paginas Nombre</Link></span>
     
       
       </li>
@@ -72,22 +69,32 @@
    
   </nav>
   <main>
-   
+   <!-- mapa total -->
     <Route path="/mapa" component={MapaElementosAgrupados} />
 
-  
-    <Route path="/mapa/:id" component={FichasElementoMapa} />    
+    <!-- genera el link mapa para buscar cada elememto por id -->
+    <Route path="/mapas/:id" component={FichasElementoMapa} /> 
+
+     <!-- todos elementos paginadas fichas  -->
     <Route path="/paginacion" component={Paginacion} />
-    <Route path="/nombre" component={MapaElementoNombre} />
+
+      <!-- no busca correctamente solo da la primera coincidencia -->
+    <!-- <Route path="/nombre" component={MapaElementoNombre} /> -->
+
+    <!-- calcular ruta -->
     <Route path="/rutass" component={Geolocalizacion} />
+
+    <!-- bics catalogados -->
     <Route path="/bic" component={Bic} />
+
     <Route path="/bics" component={ElementosMapaNombre} />
-    <!-- <Route path="/portada" component={Portada} /> -->
-
+ 
+      <!-- busca y agrupa por categoria mapa -->
     <Route path="/lento" component={ClasificaCategorias} />
-    <Route path="/pagina/busquedas" component={LocalizarNombresPaginados} />
-    <Route path="/pagina/busquedassss" component={Mapaelemento} />
 
+     <!-- busqueda por nombre y genera fichas paginadas -->
+    <Route path="/pagina/busquedas" component={LocalizarNombresPaginados} />
+  
 
   </main>
 

@@ -8,7 +8,7 @@
  import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.css";
   import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css";
   import { MarkerClusterGroup } from "leaflet.markercluster";
-  import "leaflet-routing-machine";
+
   import "../../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js";
 
   let localizacion
@@ -65,16 +65,6 @@ function manexadorDistancias() {
           
 
 
-//  function calcularRuta(){
-//   L.Routing.control({
-//   waypoints: [
-//     L.latLng(localizacion.lat,localizacion.lng),
-//     L.latLng(57.6792, -8.354254)
-//   ]
-// }).addTo(map);
-//  }
-
-//  console.log(lat,lng)
 
     
   

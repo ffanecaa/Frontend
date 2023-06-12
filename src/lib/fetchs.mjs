@@ -52,8 +52,12 @@ async function traerpaxAnterior(previousPage){
         return datos
        ;
   }
-
-
+// funcion ficha elementos busqueda por id 
+  async function traerlink() {
+    const resposta = await fetch(`http://localhost:8000/link/${id}`);
+    const datos = await resposta.json();
+    return datos;
+  }
 
 export {
     getElements,
@@ -62,5 +66,6 @@ export {
     getElementsBusqueda,
     getElementsBusquedaPax,
     traerpaxPosterior,
-    traerpaxAnterior
+    traerpaxAnterior,
+    traerlink
 }

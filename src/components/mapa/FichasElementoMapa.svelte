@@ -1,10 +1,11 @@
 <script>
-  /// la pagina genro link mapa totla ///
+  /// Componente para generar ficha en el link mapa elementos agrupados ///
+  import {traerlink} from "../../lib/fetchs.mjs";
   import L from "leaflet";
   import { onMount, afterUpdate } from "svelte";
   let map;
   export let id = 1;
-  let name = "centro geografico";
+  let name ="elemento"
   let latitude = 42.812;
   let longitude = -7.90005;
   let description = " por descubrir";
@@ -16,12 +17,8 @@
     latitude: latitude,
     longitude: longitude,
   };
-  // $:marca =[elemento.latitude,elemento.longitude]
-  async function traerlink() {
-    const resposta = await fetch(`http://localhost:8000/link/${id}`);
-    const datos = await resposta.json();
-    return datos;
-  }
+  
+ 
   function traerlinkm() {
     traerlink().then((datosrecibidos) => {
       elemento = datosrecibidos;
@@ -56,27 +53,19 @@
   });
 </script>
 
-<h2>{elemento.name}</h2>
-<!-- <button on:click={traerlinkm}>id</button> -->
-<input type="text" on:change={traerlinkm} bind:value={id} />
-<p>{elemento.description}</p>
+<div class="container__Fichas">
+  <h2>{elemento.name}</h2>
+  <!-- <button on:click={traerlinkm}>id</button> -->
+  <input type="text" on:change={traerlinkm} bind:value={id} />
+  <p>{elemento.description}</p>
 
-<div id={mapId} style="height: 600px;width:800px" ></div>
+  <div id={mapId} style="height: 600px;width:800px" />
+</div>
 
 <style>
-  /* button {
-    border-radius: 0.4em;
-    padding: 0.4em 1em;
-    border: none;
-    cursor: grab;
-    background-color: transparent;
-    border-radius: 0.4em;
-    color: royalblue;
-    padding: 0.4em 1em;
-    border: 1px solid royalblue;
-  } */
-  div {
-    border: 9px inset #add19e;
+  .container__Fichas {
+    display: flex;
+    flex-direction: column;
   }
   h2 {
     text-transform: uppercase;
