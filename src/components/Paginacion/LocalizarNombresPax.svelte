@@ -101,19 +101,23 @@
 
 
 button{
-    cursor: pointer;
-        border: 1px solid #3498db;
-        background-color: transparent;
-        height: 50px;
-        width: 200px;
-        color: #3498db;
-        font-size: 1.5em;
-        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+  width: 80px;
+      height: 40px;
+      background-color: whitesmoke;
+      box-shadow: 3px 3px 10px rgb(129, 125, 125);
+      border-radius: 5%;
+      margin-left: 50px;
 }
 
 
 
-
+/* .button-ghost-blue {
+  background-color: transparent;
+  border-radius: 0.4em;
+  color: royalblue;
+  padding: 0.4em 1em;
+  border: 1px solid royalblue;
+} */
 
 
 

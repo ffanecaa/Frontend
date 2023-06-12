@@ -24,6 +24,26 @@ body{
   text-align: center;
 
 }
+
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: whitesmoke;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
 /* body {
   margin: 0;
   display: flex;
@@ -66,7 +86,12 @@ h1 {
   padding: 2em;
 }
 
-
+button width: 80px;
+      height: 40px;
+      background-color: whitesmoke;
+      box-shadow: 3px 3px 10px rgb(129, 125, 125);
+      border-radius: 5%;
+      margin-left: 50px;
 
 button {
   border-radius: 8px;
