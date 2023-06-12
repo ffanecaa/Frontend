@@ -41,7 +41,7 @@
   </script>
   <div class="geo">
     <h2><span> Bienes </span> <span> Interes </span><span> Cultural</span> </h2>
-  <div id="map" style="width: 100%; height: 400px; "></div>
+  <div id="map" style="width: 100%; height: 600px; "></div>
   
 </div>
 

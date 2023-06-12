@@ -69,11 +69,7 @@
     
       
       </li>
-      <!-- <li>
-        <span>     <Link to="/lento">Categorias</Link></span>
     
-      
-      </li> -->
       <li>
         <span>     <Link to="/rutass">Rutas</Link></span>
     
