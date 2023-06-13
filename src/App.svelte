@@ -25,7 +25,7 @@
   import MapaTotal from "./components/MapaTotal/MapaTotal.svelte";
   // import Mapas from "./components/mapa/Mapas.svelte";
   // import PaginacionCategoria from "./components/Paginacion/PaginacionCategoria.svelte";
-  import Lento from "./components/Mapa/Lento.svelte";
+  import ClasificaCategoria from "./components/Mapa/ClasificaCategoria.svelte";
 
   
  // import Usuario from "./components/Usuarios/Usuario.svelte";
@@ -94,7 +94,7 @@
   
    
     <!-- <Route path="/cates" component={PaginacionCategoria} /> -->
-    <Route path="/lento" component={Lento} />
+    <Route path="/lento" component={ClasificaCategoria} />
  <!-- <Geolocalizacion/> -->
 
   </main>
