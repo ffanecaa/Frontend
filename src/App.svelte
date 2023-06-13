@@ -26,10 +26,9 @@
   // import Mapas from "./components/mapa/Mapas.svelte";
   // import PaginacionCategoria from "./components/Paginacion/PaginacionCategoria.svelte";
   import ClasificaCategoria from "./components/Mapa/ClasificaCategoria.svelte";
-
+  import FichaElemento from "./components/Mapa/FichaElemento.svelte"
   
- // import Usuario from "./components/Usuarios/Usuario.svelte";
- // import Sesion from "./components/Usuarios/Sesion.svelte";
+
   import Header from "./components/Header/Header.svelte";
  import Geojson from "./components/geojson/Geojson.svelte";
   //import Rutas from "./components/Geolocalizacion/Rutas.svelte";
@@ -39,7 +38,7 @@
 
 <Router >
   <!-- <Rutas/> -->
-<Geojson/>
+
   <div class="container">
     <Header/>
   <!-- <Portada/> -->
@@ -88,14 +87,14 @@
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
     <Route path="/rutass" component={Geolocalizacion} />
-    <!-- <Route path="/portada" component={Portada} /> -->
+    <Route path="/ficha/:id" component= {FichaElemento}/>
     
 
   
    
-    <!-- <Route path="/cates" component={PaginacionCategoria} /> -->
+  
     <Route path="/lento" component={ClasificaCategoria} />
- <!-- <Geolocalizacion/> -->
+
 
   </main>
 

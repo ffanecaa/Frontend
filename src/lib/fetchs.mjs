@@ -23,11 +23,17 @@ async function getIcon(){
 }
 
 
-
+// funcion ficha elementos busqueda por id 
+async function traerlink(id) {
+    const resposta = await fetch(baseURL + `link/${id}`);
+    const datos = await resposta.json();
+    return datos;
+  }
 
 export {
     getElements,
     getCathegory,
-    getIcon
+    getIcon,
+    traerlink,
 
 }
