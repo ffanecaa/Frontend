@@ -43,7 +43,7 @@
           ]).bindPopup(contenido).on("click",saveMarkerTarget);
           markers.addLayer(marker);
           mapMakerToElemen.set(marker, elemento)
-          // Para obetener el elemento del marker: const elemento = mpaMarkerToElemen.get(marker)
+          // Para obetener el elemento del marker: const elemento = mapMarkerToElemen.get(marker)
         }
         map.addLayer(markers);
       });

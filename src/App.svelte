@@ -58,7 +58,7 @@
       
       </li>
       <li>
-        <span>     <Link to="/busqueda">paginadosNombres</Link></span>
+        <span>     <Link to="/busqueda">paginados Nombres</Link></span>
     
       
       </li>
