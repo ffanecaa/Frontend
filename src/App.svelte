@@ -13,7 +13,7 @@
   import LocalizarNombresPaginados from "./components/Paginacion/LocalizarNombresPaginados.svelte"
 
   import Header from "./components/Header/Header.svelte";
- import Geojson from "./components/geojson/Geojson.svelte";
+
  
 </script>
 
