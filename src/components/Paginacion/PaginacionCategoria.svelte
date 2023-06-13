@@ -117,11 +117,11 @@
        justify-content: space-between;
        align-content: center;
      }
-     .siguientes {
+     /* .siguientes {
        display: flex;
        justify-content: space-between;
        align-content: center;
-     }
+     } */
      .ficha {
        margin-bottom: 80px;
      }
