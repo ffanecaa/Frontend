@@ -107,16 +107,25 @@
 
 <style>
 
-  nav ul {
-	list-style: none; overflow: hidden; position: relative;
+nav ul {
+	list-style: none; 
+  overflow: hidden; 
+  position: relative;
 color:black ;
+
+
 }
+
 	nav ul li {
-		float: left; margin: 0 20px 0 0;
-    background-color: #D5C4A4
-	}
-		nav ul li  {
-			display: block; width: 120px; height: 40px;
+		float: left;
+     margin: 0 10px 0 0;
+    background-color: whitesmoke;
+      box-shadow: 3px 3px 10px rgb(129, 125, 125);
+      border-radius: 5%;
+      margin-left: 50px;
+			display: block;
+       width: 120px; 
+       height: 40px;
 		}
 			nav ul li:nth-child(1)  {
 				/* background-color: #D3975B; */
@@ -148,7 +157,9 @@ color:black ;
 				background-position: 28px -582px;
 			}
 		 span {
-					font: 1rem "Dosis", sans-serif; text-transform: uppercase; 
+					font: 1rem "Dosis", sans-serif; 
+          text-transform: uppercase; 
+       
 	
 				}
 				 :hover span {
@@ -156,7 +167,13 @@ color:black ;
 					}
 				
 
-					
+          :global(a) {
+      text-decoration: none;
+      color:#c5455a8f;
+      text-align: center;
+      font-weight: bold;
+  
+    }		
   main{
   width: 100%;
  
