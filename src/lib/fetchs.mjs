@@ -53,6 +53,19 @@ async function traerpaxAnterior(previousPage){
         return datos
        ;
   }
+// ------------- trae varios elementos buscados por nombre a un solo mapa -------------
+  async function getElementsBusqueda(name){
+    const response = await fetch(baseURL +`/varios/?name=${name}`)
+    const data = await response.json()
+    return data
+}
+
+  //
+  async function traerlinkName(name) {
+    const resposta = await fetch(`http://localhost:8000/links/${name}`);
+    const datos = await resposta.json();
+    return datos;
+  }
 export {
     getElements,
     getCathegory,
@@ -60,5 +73,8 @@ export {
     traerlink,
     getElementsBusquedaPax,
     traerpaxPosterior,
-    traerpaxAnterior
+    traerpaxAnterior,
+    traerlinkName,
+    getElementsBusqueda,
+    
 }

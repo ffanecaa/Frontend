@@ -14,7 +14,7 @@
   import MapaElementosAgrupados from "./components/MapaElementosAgrupados/MapaElementosAgrupados.svelte"
   import Header from "./components/Header/Header.svelte";
   import Bic from "./components/Bic/Bic.svelte";
-
+  import MapaElementosNombreVarios from "./components/Mapa/MapaElementosNombreVarios.svelte"
  
 </script>
 
@@ -43,7 +43,7 @@
         
       </li>
       <li>  
-        <span>    <Link to="/nombre">busqueda por nombre </Link></span>
+        <span>    <Link to="/nombre">mapas nombre </Link></span>
     
       
       </li>
@@ -67,6 +67,11 @@
     
       
       </li>
+      <li>
+        <span>     <Link to="/busqueda/nombre">elementos nombre</Link></span>
+    
+      
+      </li>
     </ul>
    
   </nav>
@@ -84,6 +89,7 @@
     <Route path="/rutass" component={Geolocalizacion} />
     <Route path="/ficha/:id" component= {FichaElemento}/>
     <Route path="/busqueda" component= {LocalizarNombresPaginados}/>
+    <Route path="/busqueda/nombre" component= {MapaElementosNombreVarios }/>
     
 
   

@@ -1,7 +1,7 @@
 <script>  // busqueda de elemnto por nombre ... ARREGLAR EL TIPO DE BUSQUEDA QUE ES DEMASIADO ARBITRARIA  
     import L from "leaflet";
     import { onMount ,afterUpdate} from "svelte";
- 
+    import {traerlinkName} from "../../lib/fetchs.mjs"
   // import Cathegory from "../Cathegory/Cathegory.svelte"
   // import Delete from "../Elemento/Delete.svelte";
     let map;
@@ -21,13 +21,9 @@
     };
     // $:marca =[elemento.latitude,elemento.longitude]
   
-    async function traerlink() {
-      const resposta = await fetch(`http://localhost:8000/links/${name}`);
-      const datos = await resposta.json();
-      return datos;
-    }
+ 
     function traerlinkm() {
-      traerlink().then((datosrecibidos) => {
+      traerlinkName(name).then((datosrecibidos) => {
         elemento = datosrecibidos;
         console.log(elemento);
       });
