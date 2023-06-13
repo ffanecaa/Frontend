@@ -27,7 +27,7 @@
   // import PaginacionCategoria from "./components/Paginacion/PaginacionCategoria.svelte";
   import ClasificaCategoria from "./components/Mapa/ClasificaCategoria.svelte";
   import FichaElemento from "./components/Mapa/FichaElemento.svelte"
-  
+  import LocalizarNombresPaginados from "./components/Paginacion/LocalizarNombresPaginados.svelte"
 
   import Header from "./components/Header/Header.svelte";
  import Geojson from "./components/geojson/Geojson.svelte";
@@ -75,6 +75,11 @@
     
       
       </li>
+      <li>
+        <span>     <Link to="/busqueda">paginadosNombres</Link></span>
+    
+      
+      </li>
     </ul>
    
   </nav>
@@ -88,6 +93,7 @@
     <Route path="/nombre" component={MapaElementoNombre} />
     <Route path="/rutass" component={Geolocalizacion} />
     <Route path="/ficha/:id" component= {FichaElemento}/>
+    <Route path="/busqueda" component= {LocalizarNombresPaginados}/>
     
 
   
