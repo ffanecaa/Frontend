@@ -89,7 +89,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image:url(mapco.jpg);
+      background-image:url(/mapco.jpg);
       background-position:80%;
       background-size: cover;
       background-repeat: no-repeat;

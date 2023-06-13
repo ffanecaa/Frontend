@@ -6,13 +6,14 @@
    import Nosaldra from "./components/Mapa/Nosaldra.svelte";
    import Geolocalizacion from "./components/Geolocalizacion/Geolocalizacion.svelte";
   import { Router, Link, Route } from "svelte-routing";
-  import MapaTotal from "./components/MapaTotal/MapaTotal.svelte";
+
 
   import ClasificaCategoria from "./components/Mapa/ClasificaCategoria.svelte";
   import FichaElemento from "./components/Mapa/FichaElemento.svelte"
   import LocalizarNombresPaginados from "./components/Paginacion/LocalizarNombresPaginados.svelte"
-
+  import MapaElementosAgrupados from "./components/MapaElementosAgrupados/MapaElementosAgrupados.svelte"
   import Header from "./components/Header/Header.svelte";
+  import Bic from "./components/Bic/Bic.svelte";
 
  
 </script>
@@ -61,12 +62,19 @@
     
       
       </li>
+      <li>
+        <span>     <Link to="/bic">bic</Link></span>
+    
+      
+      </li>
     </ul>
    
   </nav>
   <main>
     <Route path="/" component={Nosaldra} />
-    <Route path="/mapa" component={MapaTotal} />
+   
+    <Route path="/mapa" component={MapaElementosAgrupados} />
+    <Route path="/bic" component={Bic} />
 
     <!-- genera el link para la ficha de cada elemento -->
     <Route path="/mapa/:id" component={Mapaelemento} /> 
