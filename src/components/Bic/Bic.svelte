@@ -58,7 +58,7 @@
     flex-direction: row;
     justify-content: center;
     gap:12px;
-    color:#c5455a;
+    color:grey;
   }
   h2 span{
     display: block;  /* no funciona con elementos de liena elletter*/
@@ -68,7 +68,8 @@ h2 span::first-letter{
     
     font-size: 3.5rem;
     font-weight:900;
-    text-shadow: 4px 4px 4px  #6b2430;;
+    text-shadow: 4px 4px 4px  #6b2430;
+    color:#b7374c
    
   
   }
