@@ -62,7 +62,7 @@
 
     //icono
     let customIcon = new L.Icon({
-      iconUrl: "ico.png",
+      iconUrl: "icoo.png",
       iconSize: [50, 50],
       iconAnchor: [25, 50],
     });
