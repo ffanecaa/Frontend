@@ -21,6 +21,16 @@
  let coor={}
 let lat 
 let lng 
+let mapMakerToElemen = new Map()
+  let selecteTarget
+
+
+
+ function saveMarkerTarget(event) {
+  selecteTarget = event.latlng
+   console.log(selecteTarget);
+ }
+
 
 obterLocalizacion().then( novaLocalizacion => localizacion = novaLocalizacion)
 
@@ -42,11 +52,13 @@ function manexadorDistancias() {
           let marker = L.marker([
             elemento.latitude,
             elemento.longitude,
-          ]).bindPopup(contenido);
+          ]).bindPopup(contenido).on("click",saveMarkerTarget);
           markers.addLayer(marker);
+          mapMakerToElemen.set(marker, elemento)
+          // Para obetener el elemento del marker: const elemento = mapMarkerToElemen.get(marker)
         }
         map.addLayer(markers);
-      });
+      })
   }
   
   onMount(() => {
@@ -65,14 +77,17 @@ function manexadorDistancias() {
           
 
 
-//  function calcularRuta(){
-//   L.Routing.control({
-//   waypoints: [
-//     L.latLng(localizacion.lat,localizacion.lng),
-//     L.latLng(57.6792, -8.354254)
-//   ]
-// }).addTo(map);
-//  }
+ function calcularRuta(){
+  L.Routing.control({
+  waypoints: [
+    L.latLng(localizacion.lat,localizacion.lng),
+    L.latLng(selecteTarget.lat,selecteTarget.lng),
+  ],
+  language:"es",
+  routeWhileDragging: true,
+  waypointMode: 'snap',
+}).addTo(map);
+ }
 
 //  console.log(lat,lng)
 
@@ -87,3 +102,4 @@ function manexadorDistancias() {
  <div id="map" style="height: 600px;width:800px"></div>
 
  <button on:click={manexadorDistancias}>Buscar</button>
+ <button on:click={calcularRuta}>ruta</button>

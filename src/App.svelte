@@ -15,7 +15,7 @@
   import Header from "./components/Header/Header.svelte";
   import Bic from "./components/Bic/Bic.svelte";
   import MapaElementosNombreVarios from "./components/Mapa/MapaElementosNombreVarios.svelte"
- 
+ import Rutas from "./components/Geolocalizacion/Rutas.svelte"
 </script>
 
 <Router >
