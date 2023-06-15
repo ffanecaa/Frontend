@@ -13,6 +13,7 @@
   import MapaElementosAgrupados from "./components/MapaElementosAgrupados/MapaElementosAgrupados.svelte"
   import Geolocalizacion from "./components/Geolocalizacion/Geolocalizacion.svelte";
   import Bic from "./components/Bic/Bic.svelte";
+  // import ElemntosCatalogados from "./components/Bic/ElemntosCatalogados.svelte";
   import MapaElementosNombreVarios from "./components/Mapa/MapaElementosNombreVarios.svelte"
   import Header from "./components/Header/Header.svelte";
 //  import Rutas from "./components/Geolocalizacion/Rutas.svelte"
@@ -21,7 +22,7 @@
 </script>
 
 <Router >
- 
+
 <Header/>
 <div class="container">
 <nav>
@@ -120,74 +121,37 @@
   
 </Router>
   <style>
+    nav{
+      background-color: rgb(166, 166, 21);
+    }
   
-      nav ul {
-          list-style: none; 
-        overflow: hidden; 
-        position: relative;
-      color:black ;
-      
-      
+     ul {
+    
+      display: flex;
+      justify-content: space-evenly;
+      align-content: center;
+      list-style: none;
+      color:white;
+      font-size: 1.5rem;
       }
-      
-          nav ul li {
-              float: left;
-           margin: 0 10px 0 0;
-          background-color: whitesmoke;
-            box-shadow: 3px 3px 10px rgb(129, 125, 125);
-            border-radius: 5%;
-            margin-left: 50px;
-                  display: block;
-             width: 120px; 
-             height: 40px;
-              }
-                  nav ul li:nth-child(1)  {
-                      /* background-color: #D3975B; */
-                      background-position: 28px 28px;
-              
-                  
-                  }
-                  nav ul li:nth-child(2)  {
-                      /* background-color: #D3975B; */
-                      background-position: 28px -96px;
-          
-                  }
-                  nav ul li:nth-child(3)  {
-                      /* background-color: #D3975B; */
-                      background-position: 28px -222px;
-              
-                  
-                  }
-                  nav ul li:nth-child(4)  {
-                      /* background-color: #D3975B; */
-                      background-position: 28px -342px;
-                  }
-                  nav ul li:nth-child(5)  {
-                      /* background-color: #E6E7EB; */
-                      background-position: 28px -462px;
-                  }
-                  nav ul li:nth-child(6)  {
-                      /* background-color: #D3975B; */
-                      background-position: 28px -582px;
-                  }
-               span {
-                          font: 1rem "Dosis", sans-serif; 
-                text-transform: uppercase; 
-             
-          
-                      }
-                       :hover span {
-                              display: block;
-                          }
+ 
                       
-      
-                :global(a) {
+:global(a) {
             text-decoration: none;
-            color:#c5455a8f;
+          color:whitesmoke;
             text-align: center;
             font-weight: bold;
-        
-          }		
+            font-size: 1.5rem;
+           transition: font-size 0.2s;
+      }
+
+:global(a:hover){
+  transform: scale(1.2);
+  color:grey;
+  font-size: 2rem;
+
+}
+
         main{
         width: 100%;
        
@@ -195,6 +159,7 @@
         display: flex;
         justify-content: center;
         margin:5% 0;
+        text-transform:capitalize;
         }
       </style>
       

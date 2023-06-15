@@ -136,24 +136,29 @@ console.log(map._lastCenter.lng);
 <div class="container__geolocalizacion">
  
   
-<div class="map">
+<div class="container__map">
+  <h2 class="texto__horizontal"> CALCULA TU RUTA</h2>
   <div id="map" ></div>
   
   <button class="button__1" on:click|once={manexadorDistancias}>Buscar</button>
    <button class="button__2"on:click={calcularRuta}>ruta</button>
+   <h2 class="texto__horizontal">elementos a 10km a la redonda</h2> 
   </div>
 
-   <div class="container__image">
+  <div class="container__image">
         
        
-    <h2 class="texto__horizontal"> RUTAS</h2>
-    <h2 class="texto__vertical">10km a la redonda</h2>   
-        
+ 
+   <!-- <div class="texto">
+  
+   </div>
+         -->
     <figure>
   
       <img src="niñaMapa.jpg" alt="nina">
       
   </figure> 
+  
 </div>
 </div>
 
@@ -162,23 +167,30 @@ console.log(map._lastCenter.lng);
 
 .container__geolocalizacion{
   display: flex;
-  flex-direction: column;
-
-
  
+  justify-content: space-evenly;
 
 }
-
-.map{
-  position:relative ;
+.container__map{
+  width: 70%;
+  height: 60vh;
+ 
+  gap:30%
 }
+.container__image{
+  width: 30%;
+
+  display: flex;
+
+  justify-content: center;
+  align-content: center;
+  margin-top: 20%;
+}
+
   #map {
-   
-    position: absolute;
- top:25px;
- right: 25px;
- width: 800px;
- height: 800px;
+
+ width: 100%;
+ height: 100%;
 }
   button{
     width: 150px;
@@ -187,48 +199,35 @@ console.log(map._lastCenter.lng);
     border-radius: 10px;
     cursor:pointer;
     box-shadow: 2px 2px 2px #D5C4A4;
+    margin-left: 20px;
+    margin-top:40px
+   
   }
 
-.button__1 {
-    
-    position: absolute;
-    left:900px;
-    top:360px
-  }
-  .button__2 {
-    position: absolute;
-    left:900px;
-    top:520px
-  }
 
-   .container__image{
-  display: flex;
-  flex-direction: row;
-  align-content: end;
-  justify-content: end;
-
-
-  } 
   figure{
-    width: 400px;
-    height: 600px;
+    width: 65%;
+    height:80%;
+    object-fit: cover;
 
   }
+  /* .texto{
+    width: 20%;
+  } */
   img{
- width: 300px;
- height: 500px;
+ width: 100%;
+ height: 100%;
   }
-
-
-  .texto__vertical{
-    writing-mode:vertical-rl;
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
+ 
+p{
+  font-size:6rem;
+  font-weight: bold;
+  writing-mode: vertical-rl;
+}
 
 
   .texto__horizontal{
    font-size: 4rem;
    font-weight: bold;
-  }
+  } 
 </style>

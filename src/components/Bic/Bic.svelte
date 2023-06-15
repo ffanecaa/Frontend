@@ -1,76 +1,95 @@
 <script>
-    import { onMount } from 'svelte';
-    import L from 'leaflet';
-    import { lugares} from "../../../sitios.mjs"
-    import Utm from 'geodesy/utm.js'
-    import { MarkerClusterGroup } from 'leaflet.markercluster';
-    const datas = lugares.features
-    let markers = new MarkerClusterGroup()
-    let map
-    onMount(() => {
-      // Crear el mapa y establecer la vista inicial
-     map = L.map('map').setView([42.812000, -7.90005], 13);
-  
-      // Agregar capa de mapa base
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
-        maxZoom: 18,
-      }).addTo(map);
-  
-        
+  import { onMount } from 'svelte';
+  import L from 'leaflet';
+  import { lugares } from "../../../sitios.mjs"
+  import Utm from 'geodesy/utm.js'
+  import { MarkerClusterGroup } from 'leaflet.markercluster';
 
-          for( let data of datas){
-    
-  const utm = new Utm(29, "N", data.geometry.coordinates[0], data.geometry.coordinates[1]);
+  const datas = lugares.features;
+  let markers = new MarkerClusterGroup();
+  let map;
+  let mapMarkerToElement = new Map();
+let selectedTarget
 
-  // Crea un objeto Utm con las coordenadas UTM
-  const latLon = utm.toLatLon(); 
-  const contenido=`
-          <h3>${data.properties.NOME}</h3>
-          <p>${data.properties.ID_BIC}</p>
-          
-          <img src =${data.properties.IMG} style="width: 150px; height: 80px;object-fit:contain">
-        `;
-        let marker = L.marker(latLon).bindPopup(contenido)
-        markers.addLayer(marker)
-          } map.addLayer(markers)
-    
-
-          
-        })
-  </script>
-  <div class="geo">
-    <h2><span> Bienes </span> <span> Interes </span><span> Cultural</span> </h2>
-  <div id="map" style="width: 100%; height: 600px; "></div>
   
+ /**
+ * Función que se ejecuta al hacer clic en un marcador para atrapar las coordenadas.
+ * @param {LeafletEvent} event - Evento de clic en el marcador.
+ */
+//  function saveMarkerTarget(event) {
+//     selectedTarget = event.latlng;
+  
+//     setTimeout(() => {
+//       map.off('layeradd');
+   
+//     }, 1000);
+   
+//   }
+
+  onMount(() => {
+    map = L.map('map').setView([42.812000, -7.90005], 9);
+
+ /*   L.tileLayer.wms("http://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&", {
+      layers: "OI.OrthoimageCoverage",
+      format: 'image/jpeg',
+      transparent: true,
+      version: '1.3.0',
+      attribution: "PNOA WMS. Cedido por © Instituto Geográfico Nacional de España"
+    }).addTo(map);
+*/
+      L.tileLayer.wms("https://www.ign.es/wms-inspire/ign-base?", {
+    layers: 'IGNBaseTodo',
+    format: 'image/png',
+    transparent: true,
+    attribution: "ing"
+}).addTo(map);
+
+
+    for (let data of datas) {
+      const utm = new Utm(29, "N", data.geometry.coordinates[0], data.geometry.coordinates[1]);
+      const latLon = utm.toLatLon();
+      const contenido = `
+        <h3>${data.properties.NOME}</h3>
+        <p>${data.properties.ID_BIC}</p>
+        <img src=${data.properties.IMG} style="width: 150px; height: 80px; object-fit: contain">
+      `;
+      let marker = L.marker(latLon).bindPopup(contenido)//.on("click", saveMarkerTarget);
+      markers.addLayer(marker);
+      // mapMarkerToElement.set(marker, data.properties);
+    }
+    map.addLayer(markers);
+/**
+ * llamada para modificar el punto vista y vaya a coordenadas seleccionadas
+*/
+    // map.on("layeradd", () => {
+   
+    //     map.setView(selectedTarget, 18 );
+      
+   
+    //     });
+  });
+</script>
+
+<div class="geo">
+  <h2><span> B </span> <span> I </span><span> C</span>: Bien Interés Cultural </h2>
+  <div id="map" style="width: 100%; height: 600px;"></div>
 </div>
 
-
 <style>
-  .geo{
+  .geo {
     width: 100%;
     display: flex;
     flex-direction: column;
-
   }
-  h2{
+
+  h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap:12px;
-    color:grey;
-  }
-  h2 span{
-    display: block;  /* no funciona con elementos de liena elletter*/
-  }
-
-h2 span::first-letter{
-    
-    font-size: 3.5rem;
-    font-weight:900;
-    text-shadow: 4px 4px 4px  #6b2430;
-    color:#b7374c
-   
-  
+    gap: 10px;
+    font-size: 6rem;
+    font-weight: 900;
+    text-shadow: 10px 12px 2px rgba(255, 255, 255,);
+    color:whitesmoke
   }
 </style>

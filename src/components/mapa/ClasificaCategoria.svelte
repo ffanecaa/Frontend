@@ -55,14 +55,14 @@ let zoom
 //         attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
 //       })
 
-
+//  ---------------  verde y negra---------
 //  L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 // 	maxZoom: 17,
 // 	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 // }).addTo(map)
 
 
-  // muy lento---------------------------------------------------------------------------------
+  // muy lento   ortofoto   ---------------------------------------------------------------------------------
   // L.tileLayer.wms("http://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&", {
 	//    layers: "OI.OrthoimageCoverage",//nombre de la capa (ver get capabilities)
 	//    format: 'image/jpeg',
@@ -89,7 +89,7 @@ let zoom
     
     // L.tileLayer("https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",{
     //     attribution: "Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL."
-    // })
+    // }).addTo(map)
 
 
     /////dibujo malo--------------------------------------

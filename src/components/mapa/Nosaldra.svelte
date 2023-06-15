@@ -29,9 +29,7 @@
 
 
     <style>
-      :global(body){
-        background-color: black;
-      }
+    
     @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Open+Sans&family=Roboto:wght@300&display=swap");
         .image-hover-container {
           position: relative;
@@ -87,14 +85,15 @@
         }
         /* FIN EFECTO HOVER*/
         .image-hover-container .container .lake-district {
-          background-image: url(../../../o.jpg
+          background-image: url(../../../aquis.JPG
+
           );
           background-position: center;
           background-repeat:no-repeat  ;
           background-size: cover;
         }
         .image-hover-container .container .bg-image {
-          background-size: cover;
+          background-size: contain;
           background-attachment: fixed;
           background-position: 10% 10%;
         }
