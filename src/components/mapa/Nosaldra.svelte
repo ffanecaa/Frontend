@@ -4,23 +4,23 @@
             <div class='middle'>
                 <div class='bg-image lake-district'></div>
                 <a href="/mapa" class='overlay'>
-                    <p>Catálogo Elementos Galicia</p>
+                    <p>BIC GALICIA</p>
                  
                    
                 </a>
             </div>
             <div class='bottom-right'>
-                <div class='bg-image lake-district'></div>
+                <div class='bg-image lake-district'><a href= "/busqueda">CATEGORIAS</a></div>
             </div>
             <div class='bottom-left'>
-                <div class='bg-image lake-district'><a href="http://www.google.com">linl</a></div>
+                <div class='bg-image lake-district'><a href="/rutass">RUTAS</a></div>
             </div>
-            
+           
             <div class='top-left'>
-                <div class='bg-image lake-district'></div>
+                <div class='bg-image lake-district'><a href="/rutass">RUTAS</a></div>
             </div>
             <div class='top-right'>
-                <div class='bg-image lake-district'></div>
+                <div class='bg-image lake-district'><a href="/rutass">RUTAS</a></div>
             </div>
         </div>
     </div>
@@ -69,8 +69,8 @@
           box-shadow: 0px 37px 29px rgba(0, 0, 0, 0.3);
         }
         .image-hover-container .container:hover > .top-right {
-          left: 250px;
-          top: -90px;
+          left: 350px;
+          top: -60px;
           width: 260px;
           height: 280px;
           box-shadow: 0px 37px 29px rgba(0, 0, 0, 0.3);
@@ -83,7 +83,7 @@
         }
         /* FIN EFECTO HOVER*/
         .image-hover-container .container .lake-district {
-          background-image: url(../../../galicia.jpg
+          background-image: url(../../../o.jpg
           );
           background-position: center;
           background-repeat:no-repeat  ;

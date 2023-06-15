@@ -16,66 +16,16 @@
   import Bic from "./components/Bic/Bic.svelte";
   import MapaElementosNombreVarios from "./components/Mapa/MapaElementosNombreVarios.svelte"
 //  import Rutas from "./components/Geolocalizacion/Rutas.svelte"
+  import VistaPublica from "./components/Vistas/VistaPublica.svelte"
 </script>
 
 <Router >
  
 
-  <div class="container">
-    <Header/>
 
-  <nav>
-    <ul>
-      <li>
-       
-					<span> <Link to="/">Home</Link></span>
-		
-       
-      </li>
-      <li>
-      
-					<span>   <Link to="/mapa">Mapa</Link></span>
-			
-      </li>
-      <li>  
-        <span>   <Link to="/paginacion">paginacion</Link></span>
- 
-        
-      </li>
-      <li>  
-        <span>    <Link to="/nombre">mapas nombre </Link></span>
-    
-      
-      </li>
-      <li>
-        <span>     <Link to="/lento">Categorias</Link></span>
-    
-      
-      </li>
-      <li>
-        <span>     <Link to="/rutass">Rutas</Link></span>
-    
-      
-      </li>
-      <li>
-        <span>     <Link to="/busqueda">paginados Nombres</Link></span>
-    
-      
-      </li>
-      <li>
-        <span>     <Link to="/bic">bic</Link></span>
-    
-      
-      </li>
-      <li>
-        <span>     <Link to="/busqueda/nombre">elementos nombre</Link></span>
-    
-      
-      </li>
-    </ul>
    
-  </nav>
-  <main>
+
+
     <Route path="/" component={Nosaldra} />
    
     <Route path="/mapa" component={MapaElementosAgrupados} />
@@ -96,12 +46,13 @@
    
   
     <Route path="/lento" component={ClasificaCategoria} />
+    <Route path="/vista" component={VistaPublica} />
 
 
-  </main>
 
 
-</div>
+
+
 </Router>
 
 
