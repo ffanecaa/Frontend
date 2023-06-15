@@ -28,7 +28,11 @@
     </div>
 
 
-    <style>@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Open+Sans&family=Roboto:wght@300&display=swap");
+    <style>
+      :global(body){
+        background-color: black;
+      }
+    @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Open+Sans&family=Roboto:wght@300&display=swap");
         .image-hover-container {
           position: relative;
           height: 100vh;
