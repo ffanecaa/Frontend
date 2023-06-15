@@ -83,7 +83,8 @@
         }
         /* FIN EFECTO HOVER*/
         .image-hover-container .container .lake-district {
-          background-image: url(../../../o.jpg);
+          background-image: url(../../../galicia.jpg
+          );
           background-position: center;
           background-repeat:no-repeat  ;
           background-size: cover;
