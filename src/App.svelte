@@ -1,6 +1,5 @@
 <script>
-
-  import Paginacion from "./components/Paginacion/Paginacion.svelte";
+   import Paginacion from "./components/Paginacion/Paginacion.svelte";
   import Mapaelemento from "./components/Mapa/Mapaelemento.svelte";
   import MapaElementoNombre from "./components/Mapa/MapaElementoNombre.svelte";
    import Nosaldra from "./components/Mapa/Nosaldra.svelte";
@@ -15,16 +14,69 @@
   import Geolocalizacion from "./components/Geolocalizacion/Geolocalizacion.svelte";
   import Bic from "./components/Bic/Bic.svelte";
   import MapaElementosNombreVarios from "./components/Mapa/MapaElementosNombreVarios.svelte"
+  import Header from "./components/Header/Header.svelte";
 //  import Rutas from "./components/Geolocalizacion/Rutas.svelte"
-  import VistaPublica from "./components/Vistas/VistaPublica.svelte"
+ 
 
 </script>
 
 <Router >
  
+<Header/>
+<div class="container">
+<nav>
+  <ul>
+    <li>
+     
+        <span> <Link to="/">INICIO</Link></span>
+  
+     
+    </li>
+    <li>
+    
+        <span>   <Link to="/mapa">Mapa</Link></span>
+    
+    </li>
+    <li>  
+      <span>   <Link to="/paginacion">paginacion</Link></span>
 
-
+      
+    </li>
+    <li>  
+      <span>    <Link to="/nombre">mapas nombre </Link></span>
+  
+    
+    </li>
+    <li>
+      <span>     <Link to="/categoria">Categorias</Link></span>
+  
+    
+    </li>
+    <li>
+      <span>     <Link to="/rutas">Rutas</Link></span>
+  
+    
+    </li>
+    <li>
+      <span>     <Link to="/busqueda">paginados Nombres</Link></span>
+  
+    
+    </li>
+    <li>
+      <span>     <Link to="/bic">bic</Link></span>
+  
+    
+    </li>
+    <li>
+      <span>     <Link to="/busqueda/nombre">elementos nombre</Link></span>
+  
+    
+    </li>
+  </ul>
+ 
+</nav>
    
+<main>
 
 
     <Route path="/" component={Nosaldra} />
@@ -47,99 +99,104 @@
    
   
     <Route path="/categoria" component={ClasificaCategoria} />
-    <Route path="/vista" component={VistaPublica} />
-
-
-
-
-<VistaPublica/>
-
-</Router>
-
-
-<style>
-
-nav ul {
-	list-style: none; 
-  overflow: hidden; 
-  position: relative;
-color:black ;
-
-
-}
-
-	nav ul li {
-		float: left;
-     margin: 0 10px 0 0;
-    background-color: whitesmoke;
-      box-shadow: 3px 3px 10px rgb(129, 125, 125);
-      border-radius: 5%;
-      margin-left: 50px;
-			display: block;
-       width: 120px; 
-       height: 40px;
-		}
-			nav ul li:nth-child(1)  {
-				/* background-color: #D3975B; */
-				background-position: 28px 28px;
-        
-			
-			}
-			nav ul li:nth-child(2)  {
-				/* background-color: #D3975B; */
-				background-position: 28px -96px;
-    
-			}
-			nav ul li:nth-child(3)  {
-				/* background-color: #D3975B; */
-				background-position: 28px -222px;
-        
-			
-			}
-			nav ul li:nth-child(4)  {
-				/* background-color: #D3975B; */
-				background-position: 28px -342px;
-			}
-			nav ul li:nth-child(5)  {
-				/* background-color: #E6E7EB; */
-				background-position: 28px -462px;
-			}
-			nav ul li:nth-child(6)  {
-				/* background-color: #D3975B; */
-				background-position: 28px -582px;
-			}
-		 span {
-					font: 1rem "Dosis", sans-serif; 
-          text-transform: uppercase; 
-       
-	
-				}
-				 :hover span {
-						display: block;
-					}
-				
-
-          :global(a) {
-      text-decoration: none;
-      color:#c5455a8f;
-      text-align: center;
-      font-weight: bold;
   
-    }		
-  main{
-  width: 100%;
+
+
  
-  background-color:transparent;
-  display: flex;
-  justify-content: center;
-  margin:5% 0;
-  }
-</style>
+ 
+  
 
 
 
+  
 
+  </main>
 
+ 
+ 
 
+   
+  </div>
+  
+</Router>
+  <style>
+  
+      nav ul {
+          list-style: none; 
+        overflow: hidden; 
+        position: relative;
+      color:black ;
+      
+      
+      }
+      
+          nav ul li {
+              float: left;
+           margin: 0 10px 0 0;
+          background-color: whitesmoke;
+            box-shadow: 3px 3px 10px rgb(129, 125, 125);
+            border-radius: 5%;
+            margin-left: 50px;
+                  display: block;
+             width: 120px; 
+             height: 40px;
+              }
+                  nav ul li:nth-child(1)  {
+                      /* background-color: #D3975B; */
+                      background-position: 28px 28px;
+              
+                  
+                  }
+                  nav ul li:nth-child(2)  {
+                      /* background-color: #D3975B; */
+                      background-position: 28px -96px;
+          
+                  }
+                  nav ul li:nth-child(3)  {
+                      /* background-color: #D3975B; */
+                      background-position: 28px -222px;
+              
+                  
+                  }
+                  nav ul li:nth-child(4)  {
+                      /* background-color: #D3975B; */
+                      background-position: 28px -342px;
+                  }
+                  nav ul li:nth-child(5)  {
+                      /* background-color: #E6E7EB; */
+                      background-position: 28px -462px;
+                  }
+                  nav ul li:nth-child(6)  {
+                      /* background-color: #D3975B; */
+                      background-position: 28px -582px;
+                  }
+               span {
+                          font: 1rem "Dosis", sans-serif; 
+                text-transform: uppercase; 
+             
+          
+                      }
+                       :hover span {
+                              display: block;
+                          }
+                      
+      
+                :global(a) {
+            text-decoration: none;
+            color:#c5455a8f;
+            text-align: center;
+            font-weight: bold;
+        
+          }		
+        main{
+        width: 100%;
+       
+        background-color:transparent;
+        display: flex;
+        justify-content: center;
+        margin:5% 0;
+        }
+      </style>
+      
 
 
