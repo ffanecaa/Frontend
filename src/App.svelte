@@ -12,7 +12,7 @@
   import FichaElemento from "./components/Mapa/FichaElemento.svelte"
   import LocalizarNombresPaginados from "./components/Paginacion/LocalizarNombresPaginados.svelte"
   import MapaElementosAgrupados from "./components/MapaElementosAgrupados/MapaElementosAgrupados.svelte"
-  import Header from "./components/Header/Header.svelte";
+  import Geolocalizacion from "./components/Geolocalizacion/Geolocalizacion.svelte";
   import Bic from "./components/Bic/Bic.svelte";
   import MapaElementosNombreVarios from "./components/Mapa/MapaElementosNombreVarios.svelte"
 //  import Rutas from "./components/Geolocalizacion/Rutas.svelte"

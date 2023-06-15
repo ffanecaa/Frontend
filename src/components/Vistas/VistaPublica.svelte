@@ -4,8 +4,8 @@
 import { Router, Link, Route } from "svelte-routing";
 
 
-  import ClasificaCategoria from "..Mapa//ClasificaCategoria.svelte";
-  import FichaElemento from "..Mapa/FichaElemento.svelte"
+  import ClasificaCategoria from "../Mapa//ClasificaCategoria.svelte";
+  import FichaElemento from "../Mapa/FichaElemento.svelte"
   import LocalizarNombresPaginados from "../Paginacion/LocalizarNombresPaginados.svelte"
   import MapaElementosAgrupados from "../MapaElementosAgrupados/MapaElementosAgrupados.svelte"
 
