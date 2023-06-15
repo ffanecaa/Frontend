@@ -4,7 +4,7 @@
   import Mapaelemento from "./components/Mapa/Mapaelemento.svelte";
   import MapaElementoNombre from "./components/Mapa/MapaElementoNombre.svelte";
    import Nosaldra from "./components/Mapa/Nosaldra.svelte";
-   import Geolocalizacion from "./components/Geolocalizacion/Geolocalizacion.svelte";
+   
   import { Router, Link, Route } from "svelte-routing";
 
 
@@ -17,6 +17,7 @@
   import MapaElementosNombreVarios from "./components/Mapa/MapaElementosNombreVarios.svelte"
 //  import Rutas from "./components/Geolocalizacion/Rutas.svelte"
   import VistaPublica from "./components/Vistas/VistaPublica.svelte"
+
 </script>
 
 <Router >
@@ -36,7 +37,7 @@
        
     <Route path="/paginacion" component={Paginacion} />
     <Route path="/nombre" component={MapaElementoNombre} />
-    <Route path="/rutass" component={Geolocalizacion} />
+    <Route path="/rutas" component={Geolocalizacion} />
     <Route path="/ficha/:id" component= {FichaElemento}/>
     <Route path="/busqueda" component= {LocalizarNombresPaginados}/>
     <Route path="/busqueda/nombre" component= {MapaElementosNombreVarios }/>
@@ -45,13 +46,13 @@
   
    
   
-    <Route path="/lento" component={ClasificaCategoria} />
+    <Route path="/categoria" component={ClasificaCategoria} />
     <Route path="/vista" component={VistaPublica} />
 
 
 
 
-
+<VistaPublica/>
 
 </Router>
 

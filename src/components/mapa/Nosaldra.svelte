@@ -3,24 +3,24 @@
         <div class='container'>
             <div class='middle'>
                 <div class='bg-image lake-district'></div>
-                <a href="/mapa" class='overlay'>
+                <a href="/bic" class='overlay'>
                     <p>BIC GALICIA</p>
                  
                    
                 </a>
             </div>
             <div class='bottom-right'>
-                <div class='bg-image lake-district'><a href= "/busqueda">CATEGORIAS</a></div>
+                <div class='bg-image lake-district'><a href= "/categorias">CATEGORIAS</a></div>
             </div>
             <div class='bottom-left'>
-                <div class='bg-image lake-district'><a href="/rutass">RUTAS</a></div>
+                <div class='bg-image lake-district'><a href="/rutas">RUTAS</a></div>
             </div>
            
             <div class='top-left'>
-                <div class='bg-image lake-district'><a href="/rutass">RUTAS</a></div>
+                <div class='bg-image lake-district'><a href="/busqueda/nombre">MAPA</a></div>
             </div>
             <div class='top-right'>
-                <div class='bg-image lake-district'><a href="/rutass">RUTAS</a></div>
+                <div class='bg-image lake-district'><a href="/mapa">ELEMENTOS</a></div>
             </div>
         </div>
     </div>

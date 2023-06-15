@@ -1,8 +1,16 @@
 <script>
 
   
-    import {  Link} from "svelte-routing";
-  
+import { Router, Link, Route } from "svelte-routing";
+
+
+  import ClasificaCategoria from "..Mapa//ClasificaCategoria.svelte";
+  import FichaElemento from "..Mapa/FichaElemento.svelte"
+  import LocalizarNombresPaginados from "../Paginacion/LocalizarNombresPaginados.svelte"
+  import MapaElementosAgrupados from "../MapaElementosAgrupados/MapaElementosAgrupados.svelte"
+
+  import Bic from "../Bic/Bic.svelte";
+  import MapaElementosNombreVarios from "../Mapa/MapaElementosNombreVarios.svelte"
  
    import Header from "../Header/Header.svelte"
 
@@ -10,14 +18,15 @@
 
 
 
+
 <div class="container">
-    <Header/>
+ 
 
   <nav>
     <ul>
       <li>
        
-					<span> <Link to="/">Home</Link></span>
+					<span> <Link to="/">INICIO</Link></span>
 		
        
       </li>
@@ -37,12 +46,12 @@
       
       </li>
       <li>
-        <span>     <Link to="/lento">Categorias</Link></span>
+        <span>     <Link to="/categoria">Categorias</Link></span>
     
       
       </li>
       <li>
-        <span>     <Link to="/rutass">Rutas</Link></span>
+        <span>     <Link to="/rutas">Rutas</Link></span>
     
       
       </li>
