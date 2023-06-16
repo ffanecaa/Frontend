@@ -13,7 +13,7 @@
   import MapaElementosAgrupados from "./components/MapaElementosAgrupados/MapaElementosAgrupados.svelte"
   import Geolocalizacion from "./components/Geolocalizacion/Geolocalizacion.svelte";
   import Bic from "./components/Bic/Bic.svelte";
-  // import ElemntosCatalogados from "./components/Bic/ElemntosCatalogados.svelte";
+ import ElemntosCatalogados from "./components/Bic/ElemntosCatalogados.svelte";
   import MapaElementosNombreVarios from "./components/Mapa/MapaElementosNombreVarios.svelte"
   import Header from "./components/Header/Header.svelte";
 //  import Rutas from "./components/Geolocalizacion/Rutas.svelte"
@@ -69,6 +69,11 @@
     
     </li>
     <li>
+      <span>     <Link to="/catalogados">catalogados</Link></span>
+  
+    
+    </li>
+    <li>
       <span>     <Link to="/busqueda/nombre">elementos nombre</Link></span>
   
     
@@ -84,6 +89,7 @@
    
     <Route path="/mapa" component={MapaElementosAgrupados} />
     <Route path="/bic" component={Bic} />
+    <Route path="/catalogados" component={ElemntosCatalogados} />
 
     <!-- genera el link para la ficha de cada elemento -->
     <Route path="/mapa/:id" component={Mapaelemento} /> 
