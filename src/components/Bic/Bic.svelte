@@ -9,40 +9,37 @@
   let markers = new MarkerClusterGroup();
   let map;
   let mapMarkerToElement = new Map();
-let selectedTarget
 
   
  /**
  * Función que se ejecuta al hacer clic en un marcador para atrapar las coordenadas.
  * @param {LeafletEvent} event - Evento de clic en el marcador.
  */
-//  function saveMarkerTarget(event) {
-//     selectedTarget = event.latlng;
-  
-//     setTimeout(() => {
-//       map.off('layeradd');
-   
-//     }, 1000);
-   
-//   }
+ function saveMarkerTarget(event) {
+    map.setView(event.latlng, 16 )
+  }
 
   onMount(() => {
-    map = L.map('map').setView([42.812000, -7.90005], 9);
+    map = L.map('map').setView([42.812000, -7.90005], 10);
+ 
+    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    // }).addTo(map);
 
- /*   L.tileLayer.wms("http://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&", {
+   L.tileLayer.wms("http://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&", {
       layers: "OI.OrthoimageCoverage",
       format: 'image/jpeg',
       transparent: true,
       version: '1.3.0',
       attribution: "PNOA WMS. Cedido por © Instituto Geográfico Nacional de España"
     }).addTo(map);
-*/
-      L.tileLayer.wms("https://www.ign.es/wms-inspire/ign-base?", {
-    layers: 'IGNBaseTodo',
-    format: 'image/png',
-    transparent: true,
-    attribution: "ing"
-}).addTo(map);
+
+//       L.tileLayer.wms("https://www.ign.es/wms-inspire/ign-base?", {
+//     layers: 'IGNBaseTodo',
+//     format: 'image/png',
+//     transparent: true,
+//     attribution: "ing"
+// }).addTo(map);
 
 
     for (let data of datas) {
@@ -53,20 +50,11 @@ let selectedTarget
         <p>${data.properties.ID_BIC}</p>
         <img src=${data.properties.IMG} style="width: 150px; height: 80px; object-fit: contain">
       `;
-      let marker = L.marker(latLon).bindPopup(contenido)//.on("click", saveMarkerTarget);
+      let marker = L.marker(latLon).bindPopup(contenido).on("click", saveMarkerTarget);
       markers.addLayer(marker);
-      // mapMarkerToElement.set(marker, data.properties);
+       mapMarkerToElement.set(marker,data.properties);
     }
     map.addLayer(markers);
-/**
- * llamada para modificar el punto vista y vaya a coordenadas seleccionadas
-*/
-    // map.on("layeradd", () => {
-   
-    //     map.setView(selectedTarget, 18 );
-      
-   
-    //     });
   });
 </script>
 
