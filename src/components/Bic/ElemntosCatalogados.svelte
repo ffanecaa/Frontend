@@ -1,13 +1,15 @@
 <script>
   import { onMount } from 'svelte';
   import L from 'leaflet';
-  //import { lugares } from "../../../sitios.mjs"
+
   import { ele } from "../../../prueb1.mjs"
   import { ele2 } from "../../../prueb2.mjs"
   import { ele3 } from "../../../prueb3.mjs"
   import { ele4 } from "../../../prueb4.mjs"
   import { ele5 } from "../../../prueb5.mjs"
-  import Utm from 'geodesy/utm.js'
+  import { ele6 } from "../../../prueb6.mjs"
+   import { ele7} from "../../../prueba7.mjs"
+ // import Utm from 'geodesy/utm.js'
   import { MarkerClusterGroup } from 'leaflet.markercluster';
 
   const datas = ele.features;
@@ -15,6 +17,8 @@
   const datosTercero = ele3.features;
   const datosCuarto = ele4.features;
   const datosCinco = ele5.features;
+  const datosSeis = ele6.features;
+  const datosSiete = ele7.features;
   let markers = new MarkerClusterGroup();
   let map;
   let mapMarkerToElement = new Map();
@@ -128,12 +132,58 @@
       markers.addLayer(marker);
        mapMarkerToElement.set(marker,data.properties);
     }
+    for (let data  of datosSeis) {
+      // const utm = new Utm(29, "N", data.geometry.coordinates[0], data.geometry.coordinates[1]);
+      // const latLon = utm.toLatLon();
+      console.log(data.geometry.coordinates)
+      const contenido = `
+      <h3>${data.properties.NOME}</h3>
+        <h3>${data.properties.TIPOLOXIA}</h3>
+        <h3> Provincia:${data.properties.PROVINCIA}</h3>
+        <p>Concello:${data.properties.CONCELLO}</p>
+        <p>Parroquia:${data.properties.PARROQUIA}</p>
+      `;
+      let marker = L.marker([data.geometry.coordinates[1],data.geometry.coordinates[0]]).bindPopup(contenido).on("click", saveMarkerTarget);
+      markers.addLayer(marker);
+       mapMarkerToElement.set(marker,data.properties);
+    }
+    for (let data  of datosSeis) {
+      // const utm = new Utm(29, "N", data.geometry.coordinates[0], data.geometry.coordinates[1]);
+      // const latLon = utm.toLatLon();
+      console.log(data.geometry.coordinates)
+      const contenido = `
+      <h3>${data.properties.NOME}</h3>
+        <h3>${data.properties.TIPOLOXIA}</h3>
+        <h3> Provincia:${data.properties.PROVINCIA}</h3>
+        <p>Concello:${data.properties.CONCELLO}</p>
+        <p>Parroquia:${data.properties.PARROQUIA}</p>
+      `;
+      let marker = L.marker([data.geometry.coordinates[1],data.geometry.coordinates[0]]).bindPopup(contenido).on("click", saveMarkerTarget);
+      markers.addLayer(marker);
+       mapMarkerToElement.set(marker,data.properties);
+    }
+    
+    for (let data  of datosSiete) {
+      // const utm = new Utm(29, "N", data.geometry.coordinates[0], data.geometry.coordinates[1]);
+      // const latLon = utm.toLatLon();
+      console.log(data.geometry.coordinates)
+      const contenido = `
+      <h3>${data.properties.NOME}</h3>
+        <h3>${data.properties.TIPOLOXIA}</h3>
+        <h3> Provincia:${data.properties.PROVINCIA}</h3>
+        <p>Concello:${data.properties.CONCELLO}</p>
+        <p>Parroquia:${data.properties.PARROQUIA}</p>
+      `;
+      let marker = L.marker([data.geometry.coordinates[1],data.geometry.coordinates[0]]).bindPopup(contenido).on("click", saveMarkerTarget);
+      markers.addLayer(marker);
+       mapMarkerToElement.set(marker,data.properties);
+    }
     map.addLayer(markers);
   });
 </script>
 
 <div class="geo">
-  <h2><span> B </span> <span> I </span><span> C</span>: Bien Interés Cultural </h2>
+  <h2>Elementos Catalogados </h2>
   <div id="map" style="width: 100%; height: 600px;"></div>
 </div>
 
