@@ -32,10 +32,11 @@ margin-top:0
 
 h1{
 color:white;
-font-size: 4rem;
+font-size: 3.5rem;
 font-weight:bold;
 margin-top:10%;
 text-shadow: 2px 2px 2px greenyellow;
+overflow: hidden;
 }
 .users{
   position: absolute;

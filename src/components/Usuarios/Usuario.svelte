@@ -108,10 +108,10 @@ button{
     position: absolute;
     top: 80%;
     left: 60%;
-    padding: 10px;
+    /* padding: 10px;
     width: 20%;
     height: 8%;
-    border:2px inset
+    border:2px inset */
 }
 
 </style>

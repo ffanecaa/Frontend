@@ -65,7 +65,7 @@
       color: white;
     }
   
-    button {
+    /* button {
       padding: 5px;
       width: 80px;
       height: 30px;
@@ -73,7 +73,7 @@
   
     cursor:pointer;
     box-shadow: 2px 2px 2px #D5C4A4
-    }
+    } */
   
     .botones {
       display: flex;
@@ -99,17 +99,17 @@
     }
   
   
-    .close-button {
+    /* .close-button {
       /* position: absolute;
       top: 20px;
       right: 10px; */
-      width: 100px;
+      /* width: 100px;
       height: 50px;
       border:3px solid #D5C4A4;
       border-radius: 10px;
       cursor:pointer;
-      box-shadow: 2px 2px 2px #D5C4A4;
-    }
+      box-shadow: 2px 2px 2px #D5C4A4; */ 
+    /* } */
   
     .content {
     margin-top: 20%;

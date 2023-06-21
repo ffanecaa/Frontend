@@ -135,6 +135,7 @@
     
       display: flex;
       justify-content: space-evenly;
+      flex-wrap: wrap;
       align-content: center;
       list-style: none;
       color:white;
