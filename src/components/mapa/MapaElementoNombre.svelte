@@ -30,11 +30,39 @@
     }
     $: mapId = elemento.name;
     onMount(() => {
-      map = L.map(mapId).setView([42.812, -7.90005], 8);
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-      }).addTo(map).bindPopup(elemento.name);
+      
+       map = L.map(mapId).setView([42.812, -7.90005], 8);
+      // L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      //   attribution:
+      //     '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      // }).addTo(map).bindPopup(elemento.name);
+
+//       L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+// 	maxZoom: 20,
+// 	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+// }).addTo(map).bindPopup(elemento.name);
+//  L.tileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey={apikey}', {
+// 	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+// 	apikey: '<your apikey>',
+// 	maxZoom: 22
+// })
+ L.tileLayer('http://tile.mtbmap.cz/mtbmap_tiles/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp; USGS'
+}).addTo(map).bindPopup(elemento.name);
+      
+      // meter video sobre mapa 
+//     let  videoUrl = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+//     videoBounds = [[ 42.812, -7.90005], [ 42.87473850418,-8.7039023678 ]];
+// L.videoOverlay(videoUrl, videoBounds ).addTo(map);
+
+
+//-------------------ARCHIVOS SVG SOBRE MAPA -----------------------------//
+// let svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+// svgElement.setAttribute('xmlns', "http://www.w3.org/2000/svg");
+// svgElement.setAttribute('viewBox', "0 0 200 200");
+// svgElement.innerHTML = '<rect width="200" height="200"/><rect x="75" y="23" width="50" height="50" style="fill:red"/><rect x="75" y="123" width="50" height="50" style="fill:#0013ff"/>';
+// let svgElementBounds = [[ 42.812, -7.90005], [ 42.87473850418,-8.7039023678 ]]
+// L.svgOverlay(svgElement, svgElementBounds).addTo(map);
       
     })
     afterUpdate(() => {
