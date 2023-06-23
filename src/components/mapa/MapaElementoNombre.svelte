@@ -32,24 +32,37 @@
     onMount(() => {
       
        map = L.map(mapId).setView([42.812, -7.90005], 8);
-      // L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      //   attribution:
-      //     '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-      // }).addTo(map).bindPopup(elemento.name);
+    let map1 =  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      })
 
-//       L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-// 	maxZoom: 20,
-// 	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-// }).addTo(map).bindPopup(elemento.name);
-//  L.tileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey={apikey}', {
-// 	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-// 	apikey: '<your apikey>',
-// 	maxZoom: 22
-// })
- L.tileLayer('http://tile.mtbmap.cz/mtbmap_tiles/{z}/{x}/{y}.png', {
+     let map2 = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+	maxZoom: 20,
+	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',})
+
+ let map3 =  L.tileLayer.wms("http://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&", {
+      layers: "OI.OrthoimageCoverage",
+      format: 'image/jpeg',
+      transparent: true,
+      version: '1.3.0',
+      attribution: "PNOA WMS. Cedido por © Instituto Geográfico Nacional de España"
+    })
+
+  let map4 =L.tileLayer('http://tile.mtbmap.cz/mtbmap_tiles/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp; USGS'
-}).addTo(map).bindPopup(elemento.name);
-      
+})
+
+
+
+var baseMaps = {
+    "map1": map1,
+    "map2": map2,
+    "map3": map3,
+    "map4": map4
+};
+     
+var layerControl = L.control.layers(baseMaps).addTo(map);
       // meter video sobre mapa 
 //     let  videoUrl = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
 //     videoBounds = [[ 42.812, -7.90005], [ 42.87473850418,-8.7039023678 ]];

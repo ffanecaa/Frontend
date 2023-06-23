@@ -33,6 +33,7 @@
       version: '1.3.0',
       attribution: "PNOA WMS. Cedido por © Instituto Geográfico Nacional de España"
     }).addTo(map);
+    
 
 //       L.tileLayer.wms("https://www.ign.es/wms-inspire/ign-base?", {
 //     layers: 'IGNBaseTodo',

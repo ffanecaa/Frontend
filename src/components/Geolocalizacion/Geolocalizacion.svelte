@@ -16,15 +16,13 @@
   let map;
   let latlng;
   let elementos;
-  let mapMakerToElemen = new Map()
-  let selecteTarget
+  let mapMakerToElemen = new Map();
+  let selecteTarget;
 
-
-
- function saveMarkerTarget(event) {
-  selecteTarget = event.latlng
-   console.log(selecteTarget);
- }
+  function saveMarkerTarget(event) {
+    selecteTarget = event.latlng;
+    console.log(selecteTarget);
+  }
 
   function manexadorDistancias() {
     fetch(`http://localhost:8000/distancia/?latitude=${lat}&longitude=${lng}`)
@@ -37,12 +35,11 @@
             <h3>${elemento.name}</h3>
   
           `;
-          let marker = L.marker([
-            elemento.latitude,
-            elemento.longitude,
-          ]).bindPopup(contenido).on("click",saveMarkerTarget);
+          let marker = L.marker([elemento.latitude, elemento.longitude])
+            .bindPopup(contenido)
+            .on("click", saveMarkerTarget);
           markers.addLayer(marker);
-          mapMakerToElemen.set(marker, elemento)
+          mapMakerToElemen.set(marker, elemento);
           // Para obetener el elemento del marker: const elemento = mapMarkerToElemen.get(marker)
         }
         map.addLayer(markers);
@@ -50,8 +47,8 @@
   }
 
   onMount(() => {
-    // Crea el mapa y 
-    map = L.map("map").setView([42.33642 ,-7.862982], 16);
+    // Crea el mapa y
+    map = L.map("map").setView([42.33642, -7.862982], 16);
 
     // mosaic
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -73,13 +70,13 @@
         lat = location.coords.latitude;
         lng = location.coords.longitude;
 
-        // crear marcador 
+        // crear marcador
         latlng = L.latLng(lat, lng);
         L.circle(latlng, { radius: 300 }).addTo(map);
         L.marker(latlng, { icon: customIcon })
           .addTo(map)
           .bindPopup("Localizado");
-     //  al punto 
+        //  al punto
         map.flyTo(latlng, 11, {
           animate: true,
           duration: 2,
@@ -90,144 +87,114 @@
       }
     );
 
+    // function punto (e){
+    // let secondMarker = L.marker([e.latlng.lat,e.latlng.lng]).addTo(map)
+    // }
+    /* seleccionar click mapa*/
+    //  cosa =map.on('click', (event) =>{
+    // let secondMarker = L.marker([event.latlng.lat,event.latlng.lng]).addTo(map)
+    //    return ([event.latlng.lat,event.latlng.lng])
+    //   })
 
-    
+    console.log(map._lastCenter.lat); // Acceder a la latitud
+    console.log(map._lastCenter.lng);
+  });
 
-  
+  function calcularRuta() {
+    L.Routing.control({
+      waypoints: [
+        L.latLng(lat, lng),
+        L.latLng(selecteTarget.lat, selecteTarget.lng),
+      ],
 
-// function punto (e){
-// let secondMarker = L.marker([e.latlng.lat,e.latlng.lng]).addTo(map)
-// }
-/* seleccionar click mapa*/
-//  cosa =map.on('click', (event) =>{
-// let secondMarker = L.marker([event.latlng.lat,event.latlng.lng]).addTo(map)
-//    return ([event.latlng.lat,event.latlng.lng])
-//   })
-
-
-
-
-
-
-  console.log(map._lastCenter.lat); // Acceder a la latitud
-console.log(map._lastCenter.lng); 
-
-
-  })
-
- function calcularRuta(){
-  L.Routing.control({
-  waypoints: [
-    L.latLng(lat,lng),
-    L.latLng(selecteTarget.lat,selecteTarget.lng),
-
-  ],
- 
-
-  language:"es",
-  routeWhileDragging: true,
-  waypointMode: 'snap',
-})
-.addTo(map);
-}
-  
-
+      language: "es",
+      routeWhileDragging: true,
+      waypointMode: "snap",
+    }).addTo(map);
+  }
 </script>
+
 <div class="container__geolocalizacion">
- 
-  
-<div class="container__map">
-  <h2 class="texto__horizontal"> CALCULA TU RUTA</h2>
-  <div id="map" ></div>
-  
-  <button class="button__1" on:click|once={manexadorDistancias}>Buscar</button>
-   <button class="button__2"on:click={calcularRuta}>ruta</button>
-   <h2 class="texto__horizontal">elementos a 10km a la redonda</h2> 
+  <div class="container__map">
+    <h2 class="texto__horizontal">CALCULA TU RUTA</h2>
+    <div id="map" />
+
+    <button class="button__1" on:click|once={manexadorDistancias}>Buscar</button
+    >
+    <button class="button__2" on:click={calcularRuta}>ruta</button>
+    <h2 class="texto__horizontal">elementos a 10km a la redonda</h2>
   </div>
 
   <div class="container__image">
-        
-       
- 
-   <!-- <div class="texto">
+    <!-- <div class="texto">
   
    </div>
          -->
     <figure>
-  
-      <img src="niñaMapa.jpg" alt="nina">
-      
-  </figure> 
-  
+      <img src="rutaaa.png" alt="nina" />
+    </figure>
+  </div>
 </div>
-</div>
-
 
 <style>
+  .container__geolocalizacion {
+    display: flex;
 
-.container__geolocalizacion{
-  display: flex;
- 
-  justify-content: space-evenly;
+    justify-content: space-evenly;
+  }
+  .container__map {
+    width: 70%;
+    height: 60vh;
 
-}
-.container__map{
-  width: 70%;
-  height: 60vh;
- 
-  gap:30%
-}
-.container__image{
-  width: 30%;
+    gap: 30%;
+  }
+  .container__image {
+    width: 50%;
+  height: 100vh;
+    display: flex;
 
-  display: flex;
-
-  justify-content: center;
-  align-content: center;
-  margin-top: 20%;
-}
-
-  #map {
-
- width: 100%;
- height: 100%;
-}
-  button{
-    width: 150px;
-    height: 50px;
-    border:3px solid #D5C4A4;
-    border-radius: 10px;
-    cursor:pointer;
-    box-shadow: 2px 2px 2px #D5C4A4;
-    margin-left: 20px;
-    margin-top:40px
-   
+    justify-content: center;
+    align-content: center;
+    margin-top: 20%;
   }
 
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+  button {
+    width: 150px;
+    height: 50px;
+    border: 3px solid #d5c4a4;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #d5c4a4;
+    margin-left: 20px;
+    margin-top: 40px;
+  }
 
-  figure{
+  figure {
     width: 65%;
-    height:80%;
+    height: 100%;
     object-fit: cover;
-
   }
   /* .texto{
     width: 20%;
   } */
-  img{
- width: 100%;
- height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    filter:drop-shadow(0 0 20px #99AA1D)
   }
- 
-p{
-  font-size:6rem;
-  font-weight: bold;
-  writing-mode: vertical-rl;
-}
 
+  p {
+    font-size: 6rem;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+  }
 
-  .texto__horizontal{
-   font-size: 4rem;
-   font-weight: bold;
-  } 
+  .texto__horizontal {
+    font-size: 4rem;
+    font-weight: bold;
+  }
 </style>
