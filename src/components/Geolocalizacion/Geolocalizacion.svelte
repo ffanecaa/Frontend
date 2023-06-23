@@ -184,7 +184,7 @@
   img {
     width: 100%;
     height: 100%;
-    filter:drop-shadow(0 0 20px #99AA1D)
+    filter:drop-shadow(0 0 20px #704A2D)
   }
 
   p {
