@@ -117,46 +117,31 @@
 <div class="container__geolocalizacion">
   <div class="container__map">
     <h2 class="texto__horizontal">CALCULA TU RUTA</h2>
-    <div id="map" />
-
+ 
     <button class="button__1" on:click|once={manexadorDistancias}>Buscar</button
     >
     <button class="button__2" on:click={calcularRuta}>ruta</button>
     <h2 class="texto__horizontal">elementos a 10km a la redonda</h2>
   </div>
-
-  <div class="container__image">
-    <!-- <div class="texto">
-  
-   </div>
-         -->
-    <figure>
-      <img src="rutaaa.png" alt="nina" />
-    </figure>
+     <div id="map" ></div>
   </div>
-</div>
+
 
 <style>
   .container__geolocalizacion {
     display: flex;
-
+    width: 100vw;
     justify-content: space-evenly;
+    position: relative;
+   
   }
   .container__map {
-    width: 70%;
-    height: 60vh;
+    width: 60%;
+    height: 80vh;
 
-    gap: 30%;
   }
-  .container__image {
-    width: 50%;
-  height: 100vh;
-    display: flex;
 
-    justify-content: center;
-    align-content: center;
-    margin-top: 20%;
-  }
+
 
   #map {
     width: 100%;
@@ -165,36 +150,19 @@
   button {
     width: 150px;
     height: 50px;
-    border: 3px solid #d5c4a4;
+    border: 3px solid #596365;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 2px 2px 2px #d5c4a4;
+    box-shadow: 2px 2px 2px #596365;
     margin-left: 20px;
     margin-top: 40px;
   }
 
-  figure {
-    width: 65%;
-    height: 100%;
-    object-fit: cover;
-  }
-  /* .texto{
-    width: 20%;
-  } */
-  img {
-    width: 100%;
-    height: 100%;
-    filter:drop-shadow(0 0 20px #704A2D)
-  }
 
-  p {
-    font-size: 6rem;
-    font-weight: bold;
-    writing-mode: vertical-rl;
-  }
 
   .texto__horizontal {
     font-size: 4rem;
     font-weight: bold;
+    color: aliceblue;
   }
 </style>

@@ -38,8 +38,8 @@ function manexadorEnvio(){
 
   
     .usuario{
-        position: absolute;
-    top:50%;
+ position: absolute;
+top:50%;
     left: 50%;
     height: 600px;
     transform: translate(-50%, -50%);

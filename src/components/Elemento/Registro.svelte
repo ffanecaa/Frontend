@@ -1,4 +1,6 @@
 <script>
+  import SoAutorizados from "../SoAutorizados/SoAutorizados.svelte";
+
   let name=''
   let description=''
   let longitude=0
@@ -26,24 +28,26 @@ $: elements = {
 
 </script>
 
-<div>
-  <h1>datos</h1>
- 
-  <label
-    >nome
-    <input type="text" bind:value={name} />
-  </label><br />
-  <label >description
-    <input type="text" bind:value={description} />
-  </label><br/> 
-  <label>latitude
-    <input type="number" bind:value={latitude} />
-  </label><br />
-  <label
-    >longitude
+<SoAutorizados>
+  <div>
+    <h1>datos</h1>
+  
+    <label
+      >nome
+      <input type="text" bind:value={name} />
+    </label><br />
+    <label >description
+      <input type="text" bind:value={description} />
+    </label><br/> 
+    <label>latitude
+      <input type="number" bind:value={latitude} />
+    </label><br />
+    <label
+      >longitude
 
-    <input type="number" bind:value={longitude} />
-  </label>
-  <button on:click={handlePost}>subir</button>
+      <input type="number" bind:value={longitude} />
+    </label>
+    <button on:click={handlePost}>subir</button>
 
-</div>
+  </div>
+</SoAutorizados>

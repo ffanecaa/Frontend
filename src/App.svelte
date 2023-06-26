@@ -16,6 +16,8 @@
  import ElemntosCatalogados from "./components/Bic/ElemntosCatalogados.svelte";
   import MapaElementosNombreVarios from "./components/Mapa/MapaElementosNombreVarios.svelte"
   import Header from "./components/Header/Header.svelte";
+  import Delete from "./components/Cathegory/Delete.svelte";
+  import Registro from "./components/Elemento/Registro.svelte";
 //  import Rutas from "./components/Geolocalizacion/Rutas.svelte"
  
 
@@ -106,16 +108,10 @@
    
   
     <Route path="/categoria" component={ClasificaCategoria} />
+
+    <Route path="/registro-elementos" component={Registro}/>
   
-
-
  
- 
-  
-
-
-
-  
 
   </main>
 
@@ -129,6 +125,7 @@
   <style>
     nav{
       background-color: rgb(166, 166, 21);
+    
     }
   
      ul {
@@ -136,10 +133,12 @@
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
+      gap:10px;
       align-content: center;
       list-style: none;
       color:white;
       font-size: 1.5rem;
+
       }
  
                       

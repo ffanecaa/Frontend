@@ -66,6 +66,50 @@ async function traerpaxAnterior(previousPage){
     const datos = await resposta.json();
     return datos;
   }
+
+
+
+  ///----------------validacions --------------------------------
+
+
+
+
+//   async function obtenerPase(name, password, manexador) {
+//     const response = await fetch(baseURL+"sesion/", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify(
+//             {
+//                 name,
+//                 password
+//             }
+//         )
+//     })
+//     manexador( response.ok ? await response.text() : false )
+// }
+
+// async function enviarPerfil(objetoPerfil, jwt, manejador) {
+//     const respuesta = await fetch(baseURL+"usuarios/perfiles/", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json",
+//             authorization: "Bearer "+jwt
+//         },
+//         body: JSON.stringify(objetoPerfil)
+//     })
+//     manejador( respuesta.ok ? await respuesta.json() : false )
+// }
+
+// async function recuperarPerfil(jwt, manejador) {
+//     const respuesta = await fetch(baseURL+"usuarios/perfiles/",{
+//         headers: {
+//             authorization: "Bearer "+jwt
+//         },
+//     })
+//     manejador( respuesta.ok ? await respuesta.json() : false )
+// }
+
+
 export {
     getElements,
     getCathegory,
@@ -76,5 +120,10 @@ export {
     traerpaxAnterior,
     traerlinkName,
     getElementsBusqueda,
+
+
+    // obtenerPase,
+    // enviarPerfil,
+    // recuperarPerfil
     
 }
