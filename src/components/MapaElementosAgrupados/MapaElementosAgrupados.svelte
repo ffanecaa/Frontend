@@ -7,7 +7,7 @@
 
     let map;
     let elementos = [];
-
+    let mapContainer
     let markers = new MarkerClusterGroup()
 
 
@@ -35,7 +35,7 @@
     
   
     onMount(() => {
-      map = L.map("mymap").setView([42.812000, -7.90005], 8);
+      map = L.map("mymap").setView([42.812000, -7.90005], 9);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
       }).addTo(map);
@@ -64,6 +64,8 @@
         },
         (error) => {
           console.error(error);})
+          mapContainer.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+
     });
     onMount( ()=>{
       manexadorTrae()
@@ -74,8 +76,8 @@
   <div class="mapaTotal">
     <h1>mapa puntos</h1>
     
-    <div class="container__map">
-      <div class="map" id="mymap" style="height: 600px;width:800px"></div>
+    <div class="container__map" bind:this={mapContainer}>
+      <div class="map" id="mymap" style=""></div>
       <!-- convendria fuera funcion load dispare cargue pagina mirar evento -->
       <!-- <button on:click|once={manexadorTrae}>Cargar localizaciones</button> -->
       
@@ -83,19 +85,27 @@
   </div>
 
 <style>
-   
-.container__map{
-  position: relative;
-  width: 850px;
-  height:650px ;
+   .mapaTotal{
+    display:flex;  
+   justify-content:center;
 
-background-color:  #D5C4A4;;
+align-content:center;
+flex-direction: column;
+  width:100vw;
+  height:750px ;
+  flex-wrap: wrap;
+   }
+
+.container__map{
+
+ 
+
   }
 
 .map{
-  position: absolute;
- top:25px;
- right: 25px;
+ 
+ height: 800px;
+ width:800px
  
 }
 </style>

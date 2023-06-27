@@ -18,7 +18,7 @@
   let elementos;
   let mapMakerToElemen = new Map();
   let selecteTarget;
-
+  let mapContainer
   function saveMarkerTarget(event) {
     selecteTarget = event.latlng;
     console.log(selecteTarget);
@@ -86,18 +86,10 @@
         console.error(error);
       }
     );
+//  mapContainer.scrollIntoView({ behavior: "smooth" });
+mapContainer.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
 
-    // function punto (e){
-    // let secondMarker = L.marker([e.latlng.lat,e.latlng.lng]).addTo(map)
-    // }
-    /* seleccionar click mapa*/
-    //  cosa =map.on('click', (event) =>{
-    // let secondMarker = L.marker([event.latlng.lat,event.latlng.lng]).addTo(map)
-    //    return ([event.latlng.lat,event.latlng.lng])
-    //   })
-
-    console.log(map._lastCenter.lat); // Acceder a la latitud
-    console.log(map._lastCenter.lng);
+    
   });
 
   function calcularRuta() {
@@ -115,7 +107,7 @@
 </script>
 
 <div class="container__geolocalizacion">
-  <div class="container__map">
+  <div class="container__map"bind:this={mapContainer}>
     <h2 class="texto__horizontal">CALCULA TU RUTA</h2>
  
     <button class="button__1" on:click|once={manexadorDistancias}>Buscar</button

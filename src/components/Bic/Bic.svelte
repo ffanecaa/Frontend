@@ -9,6 +9,7 @@
   let markers = new MarkerClusterGroup();
   let map;
   let mapMarkerToElement = new Map();
+  let mapContainer
 
   
  /**
@@ -56,12 +57,14 @@
        mapMarkerToElement.set(marker,data.properties);
     }
     map.addLayer(markers);
+
+    mapContainer.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
   });
 </script>
 
-<div class="geo">
+<div class="geo" >
   <h2><span> B </span> <span> I </span><span> C</span>: Bien Interés Cultural </h2>
-  <div id="map" style="width: 100%; height: 600px;"></div>
+  <div id="map"style="width: 80%; height: 800px;"bind:this={mapContainer} ></div>
 </div>
 
 <style>
@@ -69,16 +72,21 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content:center;
   }
 
   h2 {
-    display: flex;
+ 
+    gap: 10px;
+    font-size: 6rem;   display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
-    font-size: 6rem;
     font-weight: 900;
     text-shadow: 10px 12px 2px rgba(255, 255, 255,);
     color:whitesmoke
+  }
+  #map{
+ margin-left:auto;
+ margin-right:auto;
   }
 </style>
