@@ -131,7 +131,7 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(6.8px);
 -webkit-backdrop-filter: blur(6.8px);
 border: 1px solid rgba(255, 255, 255, 0.21);
- text-transform:capitalize;
+
 
      
     }
@@ -157,13 +157,41 @@ border: 1px solid rgba(255, 255, 255, 0.21) */
  
                       
 :global(a) {
+  gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: 900;
+     background: transparent;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 0%;
+    margin-left:0%;
+    text-align:center;
+    text-shadow: 2px 2px 2px white;
+    overflow: hidden;
+  
             text-decoration: none;
-          color:white;
+    
             text-align: center;
             font-weight: bold;
             font-size: 1.5rem;
            transition: font-size 0.2s;
+           
+                      
+
+          color:transparent;
+         
+        
+           transition: font-size 0.2s;
+          cursor:pointer;
+   
+    text-shadow: 1px 1px 2px white;
+  
+     color: transparent;
       }
+
+
 
 :global(a:hover){
   transform: scale(1.2);
@@ -182,6 +210,7 @@ border: 1px solid rgba(255, 255, 255, 0.21) */
         text-transform:capitalize;
         }
 
+    
       
       </style>
       

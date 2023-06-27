@@ -35,15 +35,21 @@
   function mas() {
     traerpaxPosterior(info.pagination.nextPAge).then(
       (datosrecibidos) => (info = datosrecibidos)
+
     );
-    console.log(info);
+ scroll(1000)
   }
   function menos() {
     traerpaxAnterior(info.pagination.previousPage).then(
       (datosrecibidos) => (info = datosrecibidos)
     );
-    console.log(info);
+    scroll(900)
   }
+
+
+    function scroll(position) {
+    window.scrollTo({ top: position, behavior: "smooth" })
+    }
 </script>
 
 <div class="container">

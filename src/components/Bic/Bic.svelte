@@ -78,12 +78,19 @@
   h2 {
  
     gap: 10px;
-    font-size: 6rem;   display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     font-weight: 900;
-    text-shadow: 10px 12px 2px rgba(255, 255, 255,);
-    color:whitesmoke
+     background: transparent;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 0%;
+    margin-left:0%;
+    text-align:center;
+    text-shadow: 2px 2px 2px white;
+    overflow: hidden;
+  
   }
   #map{
  margin-left:auto;
