@@ -17,7 +17,7 @@
     let info = { elements: [], pagination: {} }
 
  export let page  =1
- export let limit= 5
+ export let limit= 6
     // let nextPage = info.pagination.nextPAge
     // let previousPage=info.pagination.previuosPage
 
@@ -65,63 +65,94 @@ onMount(()=>{
 
 </script>
 
-<div class="container_pagination">
- 
-  
-  <div class="container_title">
+<div class="container_pagination" >
+    <div class="container_ficha">
+      {#each info.elements as elemento (elemento.id)}
+        <div class="ficha">
+          <h2>{elemento.name}</h2>
 
-  {#each info.elements as elemento (elemento.id)}
-<div class="ficha">
-  <h2>{elemento.name}</h2>
-   
-   <p> {elemento.description} </p>
-   <p class ="coordenadas">{elemento.latitude} {elemento.longitude}</p>
+          <p>{elemento.description}</p>
+          <p class="coordenadas">{elemento.latitude} {elemento.longitude}</p>
 
-  <Mapas name={elemento.name} latitude={elemento.latitude} longitude= {elemento.longitude} L={L}/>
-</div>
-  {/each}
-</div>
-  <div class="paginacion">
-    <button on:click={menos} >◀</button>
-    <p>{info.pagination.page}</p>
-    <button on:click={mas} >▶</button>
-    <input type="text"bind:value={page}>
-  <!-- elementos -->
-  <!-- <input type="text"bind:value={limit}> -->
-  <button on:click={traerDatosm}>boton</button>
+          <Mapas
+            name={elemento.name}
+            latitude={elemento.latitude}
+            longitude={elemento.longitude}
+            {L}
+          />
+        </div>
+      {/each}
+    </div>
+
+    <div class="paginacion">
+      <button on:click={menos}>◀</button>
+      <button on:click={mas}>▶</button>
+    </div>
   </div>
-</div>
 
 
 <style>
-  /* .container_pagination {
+
+ .container {
     display: flex;
-    flex-direction: column;
-    align-content: center;
     justify-content: center;
-  } */
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    /* background-image: url(descarga.png); */
+  }
+  .container_pagination{
+    width:100%;
+ 
+  }
+  .container_ficha {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+
+  }
+  .ficha{
+    background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.8px);
+-webkit-backdrop-filter: blur(6.8px);
+border: 1px solid rgba(255, 255, 255, 0.21);
+padding-left:15px;
+    width:40%;
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+
+
+  }
+
   .paginacion {
     display: flex;
-    justify-content: space-between;
-    align-content: center;
+    justify-content: space-evenly;
+
+  
+    width: 90%;
+    
   }
-  /* .siguientes {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+  button {
+    width: 80px;
+    height: 40px;
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 10px rgb(129, 125, 125);
+    border-radius: 5%;
+    margin: 50px;
+  }
+
+  /* .button-ghost-blue {
+    background-color: transparent;
+    border-radius: 0.4em;
+    color: royalblue;
+    padding: 0.4em 1em;
+    border: 1px solid royalblue;
   } */
-  .ficha {
-    margin-bottom: 80px;
-  }
-  .coordenadas {
-    /*writing-mode: vertical-lr;*/
-    left: 10;
-    top: 40%;
-  }
- input {
-    width: 40px;
-    text-align: center;
-  }
-
-
 </style>

@@ -1,4 +1,4 @@
-<div class="map" id={mapId} style="height: 500px ;"></div>
+<div class="container"><div class="map" id={mapId} style="height: 500px ;"></div></div>
 
 <script>
     //  import L from 'leaflet';
@@ -25,8 +25,15 @@ $: markers = [
 
   onMount(() => {
     map = L.map(mapId).setView([ latitude, longitude], 18);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    // }).addTo(map);
+    L.tileLayer.wms("http://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&", {
+      layers: "OI.OrthoimageCoverage",
+      format: 'image/jpeg',
+      transparent: true,
+      version: '1.3.0',
+      attribution: "PNOA WMS. Cedido por © Instituto Geográfico Nacional de España"
     }).addTo(map);
   
 
@@ -41,12 +48,17 @@ para cada marca que lo envie al marker */
 
 
 <style>
+.container{
+  display:flex;
+  justify-content:center,
+  
+}
  .map{
   width: 600px;
   height: 300px;
   align-items: center;
   margin: 3rem;
-  box-shadow: 3px 3px 3px #8A7EA7;
+  box-shadow: 3px 3px 5px #8A7EA7;
  }
   
 </style>

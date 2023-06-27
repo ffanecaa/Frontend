@@ -124,8 +124,16 @@
 </Router>
   <style>
     nav{
-      background-color: #FEC1CB;
-    
+      background-color: white;
+   background: rgba(255, 255, 255, 0.31);
+border-radius: 0px 0px 10px 10px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.8px);
+-webkit-backdrop-filter: blur(6.8px);
+border: 1px solid rgba(255, 255, 255, 0.21);
+ text-transform:capitalize;
+
+     
     }
   
      ul {
@@ -133,18 +141,24 @@
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
-      gap:10px;
+      gap:5px;
       align-content: center;
       list-style: none;
       color:white;
       font-size: 1.5rem;
+      /* background: rgba(255, 255, 255, 0.31);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.8px);
+-webkit-backdrop-filter: blur(6.8px);
+border: 1px solid rgba(255, 255, 255, 0.21) */
 
       }
  
                       
 :global(a) {
             text-decoration: none;
-          color:whitesmoke;
+          color:white;
             text-align: center;
             font-weight: bold;
             font-size: 1.5rem;
@@ -160,13 +174,15 @@
 
         main{
         width: 100%;
-       
+     
         background-color:transparent;
         display: flex;
         justify-content: center;
         margin:5% 0;
         text-transform:capitalize;
         }
+
+      
       </style>
       
 

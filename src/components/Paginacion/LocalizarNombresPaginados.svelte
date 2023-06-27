@@ -22,7 +22,7 @@
   };
 
   let page = 1;
-  let limit = 4;
+  let limit = 6;
 
   function traerDatosm() {
     getElementsBusquedaPax(name, page, limit).then((datosrecibidos) => {
@@ -64,12 +64,14 @@
           <p>{elemento.description}</p>
           <p class="coordenadas">{elemento.latitude} {elemento.longitude}</p>
 
-          <Mapas
-            name={elemento.name}
-            latitude={elemento.latitude}
-            longitude={elemento.longitude}
-            {L}
-          />
+          <div class="mapa">
+            <Mapas
+              name={elemento.name}
+              latitude={elemento.latitude}
+              longitude={elemento.longitude}
+              {L}
+            />
+          </div>
         </div>
       {/each}
     </div>
@@ -88,6 +90,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
+    margin-top:200px;
     /* background-image: url(descarga.png); */
   }
   .container_pagination{
@@ -100,16 +103,35 @@
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: #fee8bd;
+    gap: 1.8rem;
 
   }
+  .ficha{
+    background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.8px);
+-webkit-backdrop-filter: blur(6.8px);
+border: 1px solid rgba(255, 255, 255, 0.21);
+padding-left:15px;
+    width:40%;
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
 
+
+  }
+.map{
+  width:40%;
+}
   .paginacion {
     display: flex;
     justify-content: space-evenly;
 
   
     width: 90%;
+    
   }
   button {
     width: 80px;
