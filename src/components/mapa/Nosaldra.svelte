@@ -85,15 +85,16 @@
         }
         /* FIN EFECTO HOVER*/
         .image-hover-container .container .lake-district {
-          background-image: url(../../../aquis.JPG
+          background-image: url(../../../overde.jpg
+
 
           );
           background-position: center;
           background-repeat:no-repeat  ;
-          background-size: cover;
+          background-size: contain;
         }
         .image-hover-container .container .bg-image {
-          background-size: contain;
+          background-size: cover;
           background-attachment: fixed;
           background-position: 10% 10%;
         }

@@ -1,8 +1,12 @@
+
+
 <script>
     import { onMount,afterUpdate } from "svelte";
     import L from "leaflet";
+
     import { getElementsBusqueda } from "../../lib/fetchs.mjs";
     import { MarkerClusterGroup } from 'leaflet.markercluster';
+    
     let map;
     let markers = new MarkerClusterGroup()
     let name = "catedral";
@@ -32,6 +36,7 @@
         attribution:
           '&copy; <a href="https://1938.com.es/">Web Inteligencia Artificial</a>',
       }).addTo(map);
+   
   
       
     });
@@ -53,7 +58,7 @@
      justify-content: center;
       align-content: center;
      gap:2rem;
-      background-color: #c5455a8f;
+      background-color: #FEE8BD;
     }
    #mymap {
     width: 80vw;

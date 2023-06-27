@@ -12,7 +12,8 @@
 <style>
   header {
     /* background-color: #D6E8DB; */
-    background-image: url(/bus.jpg);
+    background-image: url(/busBn.jpg
+    );
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 80% 80%;
@@ -29,7 +30,7 @@
     font-size: 3.5rem;
     font-weight: bold;
     margin-top: 10%;
-    text-shadow: 2px 2px 2px greenyellow;
+    text-shadow: 2px 2px 2px #f55772;
     overflow: hidden;
   }
   .users {

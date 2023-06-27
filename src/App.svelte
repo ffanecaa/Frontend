@@ -124,7 +124,7 @@
 </Router>
   <style>
     nav{
-      background-color: rgb(166, 166, 21);
+      background-color: #FEC1CB;
     
     }
   
