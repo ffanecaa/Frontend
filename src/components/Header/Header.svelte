@@ -12,17 +12,18 @@
 <style>
   header {
     /* background-color: #D6E8DB; */
-    background-image: url(/busBn.jpg
+    background-image: url(/antro.jpg
     );
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 80% 80%;
+    background-position: 90% 55%;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
     position: relative;
     height: 350px;
     margin-top: 0;
+   
   }
 
   h1 {
