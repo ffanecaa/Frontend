@@ -211,3 +211,8 @@
   
   }
 </style>
+
+<!-- A realidade do voo americano
+Adoita dicirse que todas as fotografías aéreas catastrais proceden dos denominados “Voos americanos”. Pero, como vimos, os traballos de fotografía aérea comezaran moito antes, aínda que se viron paralizados pola Guerra Civil. O certo é que, na última fase da realización do Catastro parcelario, a utilización das fotografías aéreas de cinco millóns de hectáreas “de los vuelos que realizaron los EE.UU. de América para cubrir fotográficamente nuestro territorio” abaratou significativamente os custes, ao non  ser necesaria contratar  máis que a labor de ampliación (García-Badell, 1968, p. 161, citado por Fernández, 2007, p. 120).
+
+Así, a fins de 1960, o Servizo de Documentación Gráfica do Catastro dispuña de “19.294.115 ha cubiertas por vuelos del Ministerio de Hacenda, de 4.235.112 pertenecientes al vuelo americano de la serie B, realizadas entre 1956 y 1957, y de 873.728 correspondientes a vuelos de las Islas Canarias a escala 1 : 10.000; en total, casi 25 millones de ha fotografiadas. En cambio, la superficie cubierta con planos parcelarios por el Instituto Geográfico desde 1925 hasta 1960 se situaba en 16 millones de ha.” (García-Badell, 1968, ibidem, citado por Fernández, 2007, ibidem). -->

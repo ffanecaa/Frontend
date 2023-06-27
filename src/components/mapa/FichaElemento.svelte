@@ -59,6 +59,7 @@
   <p>{elemento.description}</p>
 
   <div id={mapId} style="height: 600px;width:800px" />
+  <button><a href="/mapa">🔙</a></button>
 </div>
 
 <style>
@@ -68,5 +69,17 @@
   }
   h2 {
     text-transform: uppercase;
+  }
+  button{
+     margin:20px;
+    width:150px;
+    height:50px; 
+    background:transparent
+  
+
+  }
+  a{
+      font-size:3.2rem;
+    color:black;
   }
 </style>

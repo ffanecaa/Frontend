@@ -59,6 +59,7 @@ para cada marca que lo envie al marker */
   align-items: center;
   margin: 3rem;
   box-shadow: 3px 3px 5px #8A7EA7;
+  
  }
   
 </style>

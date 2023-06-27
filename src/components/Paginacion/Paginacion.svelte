@@ -30,7 +30,7 @@
     }
       function traerDatosm(){
     traerDatos()
-    .then (datosrecibidos=> { info = datosrecibidos;  console.log(info)})
+    .then (datosrecibidos=> { info = datosrecibidos;  })
   
 }
 // traer datos -------------------------------NEXT PAGE----------------------------------
@@ -44,7 +44,7 @@
     function mas(){
        traerpaxPosterior()
        .then (datosrecibidos => info = datosrecibidos)
-      console.log(info) 
+          scroll(900)
     }
 //------------------PREVIOUS PAGE --------ENVIO RUTA--------ºº-----------------------------------
    async function traerPaxAnterior(){
@@ -56,17 +56,24 @@
     function menos(){
        traerPaxAnterior()
          .then (datosrecibidos=> info = datosrecibidos)
-        console.log(info) 
+            scroll(900)
 }
 
 onMount(()=>{
   traerDatosm()
   })
 
+    function scroll(position) {
+    window.scrollTo({ top: position, behavior: "smooth" })
+    }
 </script>
 
 <div class="container_pagination" >
+ <h2>Elementos varios</h2>
+
+
     <div class="container_ficha">
+   
       {#each info.elements as elemento (elemento.id)}
         <div class="ficha">
           <h2>{elemento.name}</h2>
