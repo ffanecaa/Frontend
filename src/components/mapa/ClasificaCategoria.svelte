@@ -121,10 +121,42 @@ let zoom
   </script>
   
   <div class="container">
-    <h1>Localizacion por tipoloxia</h1>
-    <div id="mymap" style="height: 600px;width:900px" ></div>
+    <h2>Localización por tipoloxía</h2>
+    <div id="mymap"  ></div>
   </div>
+  
 <style>
 
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+  
+  }
 
+  #mymap{
+
+ width: 80%;
+  height:80vh;
+  margin:auto
+  }
+
+  h2 {
+ 
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: 900;
+     background: transparent;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 0%;
+    margin-left:0%;
+    text-align:center;
+    text-shadow: 2px 2px 2px white;
+    overflow: hidden;
+  
+  }
 </style>

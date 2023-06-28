@@ -63,7 +63,7 @@
 </script>
 
 <div class="geo" >
-  <h2><span> B </span> <span> I </span><span> C</span>: Bien Interés Cultural </h2>
+  <h2>BIC: Bien Interés Cultural </h2>
   <p> es cualquier inmueble y objeto mueble de interés histórico, artístico, paleontológico, arqueológico, etnográfico, científico o técnico, que haya sido declarado como tal por la administración competente. También puede ser declarado como BIC el patrimonio documental y bibliográfico, los yacimientos y zonas arqueológicas, así como los sitios naturales, jardines y parques, que tengan valor artístico, histórico o antropológico.<br>
  [...] Conforme al dispuesto en la disposición transitoria primera de la Ley 5/2016 del Patrimonio Cultural de Galicia, continuarán siendo de aplicación a todos los procedimientos de declaración de interés cultural las normas reglamentarias vigentes a su entrada en vigor que regulan dicho procedimiento, en tanto no se opongan a lo dispuesto en esta ley, por lo que para las solicitudes y definición del contenido de los bienes del Registro de BIC sigue en vigor el dispuesto en el Decreto 430/1991, de 30 de diciembre, por el que se regula la tramitación para la declaración de bien de interés cultural y se crea el Registro de Bienes de Interés Cultural para Galicia (DOG nº 14 de 22 de enero de 1992), en las condiciones descritas.[...] <br><a href="https://sede.xunta.gal/detalle-procedemento?codtram=CT135A" target="a_blanck">**Procedimiento de solicitud de incoación de Bienes de Interés Cultural</a>  </p>
 
