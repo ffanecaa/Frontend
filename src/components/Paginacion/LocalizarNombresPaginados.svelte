@@ -35,33 +35,30 @@
   function mas() {
     traerpaxPosterior(info.pagination.nextPAge).then(
       (datosrecibidos) => (info = datosrecibidos)
-
     );
- scroll(1000)
+    scroll(1000);
   }
   function menos() {
     traerpaxAnterior(info.pagination.previousPage).then(
       (datosrecibidos) => (info = datosrecibidos)
     );
-    scroll(900)
+    scroll(900);
   }
 
-
-    function scroll(position) {
-    window.scrollTo({ top: position, behavior: "smooth" })
-    }
+  function scroll(position) {
+    window.scrollTo({ top: position, behavior: "smooth" });
+  }
 </script>
 
 <div class="container">
   <div class="header">
-    <h1>busca</h1>
+    <h1>Localiza las fichas de los elementos</h1>
     <input type="text" bind:value={name} />
 
     <button on:click={traerDatosm}>boton</button>
-  </div>  
+  </div>
 
-
-  <div class="container_pagination" >
+  <div class="container_pagination">
     <div class="container_ficha">
       {#each info.elements as elemento (elemento.id)}
         <div class="ficha">
@@ -96,12 +93,11 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    margin-top:200px;
+    margin-top: 200px;
     /* background-image: url(descarga.png); */
   }
-  .container_pagination{
-    width:100%;
- 
+  .container_pagination {
+    width: 100%;
   }
   .container_ficha {
     margin: 10px;
@@ -109,35 +105,28 @@
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1.8rem;
-
+    gap: 1rem;
+    width: 100%;
   }
-  .ficha{
+  .ficha {
     background: rgba(255, 255, 255, 0.31);
-  border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(6.8px);
--webkit-backdrop-filter: blur(6.8px);
-border: 1px solid rgba(255, 255, 255, 0.21);
-padding-left:15px;
-    width:40%;
-    display:flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
-
-
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    padding-left: 15px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    flex-direction: column;
   }
-.map{
-  width:40%;
-}
+
   .paginacion {
     display: flex;
     justify-content: space-evenly;
-
-  
-    width: 90%;
-    
+    width: 100%;
   }
   button {
     width: 80px;
@@ -147,12 +136,4 @@ padding-left:15px;
     border-radius: 5%;
     margin: 50px;
   }
-
-  /* .button-ghost-blue {
-    background-color: transparent;
-    border-radius: 0.4em;
-    color: royalblue;
-    padding: 0.4em 1em;
-    border: 1px solid royalblue;
-  } */
 </style>

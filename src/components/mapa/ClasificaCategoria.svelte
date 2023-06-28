@@ -120,5 +120,11 @@ let zoom
    
   </script>
   
-  <div id="mymap" style="height: 600px;width:900px" ></div>
+  <div class="container">
+    <h1>Localizacion por tipoloxia</h1>
+    <div id="mymap" style="height: 600px;width:900px" ></div>
+  </div>
+<style>
 
+
+</style>

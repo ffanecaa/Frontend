@@ -22,6 +22,7 @@
   function traerlinkm() {
     traerlink(id).then((datosrecibidos) => {
       elemento = datosrecibidos;
+      scroll(600);
     });
   }
   $: mapId = elemento.name;
@@ -31,7 +32,11 @@
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     }).addTo(map);
+ 
   });
+  function scroll(position) {
+    window.scrollTo({ top: position, behavior: "smooth" });
+  }
   afterUpdate(() => {
     // Eliminar el marcador anterior si existe
     //recorre el each si exites marcadores
@@ -45,6 +50,8 @@
     L.marker([elemento.latitude, elemento.longitude])
       .addTo(map)
       .bindPopup(elemento.name);
+
+      
   });
 
   onMount(() => {
@@ -55,11 +62,11 @@
 <div class="container__Fichas">
   <h2>{elemento.name}</h2>
   <!-- <button on:click={traerlinkm}>id</button> -->
-  <input type="text" on:change={traerlinkm} bind:value={id} />
+  <input type="text" on:change={traerlinkm} bind:value={id} placeholder="elemento id" />
   <p>{elemento.description}</p>
 
   <div id={mapId} style="height: 600px;width:800px" />
-  <button><a href="/mapa">🔙</a></button>
+  <button><a href="/mapa">✔️regresar mapa</a></button>
 </div>
 
 <style>
@@ -73,13 +80,33 @@
   button{
      margin:20px;
     width:150px;
-    height:50px; 
-    background:transparent
-  
-
+    height:60px; 
+    background:transparent;
+    border:none
   }
+
+  
   a{
-      font-size:3.2rem;
+      font-size:1.2rem;
     color:black;
   }
+a:hover{
+  font-size:1.2rem;
+    color:black;
+}
+
+input{
+    width: 20%;
+    padding:  0 5px;
+    height: 10px;
+    font-size: 16px;
+    border:none;
+    border-bottom: 3px solid white;
+    background: none;
+    outline:invert;
+    color: #adadad;
+    font-size: 16px;
+    padding: 5px;
+ 
+}
 </style>
