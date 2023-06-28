@@ -13,14 +13,14 @@
 let zoom 
 
     const layerGroups = {};
-  
+    let mapContainer;
     function createMarkerGroup(category) {
       const markerGroup = new MarkerClusterGroup();
       for (let element of $store[category]) {
 
         const contenido=`<h3>${element.name}</h3>
           <p>${element.description}</p>
-          <a href="/mapa/${element.id}"> link</a>
+          <a href="/ficha/${element.id}"> link</a>
         `
         const icon = L.icon({
           iconUrl: $storeIconos[category]
@@ -102,7 +102,7 @@ let zoom
       attribution: '&copy; <a href="https://1938.com.es/">Web Inteligencia Artificial</a>'
     }).addTo(map)
 
-
+    
 
 
 
@@ -115,12 +115,19 @@ let zoom
         autoZIndex:true
      
       }).addTo(map);
+
+      mapContainer.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    });
+      
     });
 
    
   </script>
   
-  <div class="container">
+  <div class="container"bind:this={mapContainer}>
     <h2>Localización por tipoloxía</h2>
     <div id="mymap"  ></div>
   </div>

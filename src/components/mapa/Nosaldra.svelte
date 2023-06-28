@@ -1,3 +1,15 @@
+
+
+
+ 
+
+
+
+
+
+
+
+
 <div style='opacity: 1;' id='imageHover'>
     <div class="image-hover-container">
         <div class='container'>
@@ -271,4 +283,13 @@
   
 	hoverImagesContainer.style.opacity = '1';
     }) 
+
+
+    
+    function scroll(position) {
+    window.scrollTo({ top: position, behavior: "smooth" });
+  }
+
+  scroll(680);
+
         </script>
