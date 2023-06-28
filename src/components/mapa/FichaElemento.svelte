@@ -66,7 +66,10 @@
   <p>{elemento.description}</p>
 
   <div id={mapId} style="height: 600px;width:800px" />
-  <button><a href="/mapa">✔️regresar mapa</a></button>
+  <div class="btn_regreso">
+    <button><a href="/mapa">ir mapa</a></button>
+    <button><a href="/categoria">ir tipoloxias</a></button>
+  </div>
 </div>
 
 <style>
@@ -76,6 +79,10 @@
   }
   h2 {
     text-transform: uppercase;
+  }
+  .btn_regreso{
+     display: flex;
+     justify-content: space-evenly;
   }
   button{
      margin:20px;
