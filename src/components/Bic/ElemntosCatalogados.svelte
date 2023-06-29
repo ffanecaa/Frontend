@@ -11,6 +11,7 @@
   import { ele7 } from "../../../prueba7.mjs";
   // import Utm from 'geodesy/utm.js'
   import { MarkerClusterGroup } from "leaflet.markercluster";
+  import Fotos from "../Header/Fotos.svelte"
 
   const datas = ele.features;
   const datos = ele2.features;
@@ -225,6 +226,8 @@
 
 <div class="geo">
   <h2>Elementos Catalogados</h2>
+
+  <Fotos/>
   <div id="map"  />
 </div>
 
@@ -239,6 +242,7 @@ Así, a fins de 1960, o Servizo de Documentación Gráfica do Catastro dispuña 
     display: flex;
     flex-direction: column;
     justify-content:center;
+    gap:50px
   }
   #map{
  margin:auto;

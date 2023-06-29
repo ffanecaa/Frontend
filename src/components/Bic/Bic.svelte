@@ -4,6 +4,7 @@
   import { lugares } from "../../../sitios.mjs"
   import Utm from 'geodesy/utm.js'
   import { MarkerClusterGroup } from 'leaflet.markercluster';
+  import Fotos from '../Header/Fotos.svelte';
 
   const datas = lugares.features;
   let markers = new MarkerClusterGroup();
@@ -68,6 +69,9 @@
  [...] Conforme al dispuesto en la disposición transitoria primera de la Ley 5/2016 del Patrimonio Cultural de Galicia, continuarán siendo de aplicación a todos los procedimientos de declaración de interés cultural las normas reglamentarias vigentes a su entrada en vigor que regulan dicho procedimiento, en tanto no se opongan a lo dispuesto en esta ley, por lo que para las solicitudes y definición del contenido de los bienes del Registro de BIC sigue en vigor el dispuesto en el Decreto 430/1991, de 30 de diciembre, por el que se regula la tramitación para la declaración de bien de interés cultural y se crea el Registro de Bienes de Interés Cultural para Galicia (DOG nº 14 de 22 de enero de 1992), en las condiciones descritas.[...] <br><a href="https://sede.xunta.gal/detalle-procedemento?codtram=CT135A" target="a_blanck">**Procedimiento de solicitud de incoación de Bienes de Interés Cultural</a>  </p>
 
   <div id="map"bind:this={mapContainer} ></div>
+
+
+  <Fotos/>
   </div>
 
 

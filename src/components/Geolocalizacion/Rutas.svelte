@@ -102,4 +102,4 @@ function manexadorDistancias() {
  <div id="map" style="height: 600px;width:800px"></div>
 
  <button on:click={manexadorDistancias}>Buscar</button>
- <button on:click={calcularRuta}>ruta</button>
+ <button on:click={calcularRuta}>calcula tu ruta</button>

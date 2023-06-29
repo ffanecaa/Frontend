@@ -112,7 +112,7 @@ mapContainer.scrollIntoView({ behavior: "smooth", block: "center", inline: "cent
  
     <button class="button__1" on:click|once={manexadorDistancias}>Buscar</button
     >
-    <button class="button__2" on:click={calcularRuta}>ruta</button>
+    <button class="button__2" on:click={calcularRuta}>Calcular ruta</button>
     <h2 class="texto__horizontal">elementos a 10km a la redonda</h2>
   </div>
      <div id="map" ></div>
