@@ -70,7 +70,7 @@ border: 1px solid rgba(255, 255, 255, 0.21);
     padding: 0 0 20px 0;
     border-bottom: 1px solid silver;
     height: 600px;
-    color:#802525;
+    color:#497174;
 text-shadow: 1px 1px 1px black;}
  
 fieldset{
@@ -89,10 +89,10 @@ fieldset{
     height: 40px;
     font-size: 16px;
     border:none;
-    border-bottom: 3px solid #802525;
+    border-bottom: 3px solid #EB6440;
     background: none;
     outline:invert;
-    color: #adadad;
+    color: #1a2a2b;
     font-size: 16px;
     padding: 5px;
  
@@ -103,7 +103,7 @@ fieldset{
     left: 15px;}
 
 .nome , .pass{
-    color: #802525;
+    color:#1b3234;
     font-size: 1.8rem;
     padding: 5px;
 }
@@ -118,10 +118,7 @@ button{
     position: absolute;
     top: 80%;
     left: 60%;
-    /* padding: 10px;
-    width: 20%;
-    height: 8%;
-    border:2px inset */
+   
 }
 
    

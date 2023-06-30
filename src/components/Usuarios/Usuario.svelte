@@ -75,14 +75,14 @@ fieldset{
   }
   input{
     width: 80%;
-    padding:  0 5px;
+  
     height: 40px;
     font-size: 16px;
     border:none;
-    border-bottom: 3px solid #D5C4A4;
+    border-bottom: 3px solid #EB6440;
     background: none;
     outline:invert;
-    color: #ADD19E;
+    color: #1a2a2b;
     font-size: 16px;
     padding: 5px;
  

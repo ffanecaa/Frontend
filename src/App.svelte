@@ -84,13 +84,14 @@
 
 <style>
   nav {
-    background-color: white;
-    background: rgba(255, 255, 255, 0.31);
+    background-color: #FFF5E4;
+    background:#C6EBC5;
+    background:#D6E4E5;
     border-radius: 0px 0px 10px 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.8px);
     -webkit-backdrop-filter: blur(6.8px);
-    border: 1px solid rgba(255, 255, 255, 0.21);
+    border: 1px solid  #FFF5E4;
   }
 
   ul {
@@ -127,20 +128,19 @@
     font-size: 1.5rem;
     transition: font-size 0.2s;
 
-    color: transparent;
+    color:#497174;
 
     transition: font-size 0.2s;
     cursor: pointer;
 
     text-shadow: 1px 1px 2px white;
 
-    color: transparent;
   }
 
   :global(a:hover) {
-    transform: scale(1.2);
-    color: grey;
-    font-size: 2rem;
+    transform: scale(1.1);
+    color: #EB6440;
+    font-size: 1.8rem;
   }
 
   main {

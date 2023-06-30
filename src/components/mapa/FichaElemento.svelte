@@ -76,6 +76,7 @@
   .container__Fichas {
     display: flex;
     flex-direction: column;
+    
   }
   h2 {
     text-transform: uppercase;
@@ -86,19 +87,19 @@
   }
   button{
      margin:20px;
-    width:150px;
-    height:60px; 
-    background:transparent;
-    border:none
+    width:110px;
+    height:110px; 
+    background:#D6E4E5;
+    border-radius:90%
   }
 
   
   a{
-      font-size:1.2rem;
-    color:black;
+      font-size:0.8rem;
+    color:#EB6440;
   }
 a:hover{
-  font-size:1.2rem;
+
     color:black;
 }
 
@@ -106,9 +107,10 @@ input{
     width: 20%;
     padding:  0 5px;
     height: 10px;
+
     font-size: 16px;
     border:none;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid #EB6440;
     background: none;
     outline:invert;
     color: #adadad;

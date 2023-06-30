@@ -142,10 +142,10 @@ mapContainer.scrollIntoView({ behavior: "smooth", block: "center", inline: "cent
   button {
     width: 150px;
     height: 50px;
-    border: 3px solid #596365;
+    border: 3px solid #D6E4E5;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 2px 2px 2px #596365;
+    box-shadow: 2px 2px 2px #D6E4E5;
     margin-left: 20px;
     margin-top: 40px;
   }
@@ -155,6 +155,6 @@ mapContainer.scrollIntoView({ behavior: "smooth", block: "center", inline: "cent
   .texto__horizontal {
     font-size: 4rem;
     font-weight: bold;
-    color: aliceblue;
+    color: #EB6440;
   }
 </style>
