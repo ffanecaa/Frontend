@@ -12,11 +12,12 @@
 <style>
   header {
    
-    background-image: url(/antro.jpg
+    background-image: url(/colla.jpg
     );
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 80% 60%;
+    background-position: 80% 80%;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
