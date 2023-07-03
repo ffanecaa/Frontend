@@ -12,7 +12,7 @@
 <style>
   header {
    
-    background-image: url(/colla.jpg
+    background-image: url(/colla.webp
     );
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    height:400px;
+    height:300px;
     margin-top: 0;
    
   }

@@ -17,6 +17,7 @@
   import Header from "./components/Header/Header.svelte";
   import Delete from "./components/Cathegory/Delete.svelte";
   import Registro from "./components/Elemento/Registro.svelte";
+  import Usuario from "./components/Usuarios/Usuario.svelte";
   //  import Rutas from "./components/Geolocalizacion/Rutas.svelte"
 </script>
 
@@ -78,6 +79,7 @@
       <Route path="/categoria" component={ClasificaCategoria} />
 
       <Route path="/registro-elementos" component={Registro} />
+   
     </main>
   </div>
 </Router>

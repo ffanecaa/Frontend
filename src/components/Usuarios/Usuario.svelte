@@ -13,6 +13,13 @@ function manexadorEnvio(){
         body:JSON.stringify(usuarios)
     })
 }
+function manexadorEnviocrypto(){
+    fetch("http://localhost:8000/usuarioscrypto/",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(usuarios)
+    })
+}
 
 </script>
 
@@ -28,7 +35,8 @@ function manexadorEnvio(){
         <input class="input__pass"type="text" placeholder="introduce tu contrasinal" bind:value={password}>
     </label>
     
-    <button on:click={manexadorEnvio}>envia</button>
+    <!-- <button on:click={manexadorEnvio}>envia</button> -->
+    <button on:click={manexadorEnviocrypto}>enviocru</button>
 </fieldset>
 </div>
 
