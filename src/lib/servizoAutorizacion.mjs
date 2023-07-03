@@ -1,4 +1,4 @@
-import {  writable } from 'svelte/store';
+import { readable,writable } from 'svelte/store';
 
 
 const clavesStorage = "paseAutorizacion" 
@@ -12,6 +12,19 @@ paseAutorizacion.subscribe(value => {
     autorizado.set(!!value)
 })
 
+//------------ CERRAR SESION----------
+function pecharSesion(){
+    paseAutorizacion.set(false)
+    storage.removeItem(claveStorage)
+}
+
+function gardarPaseAutorizacion(pase) {
+    paseAutorizacion.set(pase)
+    storage.setItem(claveStorage,pase)
+}
 export {
-    autorizado
+    autorizado,
+    paseAutorizacion,
+    pecharSesion,
+    gardarPaseAutorizacion,
 }
