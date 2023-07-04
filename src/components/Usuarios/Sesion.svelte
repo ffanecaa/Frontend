@@ -8,18 +8,18 @@ let id
 
 
  async function manexadorEnvio(){
-  const response = await  fetch("http://localhost:8000/usuarios/sesion/",{
+  const response = await  fetch("http://localhost:8000/usuarios/sesionJwt/",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({name,password})
     })
 
-    if ( response.ok){
-        const token = await response.text()
-        localStorage.setItem("token" , token)
-        navigate("/Elements/")
+    // if ( response.ok){
+    //     const token = await response.text()
+    //     localStorage.setItem("token" , token)
+    //     navigate("/Elements/")
 
-    }
+    // }
 }
 
 
