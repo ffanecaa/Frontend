@@ -45,7 +45,7 @@ async function traerpaxPosterior(nextPage){
         return datos
        ;
   }
-//--------------- anterior --------------
+//--------------- anterior --------------t
 async function traerpaxAnterior(previousPage){
     
     const resposta = fetch(baseURL +`${previousPage}`)

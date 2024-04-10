@@ -10,23 +10,31 @@
     let map;
     let markers = new MarkerClusterGroup()
     let name = "catedral";
-    let infos = [];
+    let elementos = [];
   let marker
     function busqueda() {
       getElementsBusqueda(name).then((datosRecibidos) => {
-        infos = datosRecibidos;
-  
+        elementos = datosRecibidos;
+  console.log(elementos);
        
   
-        for(let info of infos){
-        
-         marker = L.marker([info.latitude, info.longitude]).bindPopup(info.name)
-          markers.addLayer(marker)
-             map.addLayer(markers)
-          }
-    }
-    
-      )}
+  for (let elemento of elementos) {
+          const contenido = `
+          <h3>${elemento.name}</h3>
+          <a href="/ficha/${elemento.id}"> link</a>
+        `;
+        console.log(elemento.latitude)
+       
+          let marker = L.marker([
+           
+            elemento.latitude,
+            elemento.longitude,
+          ]).bindPopup(contenido);
+          markers.addLayer(marker);
+        }
+        map.addLayer(markers);
+      });
+  }
   
     onMount(() => {
       map = L.map("mymap").setView([42.888052, -8.04569], 9);
@@ -57,8 +65,8 @@
       flex-wrap: wrap;
      justify-content: center;
       align-content: center;
-     gap:2rem;
-      background-color: #FEE8BD;
+      gap:2rem;
+      background-color: black;
     }
    #mymap {
     width: 80vw;

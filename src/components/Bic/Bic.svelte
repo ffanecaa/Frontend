@@ -4,7 +4,7 @@
   import { lugares } from "../../../sitios.mjs"
   import Utm from 'geodesy/utm.js'
   import { MarkerClusterGroup } from 'leaflet.markercluster';
-  import Fotos from '../Header/Fotos.svelte';
+  // import Fotos from '../Header/Fotos.svelte';
 
   const datas = lugares.features;
   let markers = new MarkerClusterGroup();
@@ -18,7 +18,7 @@
  * @param {LeafletEvent} event - Evento de clic en el marcador.
  */
  function saveMarkerTarget(event) {
-    map.setView(event.latlng, 16 )
+    map.setView(event.latlng, 18 )
   }
 
   onMount(() => {
@@ -51,8 +51,10 @@
       const contenido = `
         <h3>${data.properties.NOME}</h3>
         <p>${data.properties.ID_BIC}</p>
-        <img src=${data.properties.IMG} style="width: 150px; height: 80px; object-fit: contain">
+        <p>${data.properties.CONCELLO}</p>
+       
       `;
+      // <img src=${data.properties.IMG} style="width: 150px; height: 80px; object-fit: contain"
       let marker = L.marker(latLon).bindPopup(contenido).on("click", saveMarkerTarget);
       markers.addLayer(marker);
        mapMarkerToElement.set(marker,data.properties);
@@ -71,7 +73,7 @@
   <div id="map"bind:this={mapContainer} ></div>
 
 
-  <Fotos/>
+  <!-- <Fotos/> -->
   </div>
 
 
@@ -85,7 +87,8 @@
   #map{
  margin:auto;
  width: 80%;
-  height:80vh
+  height:80vh;
+  filter:brightness(1.1);
   }
 
   h2 {
