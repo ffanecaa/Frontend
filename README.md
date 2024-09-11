@@ -1,47 +1,43 @@
-# Svelte + Vite
+# Localización de Elementos Patrimoniales de Galicia
 
-This template should help get you started developing with Svelte in Vite.
+Este proyecto es una aplicación web cuyo objetivo principal es localizar más de **30,000 elementos patrimoniales de Galicia**, incluidos todos los **Bienes de Interés Cultural (BIC)**. La aplicación ofrece a los usuarios herramientas de filtrado por tipología, nombre y ubicación geográfica, además de funciones de geolocalización para facilitar la visita a estos elementos.
 
-## Recommended IDE Setup
+## Funcionalidades Principales
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+- **Búsqueda y Filtrado**: Los usuarios pueden buscar y filtrar los elementos patrimoniales por:
+  - **Tipología**: Clasificación de los elementos (monumentos, paisajes, etc.).
+  - **Nombre**: Búsqueda por el nombre exacto o parcial del elemento.
+  - **Ubicación Geográfica**: Filtrar elementos según su proximidad o ubicación específica en Galicia.
 
-## Need an official Svelte framework?
+- **Geolocalización**: Los usuarios pueden localizar elementos patrimoniales visitables dentro de un radio de **30 km** de su posición actual.
+  
+- **Cálculo de Ruta**: Se ofrece la funcionalidad de calcular la **ruta óptima** para llegar a los elementos seleccionados en el mapa interactivo.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## Estado del Proyecto
 
-## Technical considerations
+El proyecto está **funcional**, permitiendo a los usuarios buscar, visualizar y geolocalizar elementos patrimoniales. Sin embargo, debido a la magnitud de los datos y la complejidad de la implementación, el proyecto **está incompleto**. Algunas características avanzadas y optimizaciones aún no se han implementado, y el sistema puede expandirse significativamente en futuras fases de desarrollo.
 
-**Why use this over SvelteKit?**
+## Tecnologías Utilizadas
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+### Frontend
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+- **[Svelte](https://svelte.dev/)**: Utilizado para el desarrollo del frontend por su eficiencia y facilidad de uso. Svelte compila los componentes directamente a JavaScript puro, eliminando la sobrecarga del framework en tiempo de ejecución.
+  
+- **[Leaflet](https://leafletjs.com/)**: Biblioteca utilizada para la visualización de **mapas interactivos**. Permite la renderización eficiente de los elementos patrimoniales en un mapa, con herramientas para geolocalización y creación de rutas.
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+### Backend
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+- **[Express.js](https://expressjs.com/)**: Framework de Node.js utilizado para la creación de una API RESTful, manejando la lógica de servidor y la interacción con la base de datos.
+  
+- **[Sequelize](https://sequelize.org/)**: ORM (Object Relational Mapper) utilizado para gestionar la base de datos. Garantiza una manipulación segura y eficiente de los datos patrimoniales, facilitando las consultas y operaciones en la base de datos.
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+## Instalación
 
-**Why include `.vscode/extensions.json`?**
+Sigue estos pasos para ejecutar el proyecto localmente:
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+1. Clona el repositorio:
 
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+   ```bash   -frontend
+   git clone(https://github.com/ffanecaa/Frontend.git)
+             - backend
+   https://github.com/ffanecaa/Backend.git
